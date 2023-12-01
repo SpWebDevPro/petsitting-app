@@ -1,4 +1,4 @@
-package fr.aston.petsittingbackend;
+package fr.aston.petSitting;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
