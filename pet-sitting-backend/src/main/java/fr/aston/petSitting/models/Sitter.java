@@ -6,7 +6,9 @@ import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 /**
  * @author F_CHAMAR
@@ -16,6 +18,8 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString
+@EqualsAndHashCode(callSuper = true)
 @DiscriminatorValue("SITTER")
 public class Sitter extends User implements Serializable {
 

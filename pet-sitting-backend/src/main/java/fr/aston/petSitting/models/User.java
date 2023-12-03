@@ -13,6 +13,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -24,9 +25,12 @@ import lombok.NoArgsConstructor;
  */
 @Entity
 @Data
+
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name = "USERS")
 @DiscriminatorColumn(name = "ROLE")
+
 public abstract class User implements Serializable {
 
 	private static final long serialVersionUID = 1L;

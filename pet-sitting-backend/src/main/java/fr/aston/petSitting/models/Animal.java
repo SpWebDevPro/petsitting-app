@@ -10,17 +10,22 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Data @NoArgsConstructor @AllArgsConstructor
-public class Animal implements Serializable{
-	
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Table(name = "ANIMALS")
+public class Animal implements Serializable {
+
 	private static final long serialVersionUID = 1L;
-	
-	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String petName;
 	private String gender;
@@ -32,10 +37,10 @@ public class Animal implements Serializable{
 	private boolean isSocial;
 	private TypeAnimal type;
 	private String breed;
-	
+
 	@ManyToOne
-    private User parent; 
-	
+	private User parent;
+
 	@OneToMany(mappedBy = "animal")
 	private List<Booking> bookings;
 }
