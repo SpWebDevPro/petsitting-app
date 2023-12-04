@@ -11,6 +11,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+import jakarta.persistence.Temporal;
+import jakarta.persistence.TemporalType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -30,6 +32,7 @@ public class Animal implements Serializable {
 	private String petName;
 	private String gender;
 	private String weight;
+	@Temporal(TemporalType.DATE)
 	private Date dateOfBirth;
 	private boolean isVaccinated;
 	private boolean isSterilized;

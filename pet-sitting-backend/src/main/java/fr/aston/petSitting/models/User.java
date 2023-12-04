@@ -14,6 +14,8 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+import jakarta.persistence.Temporal;
+import jakarta.persistence.TemporalType;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -51,6 +53,7 @@ public abstract class User implements Serializable {
 	private String lastName;
 	private String telephon;
 	private String photoUrl;
+	@Temporal(TemporalType.DATE)
 	private Date dateOfBirth;
 
 	private String address;
