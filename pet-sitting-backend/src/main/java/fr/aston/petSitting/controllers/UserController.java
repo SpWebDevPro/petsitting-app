@@ -3,20 +3,12 @@ package fr.aston.petSitting.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 
-import fr.aston.petSitting.models.Sitter;
 import fr.aston.petSitting.repositories.UserRepository;
 
 @RestController
 public class UserController {
-	
-	@Autowired
-	 private UserRepository userRepository;
-	 
 
-	 
-		
-		
-	public void	run(){
-		
-		}
+	@Autowired
+	private UserRepository userRepository;
+
 }

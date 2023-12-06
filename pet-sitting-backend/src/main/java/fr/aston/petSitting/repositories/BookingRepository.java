@@ -4,14 +4,11 @@
 package fr.aston.petSitting.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-import fr.aston.petSitting.models.Booking;
+import fr.aston.petSitting.entities.Booking;
 
-/**
- * @author F_CHAMAR
- *
- */
-
-public interface BookingRepository extends JpaRepository<Booking, Long> {
+@Repository
+public interface BookingRepository extends JpaRepository<Booking, Integer> {
 
 }

@@ -4,14 +4,13 @@
 package fr.aston.petSitting.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-import fr.aston.petSitting.models.Service;
+import fr.aston.petSitting.entities.Service;
 
-/**
- * @author F_CHAMAR
- *
- */
 
-public interface ServiceRepository extends JpaRepository<Service, Long> {
+@Repository
+
+public interface ServiceRepository extends JpaRepository<Service, Integer> {
 
 }
