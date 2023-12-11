@@ -1,0 +1,77 @@
+<form [formGroup]="serviceForm" (ngSubmit)="onServiceFormSubmit()">
+  <div>
+    <label for="type" class="form-label mt-4"> Type de prestation </label>
+    <select
+      formControlName="type"
+      [class.is-invalid]="type.touched && type.invalid"
+      [class.is-valid]="type.touched && type.valid"
+      id="type"
+      class="form-select"
+    >
+      <option>Promenade</option>
+      <option>Visite</option>
+      <option>Hebergement</option>
+    </select>
+    <p
+      class="invalid-feedback mb-2"
+      *ngIf="type.touched && type.hasError('required')"
+    >
+      Vous devez choisir un type de prestation
+    </p>
+  </div>
+  <div class="form-group">
+    <label for="name" class="form-label mt-4"> Nom de la prestation </label>
+    <input
+      formControlName="name"
+      [class.is-invalid]="name.touched && name.invalid"
+      [class.is-valid]="name.touched && name.valid"
+      type="text"
+      class="form-control"
+      id="name"
+    />
+    <p
+      class="invalid-feedback mb-2"
+      *ngIf="name.touched && name.hasError('required')"
+    >
+      Vous devez donner un nom à votre service
+    </p>
+  </div>
+  <div class="form-group">
+    <label for="description" class="form-label mt-4">Description</label>
+    <textarea
+      formControlName="description"
+      [class.is-invalid]="description.touched && description.invalid"
+      [class.is-valid]="description.touched && description.valid"
+      id="description"
+      class="form-control"
+      rows="3"
+      placeholder="Décrivez votre prestation"
+    ></textarea>
+    <p
+      class="invalid-feedback mb-2"
+      *ngIf="description.touched && description.hasError('required')"
+    >
+      Vous devez renseigner une description
+    </p>
+  </div>
+  <div class="form-group">
+    <label for="daily-price" class="form-label mt-4">
+      Prix du service à la journée, en Euro
+    </label>
+    <input
+      formControlName="dailyPrice"
+      [class.is-invalid]="dailyPrice.touched && dailyPrice.invalid"
+      [class.is-valid]="dailyPrice.touched && dailyPrice.valid"
+      type="number"
+      class="form-control"
+      id="daily-price"
+    />
+    <p
+      class="invalid-feedback mb-2"
+      *ngIf="dailyPrice.touched && dailyPrice.hasError('required')"
+    >
+      Vous devez renseigner un prix à la journée
+    </p>
+  </div>
+  <button type="submit" class="btn btn-primary mt-lg-5">Enregistrer</button>
+</form>

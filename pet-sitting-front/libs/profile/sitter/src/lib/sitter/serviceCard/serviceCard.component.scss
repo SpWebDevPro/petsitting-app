@@ -1,0 +1,16 @@
+div.card {
+    margin-top: 2rem;
+    margin-right: 2rem;
+    width: 350px;
+  }
+  
+  div.actions {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  div.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }

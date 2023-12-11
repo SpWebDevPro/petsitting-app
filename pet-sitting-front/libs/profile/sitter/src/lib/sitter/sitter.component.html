@@ -1,1 +1,27 @@
-<p>sitter works!</p>
+<h2>Votre profil</h2>
+<h3 class="welcome">Bonjour Sandrine Pradier</h3>
+
+<img
+  class="avatar"
+  src="./assets/images/user-woman-icon.png"
+  alt="avatar"
+  width="200"
+/>
+<div class="sitter-profile-title">
+  <h3>Mes informations</h3>
+  <button
+    type="button"
+    class="btn btn-info btn-circle btn-circle-sm"
+    (click)="onModifyClick()"
+  >
+    <img src="./assets/icones/icons8-modifier-24.png" alt="modifier" />
+  </button>
+</div>
+
+@if(displayForm){
+<pet-sitting-front-data-sitter-form></pet-sitting-front-data-sitter-form>
+} @else {
+<pet-sitting-front-data-sitter></pet-sitting-front-data-sitter>
+}
+
+<pet-sitting-front-services-list></pet-sitting-front-services-list>

@@ -3,12 +3,10 @@ import { Route } from '@angular/router';
 /* import { AppComponent } from './app.component'; */
 
 export const appRoutes: Route[] = [
-  /*   {
+  {
     path: 'sitter-profile',
     pathMatch: 'full',
     loadComponent: () =>
-      import('@pet-sitting-front/sitter-profile').then(
-        (m) => m.SitterProfileComponent
-      ),
-  }, */
+      import('@pet-sitting-front/sitter').then((m) => m.SitterComponent),
+  },
 ];
