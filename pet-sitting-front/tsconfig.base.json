@@ -15,10 +15,15 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@pet-sitting-front/sitter-profile": ["sitter-profile/src/index.ts"],
-      "@pet-sitting-front/update-data-sitter": [
-        "update-data-sitter/src/index.ts"
-      ]
+      "@pet-sitting-front/authentication": ["libs/authentication/src/index.ts"],
+      "@pet-sitting-front/booking": ["libs/booking/src/index.ts"],
+      "@pet-sitting-front/home": ["libs/home/src/index.ts"],
+      "@pet-sitting-front/models": ["libs/models/src/index.ts"],
+      "@pet-sitting-front/parent": ["libs/profile/parent/src/index.ts"],
+      "@pet-sitting-front/services": ["libs/services/src/index.ts"],
+      "@pet-sitting-front/shared": ["libs/shared/src/index.ts"],
+      "@pet-sitting-front/sitter": ["libs/profile/sitter/src/index.ts"],
+      "@pet-sitting-front/user": ["libs/profile/user/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
