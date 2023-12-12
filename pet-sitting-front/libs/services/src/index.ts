@@ -1,1 +1,1 @@
-export * from './lib/services/services.component';
+export { serviceHttp } from './lib/services/serviceHttp';
