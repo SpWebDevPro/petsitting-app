@@ -1,14 +1,9 @@
-* {
-    margin: 0;
-    padding: 0
-}
 
-body {
-    background-color: #000
-}
+
+
 
 .card {
-    width: 350px;
+    width: 300px;
     background-color: #efefef;
     border: none;
     cursor: pointer;
@@ -23,10 +18,13 @@ body {
     transform: scale(1.5)
 }
 
-.btn {
+.btn1 {
     height: 140px;
     width: 140px;
-    border-radius: 50%
+    border-radius: 50%;
+    background-color: #545454;
+    border: none;
+
 }
 
 .name {
@@ -54,7 +52,7 @@ body {
     color: #444444
 }
 
-.btn1 {
+.btn2 {
     height: 40px;
     width: 150px;
     border: none;

@@ -19,8 +19,7 @@
         "assets": ["./src/favicon.ico", "./src/assets"],
         "styles": [
           "./src/styles.scss",
-          "node_modules/bootswatch/dist/journal/bootstrap.min.css"
-        ],
+          "node_modules/bootswatch/dist/journal/bootstrap.min.css"  ],
         "scripts": []
       },
       "configurations": {

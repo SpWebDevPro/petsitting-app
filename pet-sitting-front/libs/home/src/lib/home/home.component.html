@@ -1,15 +1,51 @@
 <pet-sitting-front-nav-bar></pet-sitting-front-nav-bar>
-<pet-sitting-front-header></pet-sitting-front-header>
+<pet-sitting-front-header  (searchEvent)="searchEvent($event)"></pet-sitting-front-header>
 <section class="py-5 border-bottom" id="features">
     <div class="container px-5 my-5">
         <div class="row gx-5 justify-content-center">
             <div class="row row-cols-1 row-cols-md-3">
-                <div *ngFor= "let p of total" class="col mb-4">
-                 <pet-sitting-front-card-service ></pet-sitting-front-card-service>
-                </div>
+
+                
+
+                <ng-container *ngIf="services$ | async as result" class="container">
+                    <ng-container [ngSwitch]="result.dataState">
+                      <ng-container *ngSwitchCase="DataStateEnum.LOADING">
+                        Loading....
+                      </ng-container>
+                      <ng-container *ngSwitchCase="DataStateEnum.LOADED">
+                        <tr *ngFor="let service of result.data">
+                        
+              
+          
+                            <pet-sitting-front-card-service  [serviceModel]="service" ></pet-sitting-front-card-service>
+                            
+                          </tr>
+                        <div *ngFor= "let service of result.data" class="col mb-4">
+                            
+                           </div>
+                       
+                      </ng-container>
+                      <ng-container *ngSwitchCase="DataStateEnum.ERROR">
+                        <div class="alert alert-danger">
+                          {{ result.errorMessage }}
+                        </div>
+                      </ng-container>
+                    </ng-container>
+                  </ng-container>
+
+
+
+
+
+
+               
               
               </div>     
             </div>
         
     </div>
 </section>
+
+<footer class="py-4 bg-dark">
+  <div class="container px-5"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2023</p></div>
+</footer>

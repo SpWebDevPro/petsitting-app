@@ -5,10 +5,13 @@ import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -96,10 +99,12 @@ public class User implements Serializable {
 	private String telephone;
 
 	// bi-directional many-to-one association to AnimalEntity
-	@OneToMany(mappedBy = "user")
+	@JsonIgnore
+	@OneToMany(mappedBy = "user", fetch=FetchType.LAZY)
 	private List<Animal> animals;
 
 	// bi-directional many-to-one association to ServiceEntity
-	@OneToMany(mappedBy = "user")
+	@JsonIgnore
+	@OneToMany(mappedBy = "user", fetch=FetchType.LAZY)
 	private List<ServiceEntity> services;
 }

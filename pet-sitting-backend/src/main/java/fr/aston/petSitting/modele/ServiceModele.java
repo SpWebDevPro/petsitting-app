@@ -3,6 +3,7 @@ package fr.aston.petSitting.modele;
 import java.math.BigDecimal;
 
 import fr.aston.petSitting.entities.ServiceEnum;
+import fr.aston.petSitting.entities.User;
 
 
 public class ServiceModele {
@@ -13,6 +14,21 @@ public class ServiceModele {
 	private String name;
 	private ServiceEnum type;
 	private Integer userId;
+	private User user;
+
+	/**
+	 * @return the user
+	 */
+	public User getUser() {
+		return user;
+	}
+
+	/**
+	 * @param user the user to set
+	 */
+	public void setUser(User user) {
+		this.user = user;
+	}
 
 	public Boolean hasUserId() {
 		if (this.getUserId() != null) {

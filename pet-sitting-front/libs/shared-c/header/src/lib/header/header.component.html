@@ -7,19 +7,21 @@
                     <p class="lead text-white-50 mb-4"></p>
                     <div class=" d-sm-flex justify-content-sm-center">
                         
-                        <input type="text" class=" px-4 me-sm-1 " placeholder="Localisation">
-                        <select class="px-5 me-sm-1" id="exampleFormControlSelect1">
-                            <option>Select animal</option>
-                            <option>Example one</option>
-                            <option>Example one</option>
-                           
-                        </select>
-                        <select class="px-5 me-sm-3 " id="exampleFormControlSelect1">
-                            <option>Select service</option>
-                            <option>Example one</option>
-                           
-                        </select>
-                        <button class="btn btn-primary btn-lg" id="submitButton" type="submit">Trouver mon sitter</button>
+                        <input type="text" class=" px-4 me-sm-1 "  name="localisation" [(ngModel)]="localisation" placeholder="Localisation">
+                       
+                      <select [(ngModel)]="typeAnimal"   class="px-5 me-sm-1" name ="typeAnimal">
+                        <option [value]="null" [disabled]="true" >Select animal</option>
+
+                        <option  *ngFor="let type of listAnimalTypes"  [value]="type">{{type}}</option>
+                  </select>
+                    
+                      <select [(ngModel)]="typeService" class="px-5 me-sm-1" name ="typeService" >
+                        <option [value]="null" [disabled]="true" >Select service</option>
+
+                        <option *ngFor="let typeS of listServiceTypes" [value]="typeS" >{{typeS}}</option>
+                        
+                      </select>
+                      <button class="btn btn-primary btn-lg" id="submitButton" type="submit" (click)="searchServices({typeAnimal: typeAnimal, typeService: typeService, localisation:localisation})">Trouver mon sitter</button>
 
                     </div>
                 </div>
@@ -27,4 +29,6 @@
         </div>
     </div>
 </header>
+
+
 

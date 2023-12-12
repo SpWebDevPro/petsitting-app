@@ -17,6 +17,7 @@ public class ServiceSitterService {
 	private ServiceRepository serviceRepository;
 
 	public List<ServiceEntity> getServicesByUserId(int userId) {
+		
 		return this.serviceRepository.findAllByUserId(userId);
 	}
 
@@ -33,6 +34,11 @@ public class ServiceSitterService {
 
 	public void deleteServiceById(int id) {
 		this.serviceRepository.deleteById(id);
+	}
+	
+	public List<ServiceEntity> selectServicewithType(ServiceEnum type, String city) {
+		
+		return this.serviceRepository.getServices( type,city);
 	}
 
 }

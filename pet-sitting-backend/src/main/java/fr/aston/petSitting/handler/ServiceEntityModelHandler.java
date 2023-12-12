@@ -22,6 +22,7 @@ public class ServiceEntityModelHandler {
 		serviceModele.setDescription(serviceEntity.getDescription());
 		serviceModele.setType(serviceEntity.getType());
 		serviceModele.setUserId(serviceEntity.getUser().getId());
+		serviceModele.setUser(serviceEntity.getUser());
 		return serviceModele;
 	}
 

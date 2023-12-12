@@ -3,3 +3,7 @@
     font-size: 20px;
     border-radius: 10px;
 }
+
+.mat-option {
+    padding: 0 !important;
+  }

@@ -1,24 +1,31 @@
 
     <div class="card mb-5 mb-xl-0">
         <div class="card-body p-5">
-            <div class=" image d-flex flex-column justify-content-center align-items-center"> 
-                <button class="btn btn-secondary"> <img src="https://i.imgur.com/wvxPV9S.png" height="100" width="100" />
+            <div class="image d-flex flex-column justify-content-center align-items-center"> 
+                <button class="btn1 btn-secondary"> <img src="https://i.imgur.com/wvxPV9S.png" height="100" width="100" />
                 </button> 
-                <span class="name mt-3">Eleanor Pena - 0Km</span>
-                 <span class="idd">Rue machin paris</span> 
+                <span class="name mt-3">{{serviceModel.user.firstName}} {{serviceModel.user.lastName}}</span>
+                 <span class="idd">{{serviceModel.user.address}} {{serviceModel.user.city}} {{serviceModel.user.postalCode}}</span> 
                 <div class="d-flex flex-row justify-content-center align-items-center gap-2">
                 </div> 
                 <div class="d-flex flex-row justify-content-center align-items-center mt-3">
-                     <span class="number">1069 <span class="follow">Followers</span></span> </div> 
-                     <div class=" d-flex mt-2"> <button class="btn1 btn-dark">Edit Profile</button> 
+                    <fa-icon [icon]="serviceModel.user.accomodationType == accomodationEnum.HOUSE ? faHouse : fabuilding" [style.color]="'#eb6864'" size="xl"></fa-icon>
+                    &nbsp;
+                     <span class="ml-3">{{serviceModel.user.accomodationType}}</span>
                 </div> 
-                <div class="text mt-3"> 
-                    <span>Eleanor Pena is a creator of minimalistic x bold graphics and digital artwork.<br><br>
-                         Artist/ Creative Director by Day #NFT minting with FND night. </span> </div> 
-        <div class="gap-3 mt-3 icons d-flex flex-row justify-content-center align-items-center"> <span>
-          <i class="fa fa-twitter"></i></span> <span><i class="fa fa-facebook-f"></i></span> <span>
-            <i class="fa fa-instagram"></i></span> <span><i class="fa fa-linkedin"></i></span> </div> 
-            <div class=" px-2 rounded mt-4 date "> <span class="join">Joined May,2021</span> </div> </div>
+              
+                <div class="text mt-3 mb-5"> 
+                    <span>{{serviceModel.name}}<br><br>
+                        {{serviceModel.description}} </span> </div> 
+                        <span>{{serviceModel.dailyPrice}} $/jour </span>
+        <div class=" d-flex mt-2"> <button class="btn btn-primary btn-lg ">Voir le profil</button> 
+        </div> 
+      
+  
+        
+            
+            
+        </div>
         </div>
     </div>
 
