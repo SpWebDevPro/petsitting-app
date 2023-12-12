@@ -101,5 +101,5 @@ public class User implements Serializable {
 
 	// bi-directional many-to-one association to ServiceEntity
 	@OneToMany(mappedBy = "user")
-	private List<Service> services;
+	private List<ServiceEntity> services;
 }

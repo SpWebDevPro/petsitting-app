@@ -29,7 +29,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "service")
-public class Service implements Serializable {
+public class ServiceEntity implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 

@@ -1,17 +1,20 @@
 package fr.aston.petSitting.services;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import fr.aston.petSitting.entities.User;
+import fr.aston.petSitting.repositories.UserRepository;
 
-/**
- * @author F_CHAMAR
- *
- */
-public interface UserService {
- 
-	public User saveUser(User user);
-	public User getUser(Long id);
 
-	public User findByUEmail(String email);
+@Service
+public class UserService {
+
+	@Autowired
+	private UserRepository userRepository;
+
+	public User getUserById(int id) {
+		return this.userRepository.findById(id).get();
+	}
 
 }
