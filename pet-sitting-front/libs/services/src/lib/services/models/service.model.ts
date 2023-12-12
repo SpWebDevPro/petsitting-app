@@ -6,8 +6,8 @@ export interface ServiceModel {
     name: string;
     description: string;
     dailyPrice: number;
-    type: ServiceEnum;
+    type: 'walk' | 'visit' | 'hosting';
     userID: number;
-    user : UserModel;
+    user ?: UserModel;
  
   }

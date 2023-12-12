@@ -1,7 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Service } from './../../../../../../models/src/lib/models/serviceType';
-
+import { ServiceModel } from '@pet-sitting-front/services';
 @Component({
   selector: 'pet-sitting-front-service-card',
   standalone: true,
@@ -11,7 +10,7 @@ import { Service } from './../../../../../../models/src/lib/models/serviceType';
 })
 export class ServiceCardComponent {
   @Input()
-  sitterService!: Service;
+  sitterService!: ServiceModel;
 
   onModifyClick() {
     console.log("j'ai cliqué sur modifier");

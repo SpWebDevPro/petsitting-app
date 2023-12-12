@@ -1,7 +1,6 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { ServiceModel } from "./models/service.model";
-import { ServiceEnum } from "./models/serviceType.enum";
 
 @Injectable({ providedIn: 'root' })
 export class SitterService {
