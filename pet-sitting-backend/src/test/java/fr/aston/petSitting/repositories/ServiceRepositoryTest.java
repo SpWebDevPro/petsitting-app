@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import fr.aston.petSitting.entities.Service;
+import fr.aston.petSitting.entities.ServiceEntity;
 import fr.aston.petSitting.entities.ServiceEnum;
 import fr.aston.petSitting.entities.User;
 
@@ -31,7 +31,7 @@ class ServiceRepositoryTest {
 	@Test
 	void testInsert() throws Exception {
 
-		Service serviceWalk = new Service();
+		ServiceEntity serviceWalk = new ServiceEntity();
 		User user = this.userRepository.findById(1).get();
 
 		serviceWalk.setDailyPrice(BigDecimal.valueOf(15.5));
@@ -40,7 +40,7 @@ class ServiceRepositoryTest {
 		serviceWalk.setType(ServiceEnum.WALK);
 		serviceWalk.setUser(user);
 
-		Service serviceWalkInserted = serviceRepository.save(serviceWalk);
+		ServiceEntity serviceWalkInserted = serviceRepository.save(serviceWalk);
 		Assertions.assertNotNull(serviceWalkInserted, "The returned object must exist");
 		Assertions.assertTrue(serviceWalkInserted.getId() > 0, "The Id must exist");
 

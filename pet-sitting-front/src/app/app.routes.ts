@@ -3,6 +3,13 @@ import { Route } from '@angular/router';
 /* import { AppComponent } from './app.component'; */
 
 export const appRoutes: Route[] = [
+
+  {
+    path: '',
+    pathMatch: 'full',
+    loadComponent: () =>
+      import('@pet-sitting-front/home').then((m) => m.HomeComponent),
+  },
   {
     path: 'sitter-profile',
     pathMatch: 'full',

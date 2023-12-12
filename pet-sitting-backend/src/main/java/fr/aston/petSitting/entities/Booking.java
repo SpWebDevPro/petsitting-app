@@ -55,6 +55,6 @@ public class Booking implements Serializable {
 	// bi-directional many-to-one association to ServiceEntity
 	@ManyToOne
 	@JoinColumn(name = "service_id", nullable = false)
-	private Service service;
+	private ServiceEntity service;
 
 }
