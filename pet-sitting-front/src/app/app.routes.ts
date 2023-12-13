@@ -15,5 +15,11 @@ export const appRoutes: Route[] = [
     pathMatch: 'full',
     loadComponent: () =>
       import('@pet-sitting-front/sitter').then((m) => m.SitterComponent),
-  },
+  },{
+
+  path: 'animal-list',
+    pathMatch: 'full',
+    loadComponent: () =>
+      import('@pet-sitting-front/animal').then((m) => m.AnimalComponent),
+  }
 ];

@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { NavBarComponent } from '@pet-sitting-front/nav-bar';
 import { HeaderComponent } from '@pet-sitting-front/header';
 import { CardServiceComponent } from '../card-service/card-service.component';
-import { AppDataState, DataStateEnum, ServiceEnum, ServiceModel, SitterService } from '@pet-sitting-front/services';
+import { AppDataState, DataStateEnum, ServiceModel, SitterService } from '@pet-sitting-front/services';
 import { Observable, catchError, map, of, startWith } from 'rxjs';
 @Component({
   selector: 'pet-sitting-front-home',
@@ -16,12 +16,12 @@ export class HomeComponent {
 
   
   constructor(private sitterService: SitterService) {
-   this. getServices("","","");
+   this. getServices("","");
   }
 
   services$: Observable<AppDataState<ServiceModel[]>> | null = null;
   readonly DataStateEnum = DataStateEnum; // affecte a type to a varibale
-  getServices(type:string, city : string, animalType:string){
+  getServices(type:string, city : string){
 
     this.services$ = this.sitterService.getServices(type, city).pipe(
 
@@ -39,7 +39,7 @@ export class HomeComponent {
   searchEvent(event:  any){
 
    
-this.getServices(event['typeService'], event['localisation'],"");
+this.getServices(event['typeService'], event['localisation']);
   }
 }
 

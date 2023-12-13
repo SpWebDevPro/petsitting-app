@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@pet-sitting-front/animal": ["libs/animal/src/index.ts"],
       "@pet-sitting-front/authentication": ["libs/authentication/src/index.ts"],
       "@pet-sitting-front/booking": ["libs/booking/src/index.ts"],
       "@pet-sitting-front/header": ["libs/shared-c/header/src/index.ts"],

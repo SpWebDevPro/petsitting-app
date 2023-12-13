@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'pet-sitting-front-shared',
+  selector: 'pet-sitting-front-animal',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './shared.component.html',
-  styleUrl: './shared.component.css',
+  templateUrl: './animal.component.html',
+  styleUrl: './animal.component.css',
 })
-export class SharedComponent {}
+export class AnimalComponent {}
