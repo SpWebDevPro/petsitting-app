@@ -10,18 +10,30 @@
                 <ng-container *ngIf="services$ | async as result" class="container">
                     <ng-container [ngSwitch]="result.dataState">
                       <ng-container *ngSwitchCase="DataStateEnum.LOADING">
-                        Loading....
+                    
+                        
+                       <div class="container-fluid alert">
+                            <div class="d-flex flex-column "style="height: 100px;">
+                                <div class="d-flex flex-grow-1 justify-content-center align-items-center">
+                                  <div class="spinner-border text-primary" role="status">
+                                    <span class="visually-hidden">Loading...</span>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
                       </ng-container>
                       <ng-container *ngSwitchCase="DataStateEnum.LOADED">
-                        <tr *ngFor="let service of result.data">
-                        
-              
-          
-                            <pet-sitting-front-card-service  [serviceModel]="service" ></pet-sitting-front-card-service>
+                        <div *ngIf="$any(result?.data)?.length === 0"  class="container">
+                       
+                              <div class="col-md">
+                                <img src="./assets/images/no-data.jpg"  alt="" class="img-fluid">
+                                <p class="fs-5 ">Réssayer avec d'autres critères de recherche</p>
+                              </div>
+
                             
-                          </tr>
+                      </div>
                         <div *ngFor= "let service of result.data" class="col mb-4">
-                            
+                          <pet-sitting-front-card-service  [serviceModel]="service" ></pet-sitting-front-card-service>
                            </div>
                        
                       </ng-container>
