@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
   FormControl,
@@ -15,6 +15,10 @@ import {
   styleUrl: './dataSitterForm.component.scss',
 })
 export class DataSitterFormComponent {
+  @Input()
+  //user!: UserModel;
+  userId!: number;
+
   dataSitterForm = new FormGroup({
     presentation: new FormControl('', [Validators.required]),
     accomodationType: new FormControl('', [Validators.required]),

@@ -7,7 +7,7 @@ export * from './lib/services/models/animalType.enum';
 export * from './lib/services/models/service.model';
 export * from './lib/services/models/user.model';
 
-export * from './lib/services/sitterService.service';
+export * from './lib/services/sitter.service';
 
 export * from './lib/services/models/state.state';
 export { serviceHttp } from './lib/services/serviceHttp';

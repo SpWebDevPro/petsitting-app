@@ -4,6 +4,10 @@ div.card {
   width: 350px;
 }
 
+.card {
+  border-color: white;
+}
+
 div.actions {
   display: flex;
   justify-content: flex-end;

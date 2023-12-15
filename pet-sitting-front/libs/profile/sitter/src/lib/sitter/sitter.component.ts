@@ -22,6 +22,7 @@ import { faPen } from '@fortawesome/free-solid-svg-icons';
 export class SitterComponent {
   displayForm: boolean = false;
   faPen = faPen;
+  userId = 4;
 
   onModifyClick() {
     console.log("j'ai cliqué sur modifier");

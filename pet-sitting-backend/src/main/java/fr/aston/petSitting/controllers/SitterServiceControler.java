@@ -35,10 +35,10 @@ public class SitterServiceControler {
 
 	@GetMapping("/list/{idUser}")
 	public ResponseEntity<List<ServiceModele>> getSitterServiceListControler(@PathVariable("idUser") int idUser) {
+		System.out.println(idUser);
 		List<ServiceEntity> resultat = this.service.getServicesByUserId(idUser);
-		System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-
 		List<ServiceModele> resultatModel = ServiceEntityModelHandler.createListModelFromEntities(resultat);
+		System.out.println("tu m'as appelé");
 		return ResponseEntity.ok(resultatModel);
 	}
 

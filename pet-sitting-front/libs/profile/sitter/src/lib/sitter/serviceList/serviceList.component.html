@@ -9,10 +9,11 @@
   </button>
 </div>
 @if (displayForm){
-<pet-sitting-front-service-form></pet-sitting-front-service-form>
-}
+<pet-sitting-front-service-form></pet-sitting-front-service-form>}
+@if(sitterServiceList$ | async; as list){
+
 <ul class="list-service">
-  @for (service of sitterServiceList; track service.id){
+  @for (service of list; track service.id){
   <li>
     <pet-sitting-front-service-card
       [sitterService]="service"
@@ -20,3 +21,6 @@
   </li>
   }
 </ul>
+} @else {
+<p class="pt-3">Vous n'avez pas encore de service à proposer</p>
+}
