@@ -15,3 +15,14 @@ img.avatar {
   padding-top: 2rem;
   padding-left: 2rem;
 }
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+fa-icon {
+  width: 90%;
+  height: 90%;
+}

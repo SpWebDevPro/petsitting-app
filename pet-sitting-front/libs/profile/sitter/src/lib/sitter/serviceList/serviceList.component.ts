@@ -2,17 +2,26 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ServiceCardComponent } from './../serviceCard/serviceCard.component';
 import { ServiceFormComponent } from './../serviceForm/serviceForm.component';
-import {  ServiceModel } from '@pet-sitting-front/services';
+import { ServiceModel } from '@pet-sitting-front/services';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'pet-sitting-front-services-list',
   standalone: true,
-  imports: [CommonModule, ServiceCardComponent, ServiceFormComponent],
+  imports: [
+    CommonModule,
+    ServiceCardComponent,
+    ServiceFormComponent,
+    FontAwesomeModule,
+  ],
   templateUrl: './serviceList.component.html',
   styleUrl: './serviceList.component.scss',
 })
 export class ServicesListComponent {
   displayForm: boolean = false;
+  faPlus = faPlus;
+  //TODO : replace fake data by incoming data from Backend
   sitterServiceList: ServiceModel[] = [
     {
       id: 1,
@@ -22,7 +31,6 @@ export class ServicesListComponent {
       type: 'walk',
       dailyPrice: 15,
       userID: 4,
-    
     },
     {
       id: 2,

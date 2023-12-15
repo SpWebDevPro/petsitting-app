@@ -1,34 +1,33 @@
 <div class="card">
-    <div class="card-body">
-      <div class="card-top">
-        <div>
-          <h4 class="card-title">{{ sitterService.name }}</h4>
-          <h6 class="card-subtitle mb-2 text-muted">{{ sitterService.type }}</h6>
-        </div>
-        <div class="daily-price">
-          <h5>{{ sitterService.dailyPrice | currency : '€' }}</h5>
-        </div>
+  <div class="card-body">
+    <div class="card-top">
+      <div>
+        <h4 class="card-title">{{ sitterService.name }}</h4>
+        <h6 class="card-subtitle mb-2 text-muted">{{ sitterService.type }}</h6>
       </div>
-  
-      <p class="card-text">
-        {{ sitterService.description }}
-      </p>
-      <div class="actions">
-        <button
-          type="button"
-          class="btn btn-info btn-circle btn-circle-sm"
-          (click)="onModifyClick()"
-        >
-          <img src="./assets/icones/icons8-modifier-24.png" alt="modifier" />
-        </button>
-        <button
-          type="button"
-          class="btn btn-danger btn-circle btn-circle-sm"
-          (click)="onDeleteClick()"
-        >
-          <img src="./assets/icones/icons8-supprimer-24.png" alt="supprimer" />
-        </button>
+      <div class="daily-price">
+        <h5>{{ sitterService.dailyPrice | currency : '€' }}</h5>
       </div>
     </div>
+
+    <p class="card-text">
+      {{ sitterService.description }}
+    </p>
+    <div class="actions">
+      <button
+        type="button"
+        class="btn btn-info btn-circle btn-circle-sm"
+        (click)="onModifyClick()"
+      >
+        <fa-icon [icon]="faPlus" [style.color]="'FFFFFF'" size="xl"></fa-icon>
+      </button>
+      <button
+        type="button"
+        class="btn btn-danger btn-circle btn-circle-sm"
+        (click)="onDeleteClick()"
+      >
+        <fa-icon [icon]="faTrash" [style.color]="'FFFFFF'" size="lg"></fa-icon>
+      </button>
+    </div>
   </div>
-  
+</div>
