@@ -1,1 +1,10 @@
-<p>card-animal works!</p>
+<div class="container">
+  <div class="card">
+    <h2>{{ animal!.name }}</h2>
+    <p>Id : {{ animal!.id}}</p>
+    <p>weight : {{ animal!.weight}}</p>
+    <img src="{{ animal!.sprites.front_default}}" height=200px alt="{{ animal!.name }}">
+    <p>{{ animal.about }}</p>
+    <button (click)="onClick()">attrapez le !</button>
+  </div>
+</div>

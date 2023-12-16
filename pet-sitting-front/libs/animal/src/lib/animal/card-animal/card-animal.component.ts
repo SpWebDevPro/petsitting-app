@@ -8,4 +8,6 @@ import { CommonModule } from '@angular/common';
   templateUrl: './card-animal.component.html',
   styleUrl: './card-animal.component.scss',
 })
-export class CardAnimalComponent {}
+export class CardAnimalComponent {
+animal: any;
+}

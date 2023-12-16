@@ -23,3 +23,29 @@ export const appRoutes: Route[] = [
       import('@pet-sitting-front/animal').then((m) => m.AnimalComponent),
   }
 ];
+
+/*
+ {
+    path:``,
+    pathMatch:`full`,
+    loadComponent: ()=>import (`@org/home`).then((m)=>m.HomeComponent),
+  },{
+  path:'list/:pokemonName',
+  loadComponent:()=>
+  import('@org/details').then((m) => m.DetailsComponent)
+},
+{
+  path:'list',
+  pathMatch: 'full',
+  loadComponent:()=>
+  import('@org/list').then((m) => m.ListComponent)
+},
+{
+  path: 'pokemons',
+  pathMatch: 'full',
+  loadComponent: () => import('@org/list').then((m) => m.ListComponent),
+},
+{
+  path: '**',
+loadComponent: () => import('@org/routeNotFound').then(m => m.RouteNotFoundComponent)
+}*/
