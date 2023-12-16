@@ -4,7 +4,7 @@ export interface ServiceModel {
     id: number;
     name: string;
     description: string;
-    dailyPrice: number;
+    dailyPrice: number; 
     type: 'walk' | 'visit' | 'hosting';
     userID: number;
     user ?: UserModel;

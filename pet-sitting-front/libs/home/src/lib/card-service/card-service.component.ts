@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AccomodationTypeEnum, ServiceModel } from '@pet-sitting-front/services';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faBuilding, faBuildingUn, faCoffee, faHouse, faHouseChimney, faHouseUser } from '@fortawesome/free-solid-svg-icons';
+import {  faBuildingUn, faHouseUser } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'pet-sitting-front-card-service',

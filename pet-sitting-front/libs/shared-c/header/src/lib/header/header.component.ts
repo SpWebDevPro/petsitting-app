@@ -32,7 +32,6 @@ constructor(){
 }
 
 searchServices(value: any ) {
-  console.log(value)
   this.searchEvent.emit(value);
 }
 }
