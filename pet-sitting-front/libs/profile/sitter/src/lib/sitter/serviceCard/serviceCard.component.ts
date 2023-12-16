@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ServiceModel } from '@pet-sitting-front/services';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faPlus, faTrash } from '@fortawesome/free-solid-svg-icons';
+import { faPen, faTrash } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'pet-sitting-front-service-card',
@@ -15,14 +15,16 @@ export class ServiceCardComponent {
   @Input()
   sitterService!: ServiceModel;
 
-  faPlus = faPlus;
+  faPen = faPen;
   faTrash = faTrash;
 
   onModifyClick() {
     console.log("j'ai cliqué sur modifier");
+    //TODO
   }
 
   onDeleteClick() {
     console.log("j'ai cliqué sur supprimer");
+    //TODO
   }
 }

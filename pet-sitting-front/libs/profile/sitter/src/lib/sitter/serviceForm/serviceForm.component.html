@@ -8,9 +8,14 @@
       id="type"
       class="form-select"
     >
-      <option>Promenade</option>
-      <option>Visite</option>
-      <option>Hebergement</option>
+      <!--  @for( type of ServiceTypeEnum; track ){
+      <option>{{ type }}</option>
+      }  -->
+      <option value="{{ ServiceTypeEnum.WALK }}">Promenade</option>
+      <option value="{{ ServiceTypeEnum.HOSTING }}">
+        Hébergement à domicile
+      </option>
+      <option value="{{ ServiceTypeEnum.VISIT }}">Visite</option>
     </select>
     <p
       class="invalid-feedback mb-2"

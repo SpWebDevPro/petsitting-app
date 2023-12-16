@@ -13,11 +13,15 @@ export class SitterService {
     return this.httpClient.get<ServiceModel[]>(url);
   }
 
-  getSitterDataById(id: number) {}
-
   getServicesBySitterId(id: number) {
     const url = this.apiUrl + 'list/' + id;
     console.log(url);
     return this.httpClient.get<ServiceModel[]>(url);
+  }
+
+  createSitterService(servicedata: ServiceModel) {
+    const url = this.apiUrl + 'create';
+    console.log(url);
+    return this.httpClient.post<ServiceModel>(url, servicedata);
   }
 }

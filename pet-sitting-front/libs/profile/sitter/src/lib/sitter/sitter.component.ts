@@ -25,7 +25,6 @@ export class SitterComponent {
   userId = 4;
 
   onModifyClick() {
-    console.log("j'ai cliqué sur modifier");
     this.displayForm = !this.displayForm;
   }
 }
