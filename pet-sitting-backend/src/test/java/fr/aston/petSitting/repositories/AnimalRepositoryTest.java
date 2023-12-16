@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import fr.aston.petSitting.entities.Animal;
+import fr.aston.petSitting.entities.AnimalEntity;
 import fr.aston.petSitting.entities.AnimalTypeEnum;
 import fr.aston.petSitting.entities.GenderEnum;
 import fr.aston.petSitting.entities.User;
@@ -34,7 +34,7 @@ class AnimalRepositoryTest {
 	@Test
 	void testInsert() {
 
-		Animal catToInsert = new Animal();
+		AnimalEntity catToInsert = new AnimalEntity();
 		catToInsert.setDateOfBirth(new Date());
 		catToInsert.setGender(GenderEnum.FEMALE);
 		catToInsert.setIsSocial(true);
@@ -47,7 +47,7 @@ class AnimalRepositoryTest {
 
 		 catToInsert.setUser(user);
 
-		Animal insertedCat = animalRepository.save(catToInsert);
+		AnimalEntity insertedCat = animalRepository.save(catToInsert);
 		Assertions.assertNotNull(insertedCat, "The returned object must exist");
 		Assertions.assertTrue(insertedCat.getId() > 0, "The Id must exist");
 	}

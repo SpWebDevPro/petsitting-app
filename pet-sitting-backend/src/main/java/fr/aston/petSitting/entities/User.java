@@ -101,7 +101,7 @@ public class User implements Serializable {
 	// bi-directional many-to-one association to AnimalEntity
 	@JsonIgnore
 	@OneToMany(mappedBy = "user", fetch=FetchType.LAZY)
-	private List<Animal> animals;
+	private List<AnimalEntity> animalEntities;
 
 	// bi-directional many-to-one association to ServiceEntity
 	@JsonIgnore

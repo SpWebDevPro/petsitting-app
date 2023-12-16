@@ -50,7 +50,7 @@ public class Booking implements Serializable {
 	// bi-directional many-to-one association to AnimalEntity
 	@ManyToOne
 	@JoinColumn(name = "animal_id", nullable = false)
-	private Animal animal;
+	private AnimalEntity animalEntity;
 
 	// bi-directional many-to-one association to ServiceEntity
 	@ManyToOne

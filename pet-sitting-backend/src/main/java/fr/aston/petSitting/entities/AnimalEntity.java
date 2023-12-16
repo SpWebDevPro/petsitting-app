@@ -27,7 +27,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "animal")
-public class Animal implements Serializable {
+public class AnimalEntity implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 

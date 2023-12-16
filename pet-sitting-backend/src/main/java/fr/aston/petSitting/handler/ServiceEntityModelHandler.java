@@ -3,14 +3,13 @@ package fr.aston.petSitting.handler;
 import java.util.ArrayList;
 import java.util.List;
 
+import fr.aston.petSitting.entities.AnimalEntity;
 import fr.aston.petSitting.entities.Booking;
 import fr.aston.petSitting.entities.ServiceEntity;
 import fr.aston.petSitting.entities.User;
 import fr.aston.petSitting.modele.FindAllByDailyPriceBetweenOrTypeModelOut;
 import fr.aston.petSitting.modele.ServiceModele;
 import fr.aston.petSitting.services.UserService;
-
-
 
 public class ServiceEntityModelHandler {
 
@@ -46,7 +45,7 @@ public class ServiceEntityModelHandler {
 		return serviceEntity;
 
 	}
-	
+
 	public static FindAllByDailyPriceBetweenOrTypeModelOut fromEntity(ServiceEntity serviceEntity) {
 		FindAllByDailyPriceBetweenOrTypeModelOut resu = new FindAllByDailyPriceBetweenOrTypeModelOut();
 		resu.setDailyPrice(serviceEntity.getDailyPrice());
@@ -64,17 +63,20 @@ public class ServiceEntityModelHandler {
 			for (Booking e : bookingEntities) {
 				bookingIdies.add(e.getId());
 			}
-			
-			resu.setBookings(bookingIdies);
-		}
-	return resu;
-	}
 
-	public static List<FindAllByDailyPriceBetweenOrTypeModelOut> fromEntities (List<ServiceEntity> serviceEntities) {
-		List<FindAllByDailyPriceBetweenOrTypeModelOut> resu = new ArrayList<FindAllByDailyPriceBetweenOrTypeModelOut>();
-		for (ServiceEntity serviceEntity : serviceEntities) {
-			resu.add(fromEntity(serviceEntity));		
+			resu.setBookings(bookingIdies);
 		}
 		return resu;
 	}
+
+	public static List<FindAllByDailyPriceBetweenOrTypeModelOut> fromEntities(List<ServiceEntity> serviceEntities) {
+		List<FindAllByDailyPriceBetweenOrTypeModelOut> resu = new ArrayList<FindAllByDailyPriceBetweenOrTypeModelOut>();
+		for (ServiceEntity serviceEntity : serviceEntities) {
+			resu.add(fromEntity(serviceEntity));
+		}
+		return resu;
+	}
+
+
+
 }
