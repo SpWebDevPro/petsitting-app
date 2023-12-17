@@ -24,12 +24,18 @@ import { Subscription } from 'rxjs';
   styleUrl: './serviceList.component.scss',
 })
 export class ServicesListComponent {
+  //propriétés d'affichage
   displayForm: boolean = false;
   faPlus = faPlus;
 
+  //reçoit les propriétés du component parent 'sitterComponent'
   @Input()
-  //user!: UserModel;
+  titleSection: string = '';
+  @Input()
+  displaySitterProfileButtons!: boolean;
+  @Input()
   userId!: number;
+  //user!: UserModel;
 
   sitterServiceList: ServiceModel[] = [];
   getServicesSubscription: Subscription = new Subscription();

@@ -20,9 +20,16 @@ import { faPen } from '@fortawesome/free-solid-svg-icons';
   styleUrl: './sitter.component.scss',
 })
 export class SitterComponent {
+  //propriétés d'affichage
   displayForm: boolean = false;
   faPen = faPen;
+  titleSectionInfos: string = 'Mes informations';
+
+  //propriétés passés à l'enfant serviceList
+  displaySitterProfileButtons = true;
   userId = 4;
+  //user!: UserModel;
+  titleSectionServices: string = 'Mes services';
 
   onModifyClick() {
     this.displayForm = !this.displayForm;

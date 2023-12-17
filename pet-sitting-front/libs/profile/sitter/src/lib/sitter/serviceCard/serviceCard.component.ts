@@ -12,11 +12,17 @@ import { faPen, faTrash } from '@fortawesome/free-solid-svg-icons';
   styleUrl: './serviceCard.component.scss',
 })
 export class ServiceCardComponent {
-  @Input()
-  sitterService!: ServiceModel;
-
+  //propriétés d'affichage
   faPen = faPen;
   faTrash = faTrash;
+
+  //reçoit les propriétés du component parent serviceList
+  @Input()
+  sitterService!: ServiceModel;
+  @Input()
+  displaySitterProfileButtons: boolean = true;
+
+  displayBookingButtons = !this.displaySitterProfileButtons;
 
   onModifyClick() {
     console.log("j'ai cliqué sur modifier");
