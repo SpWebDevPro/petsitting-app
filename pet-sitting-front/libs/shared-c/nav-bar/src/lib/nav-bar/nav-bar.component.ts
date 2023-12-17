@@ -6,11 +6,12 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatMenuModule} from '@angular/material/menu';
 import {  NavBarService } from '@pet-sitting-front/services';
 import { Subscription } from 'rxjs';
+import { Route, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'pet-sitting-front-nav-bar',
   standalone: true,
-  imports: [CommonModule, ModalModule, ModalConnexionComponent , MatIconModule, MatMenuModule],
+  imports: [CommonModule, ModalModule, ModalConnexionComponent , MatIconModule, MatMenuModule, RouterModule],
   templateUrl: './nav-bar.component.html',
   styleUrl: './nav-bar.component.css',
   providers: [BsModalService]
@@ -71,4 +72,6 @@ this.navBarService.hide();
 
 
   }
+
+
 }

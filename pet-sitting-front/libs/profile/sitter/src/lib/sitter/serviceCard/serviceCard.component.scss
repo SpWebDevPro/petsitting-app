@@ -1,16 +1,26 @@
 div.card {
-    margin-top: 2rem;
-    margin-right: 2rem;
-    width: 350px;
-  }
-  
-  div.actions {
-    display: flex;
-    justify-content: flex-end;
-  }
-  
-  div.card-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-  }
+  margin-top: 2rem;
+  margin-right: 2rem;
+  width: 350px;
+}
+
+.card {
+  border-color: white;
+}
+
+div.actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+div.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

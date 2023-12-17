@@ -24,7 +24,6 @@ export class CardServiceComponent implements OnInit{
    }
    ngOnInit() {
 
-
    }
 
   

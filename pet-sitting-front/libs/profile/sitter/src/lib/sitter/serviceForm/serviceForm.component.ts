@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
   FormControl,
@@ -15,6 +15,10 @@ import {
   styleUrl: './serviceForm.component.scss',
 })
 export class ServiceFormComponent {
+  @Input()
+  //user!: UserModel;
+  userId!: number;
+
   serviceForm = new FormGroup({
     description: new FormControl('', [Validators.required]),
     type: new FormControl('', [Validators.required]),

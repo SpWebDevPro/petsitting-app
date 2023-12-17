@@ -1,0 +1,23 @@
+div.accomodation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 450px;
+}
+
+div.accomodation-details-left {
+  display: flex;
+  justify-content: flex-start;
+}
+div.accomodation-details-left p {
+  margin-right: 10px;
+}
+
+div.has-vehicule {
+  display: flex;
+  justify-content: flex-start;
+}
+
+fa-icon {
+  padding-right: 5px;
+}

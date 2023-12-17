@@ -16,10 +16,18 @@ export class SitterService {
 
   }
   
-  auCompletion( address :string){
+  auCompletionAdress( address :string){
 //    curl 'https://api-adresse.data.gouv.fr/search/?q=20%20avenue%20de%20S%C3%A9gur%2C%20Paris&type=housenumber&autocomplete=1'
 
     const url = this.apiUrl + '?q='+address+"&autocomplete=1";
+    return this.httpClient.get<ServiceModel[]>(url);
+  }
+
+  getSitterDataById(id: number) {}
+
+  getServicesBySitterId(id: number) {
+    const url = this.apiUrl + 'list/' + id;
+    console.log(url);
     return this.httpClient.get<ServiceModel[]>(url);
   }
  

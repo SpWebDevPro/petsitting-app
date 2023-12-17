@@ -14,7 +14,7 @@ export interface UserModel {
     postalCode?: string;
     city?: string;
     pays?:string;
-    livingSpace?:number;
+    livingSpace?:string;
     hasGaden?: boolean;
     hasVehicule ?: boolean;
     telephone?: string;
@@ -25,3 +25,4 @@ export interface UserModel {
     status ?: 'AVAILABLE' | 'NOTAVAILABLE' | 'BANNED';
 
   }
+
