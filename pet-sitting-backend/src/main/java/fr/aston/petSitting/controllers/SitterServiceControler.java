@@ -69,8 +69,6 @@ public class SitterServiceControler {
 			@RequestParam(name = "type", required = false) String type,
 			@RequestParam(name = "city", required = false) String city) {
 
-		System.out.println(type);
-		System.out.println(city);
 		List<ServiceEntity> resultat = this.service.selectServicewithType(ServiceEnum.getEnum(type), city);
 
 		List<ServiceModele> resultatModel = ServiceEntityModelHandler.createListModelFromEntities(resultat);

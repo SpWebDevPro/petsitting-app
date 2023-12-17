@@ -29,8 +29,12 @@ export class HeaderComponent {
     this.listAnimalTypes = Object.keys(AnimalTypeEnum);
   }
 
+
+ 
+
+
+
   searchServices(value: any) {
-    console.log(value);
     this.searchEvent.emit(value);
   }
 }

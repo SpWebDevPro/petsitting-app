@@ -1,18 +1,28 @@
-import { AccomodationTypeEnum } from './accomodation.enum';
+import { AccomodationTypeEnum } from "./accomodation.enum";
+import { RoleEnum } from "./role.enum";
 
 export interface UserModel {
-  id: number;
-  lastName: string;
-  firstName: string;
+    id?: number;
+    lastName?: string;
+    firstName?: string;
 
-  about: string;
-  dailyPrice: number;
-  image?: string;
-  accomodationType: AccomodationTypeEnum;
-  address: string;
-  postalCode: string;
-  city: string;
-  livingSpace: string;
-  hasGaden: boolean;
-  hasVehicule: boolean;
-}
+    about?: string;
+    dailyPrice?: number;
+    image? : string;
+    accomodationType?: AccomodationTypeEnum;
+    address?: string;
+    postalCode?: string;
+    city?: string;
+    pays?:string;
+    livingSpace?:string;
+    hasGaden?: boolean;
+    hasVehicule ?: boolean;
+    telephone?: string;
+    email?: string;
+    password?:string
+    role ?: RoleEnum,
+    dateOfBirth? : Date;
+    status ?: 'AVAILABLE' | 'NOTAVAILABLE' | 'BANNED';
+
+  }
+

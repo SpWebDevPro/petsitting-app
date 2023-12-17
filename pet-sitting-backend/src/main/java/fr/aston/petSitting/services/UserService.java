@@ -1,5 +1,7 @@
 package fr.aston.petSitting.services;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,4 +19,12 @@ public class UserService {
 		return this.userRepository.findById(id).get();
 	}
 
+	
+	public User createUser(User user) {
+		return this.userRepository.save(user);
+	}
+	
+	public Optional<User>  getUserByEmailAndPassword(String email, String password) {
+		return this.userRepository.findByEmailAndPassword(email, password);
+	}
 }

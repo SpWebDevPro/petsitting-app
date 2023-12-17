@@ -20,8 +20,9 @@ import fr.aston.petSitting.entities.User;
 public interface UserRepository extends JpaRepository<User, Integer> {
 	
 	
-	public  Optional<User> findOneByEmail(String email);
+	public  Optional<User> findByEmailAndPassword(String email, String password);
 	
 	public List<User> findByFirstNameContains(String name);
+	
 
 }

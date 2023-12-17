@@ -33,13 +33,16 @@
         <span class="ml-3">{{ serviceModel.user?.accomodationType }}</span>
       </div>
 
-      <div class="text mt-3 mb-5">
-        <span
-          >{{ serviceModel.name }}<br /><br />
-          {{ serviceModel.description }}
-        </span>
+      <div class="text mt-3 mb-2">
+        <h4 >
+          {{ serviceModel.name }}
+        </h4>
       </div>
-      <span>{{ serviceModel.dailyPrice }} $/jour </span>
+        
+        <p>    {{ serviceModel.description }}</p>
+  
+   
+      <span>{{ serviceModel.dailyPrice }} €/jour </span>
       <div class="d-flex mt-2">
         <button class="btn btn-primary btn-lg">Voir le profil</button>
       </div>
