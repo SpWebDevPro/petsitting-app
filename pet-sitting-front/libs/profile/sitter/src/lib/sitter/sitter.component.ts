@@ -5,6 +5,8 @@ import { DataSitterComponent } from './dataSitter/dataSitter.component';
 import { DataSitterFormComponent } from './dataSitterForm/dataSitterForm.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faPen } from '@fortawesome/free-solid-svg-icons';
+import { EMPTY, Observable, catchError } from 'rxjs';
+import { UserModel, UserService } from '@pet-sitting-front/services';
 
 @Component({
   selector: 'pet-sitting-front-sitter',
@@ -25,11 +27,28 @@ export class SitterComponent {
   faPen = faPen;
   titleSectionInfos: string = 'Mes informations';
 
-  //propriétés passés à l'enfant serviceList
+  //propriétés passées aux enfants serviceList et dataSitter
   displaySitterProfileButtons = true;
-  userId = 4;
-  //user!: UserModel;
+  userId!: number;
+  user$!: Observable<UserModel>;
   titleSectionServices: string = 'Mes services';
+
+  constructor(private userService: UserService) {}
+
+  ngOnInit() {
+    if (localStorage.getItem('UserConnected') !== null) {
+      this.userId = +localStorage.getItem('UserConnected')!;
+    }
+
+    if (this.userId) {
+      this.user$ = this.userService.getUserById(this.userId).pipe(
+        catchError((error) => {
+          console.error(error);
+          return EMPTY;
+        })
+      );
+    }
+  }
 
   onModifyClick() {
     this.displayForm = !this.displayForm;

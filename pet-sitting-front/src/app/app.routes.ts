@@ -1,9 +1,6 @@
 import { Route } from '@angular/router';
-/* import { SitterProfileComponent } from '@pet-sitting-front/sitter-profile'; */
-/* import { AppComponent } from './app.component'; */
 
 export const appRoutes: Route[] = [
-
   {
     path: '',
     pathMatch: 'full',
@@ -11,15 +8,28 @@ export const appRoutes: Route[] = [
       import('@pet-sitting-front/home').then((m) => m.HomeComponent),
   },
   {
+    path: 'sitter/:userId/:serviceId',
+    pathMatch: 'full',
+    loadComponent: () =>
+      import('@pet-sitting-front/sitter').then((m) => m.PublicSitterComponent),
+  },
+
+  {
     path: 'sitter-profile',
     pathMatch: 'full',
     loadComponent: () =>
       import('@pet-sitting-front/sitter').then((m) => m.SitterComponent),
-  },{
-
-  path: 'animal-list',
+  },
+  {
+    path: 'animal-list',
     pathMatch: 'full',
     loadComponent: () =>
       import('@pet-sitting-front/animal').then((m) => m.AnimalComponent),
-  }
+  },
+  {
+    path: 'booking/:serviceId',
+    pathMatch: 'full',
+    loadComponent: () =>
+      import('@pet-sitting-front/booking').then((m) => m.BookingComponent),
+  },
 ];

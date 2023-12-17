@@ -12,6 +12,7 @@
 </div>
 @if (displayForm){
 <pet-sitting-front-service-form
+  [userId]="userId"
   (newServiceCreated)="addNewServiceToList($event)"
 ></pet-sitting-front-service-form
 >} @if(sitterServiceList; as list){

@@ -1,0 +1,30 @@
+div.left {
+  background-color: #222222;
+  color: #eeeeee;
+  display: flex;
+  flex-direction: column;
+}
+
+.welcome {
+  padding-top: 2rem;
+}
+
+.card {
+  background-color: #efefef;
+  border-color: #efefef;
+}
+
+div.sitter-profile-title {
+  margin-top: 3rem;
+  display: flex;
+}
+
+img.avatar {
+  padding-top: 2rem;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

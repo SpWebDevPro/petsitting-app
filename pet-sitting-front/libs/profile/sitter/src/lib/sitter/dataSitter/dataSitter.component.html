@@ -1,19 +1,19 @@
 <div>
   <div class="about mt-4">
     <h4>A propos</h4>
-    <p>{{ sitter.about }}</p>
+    <p>{{ user.about }}</p>
   </div>
 
   <div class="accomodation mt-xl-5">
     <div class="accomodation-details-left">
       <fa-icon [icon]="faHouse" [style.color]="'#eb6864'" size="xl"></fa-icon>
-      <p>{{ sitter.accomodationType }}</p>
-      <p>{{ sitter.livingSpace }}</p>
+      <p>{{ user.accomodationType }}</p>
+      <p>{{ user.livingSpace }} m2</p>
     </div>
 
     <div class="accomodation-details-left">
       <fa-icon [icon]="faTree" [style.color]="'#eb6864'" size="xl"></fa-icon>
-      @if(sitter.hasGaden){
+      @if(user.hasGaden){
       <p>Avec jardin</p>
       } @else {
       <p>Pas de jardin</p>
@@ -21,7 +21,7 @@
     </div>
     <div class="has-vehicule ml-5">
       <fa-icon [icon]="faCar" [style.color]="'#eb6864'" size="xl"></fa-icon>
-      @if(sitter.hasVehicule){
+      @if(user.hasVehicule){
       <p>Véhiculé</p>
       } @else {
       <p>Non véhiculé</p>

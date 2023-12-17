@@ -22,23 +22,23 @@ public class UserModelHandler {
 	public static UserModel createModelFromEntity(User user) {
 		UserModel userModel = new UserModel();
 		userModel.setId(user.getId());
-		userModel.setAbout(userModel.getAbout());
-		userModel.setFirstName(userModel.getFirstName());
-		userModel.setLastName(userModel.getLastName());
-		userModel.setEmail(userModel.getEmail());
-		userModel.setPassword(userModel.getPassword());
-		userModel.setAddress(userModel.getAddress());
-		userModel.setCity(userModel.getCity());
-		userModel.setPostalCode(userModel.getPostalCode());
-		userModel.setDateOfBirth(userModel.getDateOfBirth());
-		userModel.setHasGarden(userModel.getHasGarden());
-		userModel.setHasVehicule(userModel.getHasVehicule());
-		userModel.setLivingSpace(userModel.getLivingSpace());
-		userModel.setRole(userModel.getRole());
-		userModel.setPassword(userModel.getPays());
-		userModel.setStatus(userModel.getStatus());
-		userModel.setTelephone(userModel.getPays());
-		userModel.setPays(userModel.getTelephone());
+		userModel.setAbout(user.getAbout());
+		userModel.setFirstName(user.getFirstName());
+		userModel.setLastName(user.getLastName());
+		userModel.setEmail(user.getEmail());
+		userModel.setPassword(user.getPassword());
+		userModel.setAddress(user.getAddress());
+		userModel.setCity(user.getCity());
+		userModel.setPostalCode(user.getPostalCode());
+		userModel.setDateOfBirth(user.getDateOfBirth());
+		userModel.setHasGarden(user.getHasGarden());
+		userModel.setHasVehicule(user.getHasVehicule());
+		userModel.setLivingSpace(user.getLivingSpace());
+		userModel.setRole(user.getRole());
+		userModel.setPassword(user.getPays());
+		userModel.setStatus(user.getStatus());
+		userModel.setTelephone(user.getPays());
+		userModel.setPays(user.getTelephone());
 
 
 		return userModel;

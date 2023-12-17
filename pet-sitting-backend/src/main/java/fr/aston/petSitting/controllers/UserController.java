@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import fr.aston.petSitting.entities.User;
 import fr.aston.petSitting.handler.UserModelHandler;
+import fr.aston.petSitting.modele.UserModel;
 import fr.aston.petSitting.services.UserService;
 
 @CrossOrigin(origins = "*", allowedHeaders = "*")
@@ -47,5 +49,19 @@ public class UserController {
 		System.out.println(userConncted);
 		return ResponseEntity.ok(userConncted);
 
+	}
+
+
+	@GetMapping("/{idUser}")
+	public ResponseEntity<UserModel> getUserByIdControler(@PathVariable("idUser") int idUser) {
+		System.out.println("tu m'as appelé-----------------------------------------------------------------");
+			User resultat = this.userService.getUserById(idUser);
+			System.out.println(resultat);
+			System.out.println("-----------------------------------------------------------------");
+			System.out.println(resultat.getFirstName());
+			System.out.println("-----------------------------------------------------------------");
+			UserModel resultatModel = UserModelHandler.createModelFromEntity(resultat);
+			return ResponseEntity.ok(resultatModel);
+		
 	}
 }
