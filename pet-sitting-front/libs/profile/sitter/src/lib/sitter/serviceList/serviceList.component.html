@@ -9,8 +9,10 @@
   </button>
 </div>
 @if (displayForm){
-<pet-sitting-front-service-form></pet-sitting-front-service-form>}
-@if(sitterServiceList$ | async; as list){
+<pet-sitting-front-service-form
+  (newServiceCreated)="addNewServiceToList($event)"
+></pet-sitting-front-service-form
+>} @if(sitterServiceList; as list){
 
 <ul class="list-service">
   @for (service of list; track service.id){

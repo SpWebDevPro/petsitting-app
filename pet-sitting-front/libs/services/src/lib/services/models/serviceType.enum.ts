@@ -1,3 +1,5 @@
-export enum ServiceEnum {
-    WALK=  "WALK", VISIT= "VISIT", HOSTING="HOSTING"
+export enum ServiceTypeEnum {
+  WALK = 'WALK',
+  VISIT = 'VISIT',
+  HOSTING = 'HOSTING',
 }
