@@ -1,5 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 
+body {
+  min-height: 100vh;
+}
+
 /*
 *
 * ==========================================
@@ -15,23 +19,10 @@ button.btn.btn-circle.btn-circle-sm {
   margin-left: 10px;
 }
 
-button.btn.btn-circle.btn-circle-sm img {
-  position: relative;
-  top: -4px;
-  right: 11px;
-}
-
 button.btn.btn-circle.btn-circle-lg {
   width: 50px;
   height: 50px;
   border-radius: 40px;
-}
-
-button.btn.btn-circle.btn-circle-lg img {
-  position: relative;
-  //TODO
-  /* top: -5px;
-    right: 11px;  */
 }
 
 button.btn.btn-circle.btn-circle-xl {
@@ -46,3 +37,5 @@ button.btn.btn-circle.btn-circle-xl img {
   /* top: -5px;
     right: 11px;  */
 }
+
+

@@ -1,0 +1,408 @@
+{
+  "nodes": {
+    "nav-bar": {
+      "name": "nav-bar",
+      "type": "lib",
+      "data": {
+        "root": "shared-c/nav-bar",
+        "name": "nav-bar",
+        "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "libs/shared-c/nav-bar/src",
+        "prefix": "pet-sitting-front",
+        "tags": [],
+        "projectType": "library",
+        "targets": {
+          "test": {
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/{projectRoot}"
+            ],
+            "options": {
+              "jestConfig": "libs/shared-c/nav-bar/jest.config.ts"
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "executor": "@nx/eslint:lint",
+            "outputs": [
+              "{options.outputFile}"
+            ],
+            "options": {
+              "lintFilePatterns": [
+                "libs/shared-c/nav-bar/**/*.ts",
+                "libs/shared-c/nav-bar/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "implicitDependencies": []
+      }
+    },
+    "header": {
+      "name": "header",
+      "type": "lib",
+      "data": {
+        "root": "shared-c/header",
+        "name": "header",
+        "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "libs/shared-c/header/src",
+        "prefix": "pet-sitting-front",
+        "tags": [],
+        "projectType": "library",
+        "targets": {
+          "test": {
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/{projectRoot}"
+            ],
+            "options": {
+              "jestConfig": "libs/shared-c/header/jest.config.ts"
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "executor": "@nx/eslint:lint",
+            "outputs": [
+              "{options.outputFile}"
+            ],
+            "options": {
+              "lintFilePatterns": [
+                "libs/shared-c/header/**/*.ts",
+                "libs/shared-c/header/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "implicitDependencies": []
+      }
+    },
+    "authentication": {
+      "name": "authentication",
+      "type": "lib",
+      "data": {
+        "root": "authentication",
+        "name": "authentication",
+        "$schema": "../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "libs/authentication/src",
+        "prefix": "pet-sitting-front",
+        "tags": [],
+        "projectType": "library",
+        "targets": {
+          "test": {
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/{projectRoot}"
+            ],
+            "options": {
+              "jestConfig": "libs/authentication/jest.config.ts"
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "executor": "@nx/eslint:lint",
+            "outputs": [
+              "{options.outputFile}"
+            ],
+            "options": {
+              "lintFilePatterns": [
+                "libs/authentication/**/*.ts",
+                "libs/authentication/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "implicitDependencies": []
+      }
+    },
+    "parent": {
+      "name": "parent",
+      "type": "lib",
+      "data": {
+        "root": "profile/parent",
+        "name": "parent",
+        "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "libs/profile/parent/src",
+        "prefix": "pet-sitting-front",
+        "tags": [],
+        "projectType": "library",
+        "targets": {
+          "test": {
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/{projectRoot}"
+            ],
+            "options": {
+              "jestConfig": "libs/profile/parent/jest.config.ts"
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "executor": "@nx/eslint:lint",
+            "outputs": [
+              "{options.outputFile}"
+            ],
+            "options": {
+              "lintFilePatterns": [
+                "libs/profile/parent/**/*.ts",
+                "libs/profile/parent/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "implicitDependencies": []
+      }
+    },
+    "sitter": {
+      "name": "sitter",
+      "type": "lib",
+      "data": {
+        "root": "profile/sitter",
+        "name": "sitter",
+        "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "libs/profile/sitter/src",
+        "prefix": "pet-sitting-front",
+        "tags": [],
+        "projectType": "library",
+        "targets": {
+          "test": {
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/{projectRoot}"
+            ],
+            "options": {
+              "jestConfig": "libs/profile/sitter/jest.config.ts"
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "executor": "@nx/eslint:lint",
+            "outputs": [
+              "{options.outputFile}"
+            ],
+            "options": {
+              "lintFilePatterns": [
+                "libs/profile/sitter/**/*.ts",
+                "libs/profile/sitter/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "implicitDependencies": []
+      }
+    },
+    "user": {
+      "name": "user",
+      "type": "lib",
+      "data": {
+        "root": "profile/user",
+        "name": "user",
+        "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "libs/profile/user/src",
+        "prefix": "pet-sitting-front",
+        "tags": [],
+        "projectType": "library",
+        "targets": {
+          "test": {
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/{projectRoot}"
+            ],
+            "options": {
+              "jestConfig": "libs/profile/user/jest.config.ts"
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "executor": "@nx/eslint:lint",
+            "outputs": [
+              "{options.outputFile}"
+            ],
+            "options": {
+              "lintFilePatterns": [
+                "libs/profile/user/**/*.ts",
+                "libs/profile/user/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "implicitDependencies": []
+      }
+    },
+    "services": {
+      "name": "services",
+      "type": "lib",
+      "data": {
+        "root": "services",
+        "name": "services",
+        "$schema": "../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "libs/services/src",
+        "prefix": "pet-sitting-front",
+        "tags": [],
+        "projectType": "library",
+        "targets": {
+          "test": {
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/{projectRoot}"
+            ],
+            "options": {
+              "jestConfig": "libs/services/jest.config.ts"
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "executor": "@nx/eslint:lint",
+            "outputs": [
+              "{options.outputFile}"
+            ],
+            "options": {
+              "lintFilePatterns": [
+                "libs/services/**/*.ts",
+                "libs/services/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "implicitDependencies": []
+      }
+    },
+    "booking": {
+      "name": "booking",
+      "type": "lib",
+      "data": {
+        "root": "booking",
+        "name": "booking",
+        "$schema": "../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "libs/booking/src",
+        "prefix": "pet-sitting-front",
+        "tags": [],
+        "projectType": "library",
+        "targets": {
+          "test": {
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/{projectRoot}"
+            ],
+            "options": {
+              "jestConfig": "libs/booking/jest.config.ts"
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "executor": "@nx/eslint:lint",
+            "outputs": [
+              "{options.outputFile}"
+            ],
+            "options": {
+              "lintFilePatterns": [
+                "libs/booking/**/*.ts",
+                "libs/booking/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "implicitDependencies": []
+      }
+    },
+    "animal": {
+      "name": "animal",
+      "type": "lib",
+      "data": {
+        "root": "animal",
+        "name": "animal",
+        "$schema": "../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "libs/animal/src",
+        "prefix": "pet-sitting-front",
+        "tags": [],
+        "projectType": "library",
+        "targets": {
+          "test": {
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/{projectRoot}"
+            ],
+            "options": {
+              "jestConfig": "libs/animal/jest.config.ts"
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "executor": "@nx/eslint:lint",
+            "outputs": [
+              "{options.outputFile}"
+            ],
+            "options": {
+              "lintFilePatterns": [
+                "libs/animal/**/*.ts",
+                "libs/animal/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "implicitDependencies": []
+      }
+    },
+    "home": {
+      "name": "home",
+      "type": "lib",
+      "data": {
+        "root": "home",
+        "name": "home",
+        "$schema": "../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "libs/home/src",
+        "prefix": "pet-sitting-front",
+        "tags": [],
+        "projectType": "library",
+        "targets": {
+          "test": {
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/{projectRoot}"
+            ],
+            "options": {
+              "jestConfig": "libs/home/jest.config.ts"
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "executor": "@nx/eslint:lint",
+            "outputs": [
+              "{options.outputFile}"
+            ],
+            "options": {
+              "lintFilePatterns": [
+                "libs/home/**/*.ts",
+                "libs/home/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "implicitDependencies": []
+      }
+    }
+  },
+  "externalNodes": {},
+  "dependencies": {
+    "nav-bar": [],
+    "header": [],
+    "authentication": [],
+    "parent": [],
+    "sitter": [],
+    "user": [],
+    "services": [],
+    "booking": [],
+    "animal": [],
+    "home": []
+  },
+  "version": "6.0"
+}

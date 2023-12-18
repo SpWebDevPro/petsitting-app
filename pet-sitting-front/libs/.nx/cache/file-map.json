@@ -1,0 +1,736 @@
+{
+  "version": "6.0",
+  "nxVersion": "17.1.3",
+  "deps": {},
+  "pathMappings": {},
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "projectFileMap": {
+      "sitter": [
+        {
+          "file": "profile/sitter/.eslintrc.json",
+          "hash": "12354204209954383740"
+        },
+        {
+          "file": "profile/sitter/README.md",
+          "hash": "3716931438605115420"
+        },
+        {
+          "file": "profile/sitter/jest.config.ts",
+          "hash": "7747840073590610450"
+        },
+        {
+          "file": "profile/sitter/project.json",
+          "hash": "16656194712964910467"
+        },
+        {
+          "file": "profile/sitter/src/index.ts",
+          "hash": "10832729903388692331"
+        },
+        {
+          "file": "profile/sitter/src/lib/sitter/dataSitter/dataSitter.component.html",
+          "hash": "16178197945545012338"
+        },
+        {
+          "file": "profile/sitter/src/lib/sitter/dataSitter/dataSitter.component.scss",
+          "hash": "15160552097573413291"
+        },
+        {
+          "file": "profile/sitter/src/lib/sitter/dataSitter/dataSitter.component.spec.ts",
+          "hash": "6899658817005627830"
+        },
+        {
+          "file": "profile/sitter/src/lib/sitter/dataSitter/dataSitter.component.ts",
+          "hash": "13093039517715232805"
+        },
+        {
+          "file": "profile/sitter/src/lib/sitter/dataSitterForm/dataSitterForm.component.html",
+          "hash": "9554744618545865846"
+        },
+        {
+          "file": "profile/sitter/src/lib/sitter/dataSitterForm/dataSitterForm.component.scss",
+          "hash": "11745381028842535832"
+        },
+        {
+          "file": "profile/sitter/src/lib/sitter/dataSitterForm/dataSitterForm.component.spec.ts",
+          "hash": "6631455048213961901"
+        },
+        {
+          "file": "profile/sitter/src/lib/sitter/dataSitterForm/dataSitterForm.component.ts",
+          "hash": "17425771464293728135"
+        },
+        {
+          "file": "profile/sitter/src/lib/sitter/serviceCard/serviceCard.component.html",
+          "hash": "12757555997007216320"
+        },
+        {
+          "file": "profile/sitter/src/lib/sitter/serviceCard/serviceCard.component.scss",
+          "hash": "13107719906291697145"
+        },
+        {
+          "file": "profile/sitter/src/lib/sitter/serviceCard/serviceCard.component.spec.ts",
+          "hash": "9095217657517759562"
+        },
+        {
+          "file": "profile/sitter/src/lib/sitter/serviceCard/serviceCard.component.ts",
+          "hash": "7343626407184461497"
+        },
+        {
+          "file": "profile/sitter/src/lib/sitter/serviceForm/serviceForm.component.html",
+          "hash": "3506510564548694045"
+        },
+        {
+          "file": "profile/sitter/src/lib/sitter/serviceForm/serviceForm.component.scss",
+          "hash": "4375631732772310829"
+        },
+        {
+          "file": "profile/sitter/src/lib/sitter/serviceForm/serviceForm.component.spec.ts",
+          "hash": "7718401480994443409"
+        },
+        {
+          "file": "profile/sitter/src/lib/sitter/serviceForm/serviceForm.component.ts",
+          "hash": "15999038815673655190"
+        },
+        {
+          "file": "profile/sitter/src/lib/sitter/serviceList/serviceList.component.html",
+          "hash": "5734788997898490798"
+        },
+        {
+          "file": "profile/sitter/src/lib/sitter/serviceList/serviceList.component.scss",
+          "hash": "13210392166559474728"
+        },
+        {
+          "file": "profile/sitter/src/lib/sitter/serviceList/serviceList.component.spec.ts",
+          "hash": "3967967025485459223"
+        },
+        {
+          "file": "profile/sitter/src/lib/sitter/serviceList/serviceList.component.ts",
+          "hash": "2611069084067106033"
+        },
+        {
+          "file": "profile/sitter/src/lib/sitter/sitter.component.html",
+          "hash": "6772808939302361866"
+        },
+        {
+          "file": "profile/sitter/src/lib/sitter/sitter.component.scss",
+          "hash": "1956512807424653086"
+        },
+        {
+          "file": "profile/sitter/src/lib/sitter/sitter.component.spec.ts",
+          "hash": "78779453089911371"
+        },
+        {
+          "file": "profile/sitter/src/lib/sitter/sitter.component.ts",
+          "hash": "7041667233385162739"
+        },
+        {
+          "file": "profile/sitter/src/test-setup.ts",
+          "hash": "12935735732682149507"
+        },
+        {
+          "file": "profile/sitter/tsconfig.json",
+          "hash": "8526453262384300416"
+        },
+        {
+          "file": "profile/sitter/tsconfig.lib.json",
+          "hash": "6020606002228403423"
+        },
+        {
+          "file": "profile/sitter/tsconfig.spec.json",
+          "hash": "7159729809249402441"
+        }
+      ],
+      "parent": [
+        {
+          "file": "profile/parent/.eslintrc.json",
+          "hash": "12354204209954383740"
+        },
+        {
+          "file": "profile/parent/README.md",
+          "hash": "1360081581391520697"
+        },
+        {
+          "file": "profile/parent/jest.config.ts",
+          "hash": "12143361140711734022"
+        },
+        {
+          "file": "profile/parent/project.json",
+          "hash": "17891026843529389642"
+        },
+        {
+          "file": "profile/parent/src/index.ts",
+          "hash": "14584284166169257074"
+        },
+        {
+          "file": "profile/parent/src/lib/parent/parent.component.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "profile/parent/src/lib/parent/parent.component.html",
+          "hash": "6463466398937550504"
+        },
+        {
+          "file": "profile/parent/src/lib/parent/parent.component.spec.ts",
+          "hash": "3858113413905542711"
+        },
+        {
+          "file": "profile/parent/src/lib/parent/parent.component.ts",
+          "hash": "10129994288551661493"
+        },
+        {
+          "file": "profile/parent/src/test-setup.ts",
+          "hash": "12935735732682149507"
+        },
+        {
+          "file": "profile/parent/tsconfig.json",
+          "hash": "8526453262384300416"
+        },
+        {
+          "file": "profile/parent/tsconfig.lib.json",
+          "hash": "6020606002228403423"
+        },
+        {
+          "file": "profile/parent/tsconfig.spec.json",
+          "hash": "7159729809249402441"
+        }
+      ],
+      "booking": [
+        {
+          "file": "booking/.eslintrc.json",
+          "hash": "9920619745995326579"
+        },
+        {
+          "file": "booking/README.md",
+          "hash": "4670146456634699013"
+        },
+        {
+          "file": "booking/jest.config.ts",
+          "hash": "3870586908883512949"
+        },
+        {
+          "file": "booking/project.json",
+          "hash": "3409956653890837976"
+        },
+        {
+          "file": "booking/src/index.ts",
+          "hash": "13719116598388444604"
+        },
+        {
+          "file": "booking/src/lib/booking/booking.component.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "booking/src/lib/booking/booking.component.html",
+          "hash": "15595067795620530627"
+        },
+        {
+          "file": "booking/src/lib/booking/booking.component.spec.ts",
+          "hash": "15553316178584988597"
+        },
+        {
+          "file": "booking/src/lib/booking/booking.component.ts",
+          "hash": "5260473707297464494"
+        },
+        {
+          "file": "booking/src/test-setup.ts",
+          "hash": "12935735732682149507"
+        },
+        {
+          "file": "booking/tsconfig.json",
+          "hash": "15487755565970508470"
+        },
+        {
+          "file": "booking/tsconfig.lib.json",
+          "hash": "5796668385415907511"
+        },
+        {
+          "file": "booking/tsconfig.spec.json",
+          "hash": "2927375835638640771"
+        }
+      ],
+      "nav-bar": [
+        {
+          "file": "shared-c/nav-bar/.eslintrc.json",
+          "hash": "12354204209954383740"
+        },
+        {
+          "file": "shared-c/nav-bar/README.md",
+          "hash": "6900775665824513694"
+        },
+        {
+          "file": "shared-c/nav-bar/jest.config.ts",
+          "hash": "448820486206357938"
+        },
+        {
+          "file": "shared-c/nav-bar/project.json",
+          "hash": "16211887886148966016"
+        },
+        {
+          "file": "shared-c/nav-bar/src/index.ts",
+          "hash": "9138878184931875948"
+        },
+        {
+          "file": "shared-c/nav-bar/src/lib/nav-bar/nav-bar.component.css",
+          "hash": "15411351071540391198"
+        },
+        {
+          "file": "shared-c/nav-bar/src/lib/nav-bar/nav-bar.component.html",
+          "hash": "15087719628750364504"
+        },
+        {
+          "file": "shared-c/nav-bar/src/lib/nav-bar/nav-bar.component.spec.ts",
+          "hash": "5016561092919387692"
+        },
+        {
+          "file": "shared-c/nav-bar/src/lib/nav-bar/nav-bar.component.ts",
+          "hash": "11010734244701986190"
+        },
+        {
+          "file": "shared-c/nav-bar/src/test-setup.ts",
+          "hash": "12935735732682149507"
+        },
+        {
+          "file": "shared-c/nav-bar/tsconfig.json",
+          "hash": "8526453262384300416"
+        },
+        {
+          "file": "shared-c/nav-bar/tsconfig.lib.json",
+          "hash": "6020606002228403423"
+        },
+        {
+          "file": "shared-c/nav-bar/tsconfig.spec.json",
+          "hash": "7159729809249402441"
+        }
+      ],
+      "user": [
+        {
+          "file": "profile/user/.eslintrc.json",
+          "hash": "12354204209954383740"
+        },
+        {
+          "file": "profile/user/README.md",
+          "hash": "5227263925268491186"
+        },
+        {
+          "file": "profile/user/jest.config.ts",
+          "hash": "12867058720679178395"
+        },
+        {
+          "file": "profile/user/project.json",
+          "hash": "14439791424314171419"
+        },
+        {
+          "file": "profile/user/src/index.ts",
+          "hash": "13456488465132845258"
+        },
+        {
+          "file": "profile/user/src/lib/user/user.component.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "profile/user/src/lib/user/user.component.html",
+          "hash": "763390364762735682"
+        },
+        {
+          "file": "profile/user/src/lib/user/user.component.spec.ts",
+          "hash": "1877022108638086974"
+        },
+        {
+          "file": "profile/user/src/lib/user/user.component.ts",
+          "hash": "1355792233422833271"
+        },
+        {
+          "file": "profile/user/src/test-setup.ts",
+          "hash": "12935735732682149507"
+        },
+        {
+          "file": "profile/user/tsconfig.json",
+          "hash": "8526453262384300416"
+        },
+        {
+          "file": "profile/user/tsconfig.lib.json",
+          "hash": "6020606002228403423"
+        },
+        {
+          "file": "profile/user/tsconfig.spec.json",
+          "hash": "7159729809249402441"
+        }
+      ],
+      "authentication": [
+        {
+          "file": "authentication/.eslintrc.json",
+          "hash": "9920619745995326579"
+        },
+        {
+          "file": "authentication/README.md",
+          "hash": "13942167799478644483"
+        },
+        {
+          "file": "authentication/jest.config.ts",
+          "hash": "5673915789136997471"
+        },
+        {
+          "file": "authentication/project.json",
+          "hash": "12559404909861362496"
+        },
+        {
+          "file": "authentication/src/index.ts",
+          "hash": "13735562769695261149"
+        },
+        {
+          "file": "authentication/src/lib/authentication/authentication.component.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "authentication/src/lib/authentication/authentication.component.html",
+          "hash": "12783539379366204720"
+        },
+        {
+          "file": "authentication/src/lib/authentication/authentication.component.spec.ts",
+          "hash": "2888735067143930529"
+        },
+        {
+          "file": "authentication/src/lib/authentication/authentication.component.ts",
+          "hash": "12161139985893508856"
+        },
+        {
+          "file": "authentication/src/lib/modal-connexion/modal-connexion.component.html",
+          "hash": "16164757935024501978"
+        },
+        {
+          "file": "authentication/src/lib/modal-connexion/modal-connexion.component.scss",
+          "hash": "18239640953319797909"
+        },
+        {
+          "file": "authentication/src/lib/modal-connexion/modal-connexion.component.spec.ts",
+          "hash": "18001712847194141864"
+        },
+        {
+          "file": "authentication/src/lib/modal-connexion/modal-connexion.component.ts",
+          "hash": "15435791917701106439"
+        },
+        {
+          "file": "authentication/src/lib/modal-inscription/modal-inscription.component.html",
+          "hash": "10792351308366180552"
+        },
+        {
+          "file": "authentication/src/lib/modal-inscription/modal-inscription.component.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "authentication/src/lib/modal-inscription/modal-inscription.component.spec.ts",
+          "hash": "10501082352089556474"
+        },
+        {
+          "file": "authentication/src/lib/modal-inscription/modal-inscription.component.ts",
+          "hash": "9576390431503780671"
+        },
+        {
+          "file": "authentication/src/test-setup.ts",
+          "hash": "12935735732682149507"
+        },
+        {
+          "file": "authentication/tsconfig.json",
+          "hash": "15487755565970508470"
+        },
+        {
+          "file": "authentication/tsconfig.lib.json",
+          "hash": "5796668385415907511"
+        },
+        {
+          "file": "authentication/tsconfig.spec.json",
+          "hash": "2927375835638640771"
+        }
+      ],
+      "services": [
+        {
+          "file": "services/.eslintrc.json",
+          "hash": "9920619745995326579"
+        },
+        {
+          "file": "services/README.md",
+          "hash": "5047947139507590044"
+        },
+        {
+          "file": "services/jest.config.ts",
+          "hash": "1789934860520920179"
+        },
+        {
+          "file": "services/project.json",
+          "hash": "12871126913275827678"
+        },
+        {
+          "file": "services/src/index.ts",
+          "hash": "12907420241303268807"
+        },
+        {
+          "file": "services/src/lib/services/models/accomodation.enum.ts",
+          "hash": "2322864961920949457"
+        },
+        {
+          "file": "services/src/lib/services/models/animalType.enum.ts",
+          "hash": "5379621648493907063"
+        },
+        {
+          "file": "services/src/lib/services/models/genderAnimal.enum.ts",
+          "hash": "8545611803907729248"
+        },
+        {
+          "file": "services/src/lib/services/models/role.enum.ts",
+          "hash": "10890270131287502095"
+        },
+        {
+          "file": "services/src/lib/services/models/service.model.ts",
+          "hash": "17137712203739653487"
+        },
+        {
+          "file": "services/src/lib/services/models/serviceType.enum.ts",
+          "hash": "4148163991415741823"
+        },
+        {
+          "file": "services/src/lib/services/models/state.state.ts",
+          "hash": "14970140969328223939"
+        },
+        {
+          "file": "services/src/lib/services/models/user.model.ts",
+          "hash": "11155820507747228824"
+        },
+        {
+          "file": "services/src/lib/services/nav-bar.service.ts",
+          "hash": "2570000228536818868"
+        },
+        {
+          "file": "services/src/lib/services/serviceHttp.ts",
+          "hash": "17800906473896851042"
+        },
+        {
+          "file": "services/src/lib/services/sitter.service.ts",
+          "hash": "16749988398887469005"
+        },
+        {
+          "file": "services/src/lib/services/sitterService.service.ts",
+          "hash": "14949924209024833557"
+        },
+        {
+          "file": "services/src/lib/services/userService.service.ts",
+          "hash": "2973201049215645750"
+        },
+        {
+          "file": "services/src/lib/services/utils.service.ts",
+          "hash": "14250096688481776216"
+        },
+        {
+          "file": "services/src/test-setup.ts",
+          "hash": "12935735732682149507"
+        },
+        {
+          "file": "services/tsconfig.json",
+          "hash": "15487755565970508470"
+        },
+        {
+          "file": "services/tsconfig.lib.json",
+          "hash": "5796668385415907511"
+        },
+        {
+          "file": "services/tsconfig.spec.json",
+          "hash": "2927375835638640771"
+        }
+      ],
+      "animal": [
+        {
+          "file": "animal/.eslintrc.json",
+          "hash": "9920619745995326579"
+        },
+        {
+          "file": "animal/README.md",
+          "hash": "8149040201663965672"
+        },
+        {
+          "file": "animal/jest.config.ts",
+          "hash": "17711761889700971224"
+        },
+        {
+          "file": "animal/project.json",
+          "hash": "12393099913152334220"
+        },
+        {
+          "file": "animal/src/index.ts",
+          "hash": "16167372376126928675"
+        },
+        {
+          "file": "animal/src/lib/animal/animal.component.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "animal/src/lib/animal/animal.component.html",
+          "hash": "14830863175046180145"
+        },
+        {
+          "file": "animal/src/lib/animal/animal.component.spec.ts",
+          "hash": "5025267046996605594"
+        },
+        {
+          "file": "animal/src/lib/animal/animal.component.ts",
+          "hash": "402873861338449810"
+        },
+        {
+          "file": "animal/src/lib/animal/card-animal/card-animal.component.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "animal/src/lib/animal/card-animal/card-animal.component.html",
+          "hash": "11566018648023058290"
+        },
+        {
+          "file": "animal/src/lib/animal/card-animal/card-animal.component.spec.ts",
+          "hash": "14702970495989594592"
+        },
+        {
+          "file": "animal/src/lib/animal/card-animal/card-animal.component.ts",
+          "hash": "11984740171704894329"
+        },
+        {
+          "file": "animal/src/test-setup.ts",
+          "hash": "12935735732682149507"
+        },
+        {
+          "file": "animal/tsconfig.json",
+          "hash": "15487755565970508470"
+        },
+        {
+          "file": "animal/tsconfig.lib.json",
+          "hash": "5796668385415907511"
+        },
+        {
+          "file": "animal/tsconfig.spec.json",
+          "hash": "2927375835638640771"
+        }
+      ],
+      "header": [
+        {
+          "file": "shared-c/header/.eslintrc.json",
+          "hash": "12354204209954383740"
+        },
+        {
+          "file": "shared-c/header/README.md",
+          "hash": "13734922352963814394"
+        },
+        {
+          "file": "shared-c/header/jest.config.ts",
+          "hash": "6156339186778426432"
+        },
+        {
+          "file": "shared-c/header/project.json",
+          "hash": "11766231915851957114"
+        },
+        {
+          "file": "shared-c/header/src/index.ts",
+          "hash": "3078206332586970997"
+        },
+        {
+          "file": "shared-c/header/src/lib/header/header.component.css",
+          "hash": "14329857400860677134"
+        },
+        {
+          "file": "shared-c/header/src/lib/header/header.component.html",
+          "hash": "18390234968196878248"
+        },
+        {
+          "file": "shared-c/header/src/lib/header/header.component.spec.ts",
+          "hash": "4499384199601543057"
+        },
+        {
+          "file": "shared-c/header/src/lib/header/header.component.ts",
+          "hash": "18142135200523633105"
+        },
+        {
+          "file": "shared-c/header/src/test-setup.ts",
+          "hash": "12935735732682149507"
+        },
+        {
+          "file": "shared-c/header/tsconfig.json",
+          "hash": "8526453262384300416"
+        },
+        {
+          "file": "shared-c/header/tsconfig.lib.json",
+          "hash": "6020606002228403423"
+        },
+        {
+          "file": "shared-c/header/tsconfig.spec.json",
+          "hash": "7159729809249402441"
+        }
+      ],
+      "home": [
+        {
+          "file": "home/.eslintrc.json",
+          "hash": "9920619745995326579"
+        },
+        {
+          "file": "home/README.md",
+          "hash": "11867757256229368821"
+        },
+        {
+          "file": "home/jest.config.ts",
+          "hash": "9767745324320386734"
+        },
+        {
+          "file": "home/project.json",
+          "hash": "15467027038061662860"
+        },
+        {
+          "file": "home/src/index.ts",
+          "hash": "16342128905101411898"
+        },
+        {
+          "file": "home/src/lib/card-service/card-service.component.html",
+          "hash": "7866926478866961300"
+        },
+        {
+          "file": "home/src/lib/card-service/card-service.component.scss",
+          "hash": "10588866050215167547"
+        },
+        {
+          "file": "home/src/lib/card-service/card-service.component.spec.ts",
+          "hash": "768607038966741829"
+        },
+        {
+          "file": "home/src/lib/card-service/card-service.component.ts",
+          "hash": "17609850620511452810"
+        },
+        {
+          "file": "home/src/lib/home/home.component.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "home/src/lib/home/home.component.html",
+          "hash": "11170598824437321840"
+        },
+        {
+          "file": "home/src/lib/home/home.component.spec.ts",
+          "hash": "2620641819347346630"
+        },
+        {
+          "file": "home/src/lib/home/home.component.ts",
+          "hash": "16922873690871888315"
+        },
+        {
+          "file": "home/src/test-setup.ts",
+          "hash": "12935735732682149507"
+        },
+        {
+          "file": "home/tsconfig.json",
+          "hash": "15487755565970508470"
+        },
+        {
+          "file": "home/tsconfig.lib.json",
+          "hash": "5796668385415907511"
+        },
+        {
+          "file": "home/tsconfig.spec.json",
+          "hash": "2927375835638640771"
+        }
+      ]
+    },
+    "nonProjectFiles": []
+  }
+}

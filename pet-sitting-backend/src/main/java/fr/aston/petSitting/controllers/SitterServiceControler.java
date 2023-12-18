@@ -36,8 +36,6 @@ public class SitterServiceControler {
 	@GetMapping("/list/{idUser}")
 	public ResponseEntity<List<ServiceModele>> getSitterServiceListControler(@PathVariable("idUser") int idUser) {
 		List<ServiceEntity> resultat = this.service.getServicesByUserId(idUser);
-		System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-
 		List<ServiceModele> resultatModel = ServiceEntityModelHandler.createListModelFromEntities(resultat);
 		return ResponseEntity.ok(resultatModel);
 	}
@@ -71,8 +69,6 @@ public class SitterServiceControler {
 			@RequestParam(name = "type", required = false) String type,
 			@RequestParam(name = "city", required = false) String city) {
 
-		System.out.println(type);
-		System.out.println(city);
 		List<ServiceEntity> resultat = this.service.selectServicewithType(ServiceEnum.getEnum(type), city);
 
 		List<ServiceModele> resultatModel = ServiceEntityModelHandler.createListModelFromEntities(resultat);
