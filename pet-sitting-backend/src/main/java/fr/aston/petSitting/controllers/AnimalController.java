@@ -8,6 +8,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,8 +17,10 @@ import org.springframework.web.bind.annotation.RestController;
 import fr.aston.petSitting.entities.Animal;
 import fr.aston.petSitting.entities.ServiceEntity;
 import fr.aston.petSitting.entities.ServiceEnum;
+import fr.aston.petSitting.entities.User;
 import fr.aston.petSitting.handler.AnimalModelHandler;
 import fr.aston.petSitting.handler.ServiceEntityModelHandler;
+import fr.aston.petSitting.handler.UserModelHandler;
 import fr.aston.petSitting.modele.AnimalModel;
 import fr.aston.petSitting.modele.ResponseModele;
 import fr.aston.petSitting.modele.ServiceModele;
@@ -40,37 +44,19 @@ public class AnimalController{
     return ResponseEntity.ok(resultatModel);
   }
 
-/*
- NOT OK AT ALL =============================== 
+	@PostMapping("/create")
+	public ResponseEntity<?> createAnimalControler(@RequestBody Animal animal) {
+		
+		
+		System.out.println("-----------------------------------------------------------------");
+		System.out.println(animal.getDateOfBirth());
+		System.out.println(animal.toString());
+	
+		Animal resultat = this.animalService.createAnimal(animal);
 
-  @GetMapping("/delete/{id}")
-  public ResponseEntity<?> deleteSitterServiceById(@PathVariable("id") int id) {
-    this.animalService.deleteAnimalService(id);
-    ResponseModele responseModele = new ResponseModele();
-    responseModele.setStatus(202);
-    responseModele.setMessage("Service suppressed");
-    return ResponseEntity.status(HttpStatus.ACCEPTED).body(responseModele);
-  }
+		return ResponseEntity.ok(AnimalModelHandler.createModelFromEntity(resultat));
 
-  @GetMapping("/lists")
-  public ResponseEntity<List<ServiceModele>> getSitterServiceWithType(
-      @RequestParam(name = "type", required = false) String type,
-      @RequestParam(name = "city", required = false) String city) {
+	}
+	
 
-    System.out.println(type);
-    System.out.println(city);
-    List<ServiceEntity> resultat = this.animalService.selectServicewithType(ServiceEnum.getEnum(type), city);
-
-    List<ServiceModele> resultatModel = ServiceEntityModelHandler.createListModelFromEntities(resultat);
-    return ResponseEntity.ok(resultatModel);
-  }
-
-  // New mapping
-  @GetMapping("/details/{id}")
-  public ResponseEntity<AnimalModel> getAnimalDetails(@PathVariable("id") int id) {
-    Animal animal = this.animalService.getAnimalById(id);
-    AnimalModel animalModel = new AnimalModel(animal.getId(), animal.getPetName(), animal.getDateOfBirth(), animal.getBreed());
-    return ResponseEntity.ok(animalModel);
-  }
-  */
 }

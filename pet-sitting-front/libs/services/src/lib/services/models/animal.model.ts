@@ -1,17 +1,19 @@
 import { AnimalTypeEnum } from "./animalType.enum";
 import { GenderEnum } from "./genderAnimal.enum";
+import { UserModel } from "./user.model";
 
 export interface AnimalModel {
   id: number;
   type: AnimalTypeEnum;
   gender: GenderEnum;
   weight: number;
-  date_of_birth: Date;
-  is_vaccinated:boolean;
-  is_sterilized:boolean;
-  pet_name:string;
+  dateOfBirth: Date;
+  isVaccinated:boolean;
+  isSterilized:boolean;
+  petName:string;
   breed:string;
-  is_social:boolean;
-  pet_photo:string;
+  isSocial:boolean;
+  petPhoto:string;
   user_id:number;
+  user?:UserModel;
 }

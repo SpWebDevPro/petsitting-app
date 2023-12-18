@@ -10,7 +10,7 @@ export class UtilService {
  
     encryptSecretKey : string = "petSitting";// must store in the database :p 
 
-    data = "Imad2220";
+
      aesEncrypt(data : string) {
         const iv = 'I8zyA4lVhMCaJ5Kg';
         const cipher = CryptoJS.AES.encrypt(data, CryptoJS.enc.Utf8.parse(this.encryptSecretKey), {

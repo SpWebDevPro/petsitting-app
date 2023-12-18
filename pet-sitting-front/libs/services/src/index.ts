@@ -19,3 +19,8 @@ export * from './lib/services/userService.service';
 export * from './lib/services/models/role.enum';
 export * from './lib/services/nav-bar.service';
 export * from './lib/services/utils.service';
+
+export * from './lib/services/utils.service';
+export * from './lib/services/models/animal.model';
+
+export * from './lib/services/animal.service';

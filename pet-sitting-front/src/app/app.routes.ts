@@ -8,12 +8,6 @@ export const appRoutes: Route[] = [
     loadComponent: () =>
       import('@pet-sitting-front/home').then((m) => m.HomeComponent),
   },
-  {
-    path: 'sitter/:userId/:serviceId',
-    pathMatch: 'full',
-    loadComponent: () =>
-      import('@pet-sitting-front/sitter').then((m) => m.PublicSitterComponent),
-  },
 
   {
     path: 'sitter-profile',
@@ -29,18 +23,24 @@ export const appRoutes: Route[] = [
       import('@pet-sitting-front/animal').then((m) => m.AnimalComponent),
   },
   {
-
-  path: 'animal-form',
-    pathMatch: 'full',
-    loadComponent: () =>
-    import('@pet-sitting-front/animal').then((m) => m.FormAnimalComponent),
-  },
+  path: 'booking',
+  pathMatch: 'full',
+  loadComponent: () =>
+    import('@pet-sitting-front/booking').then((m) => m.BookingComponent),
+},
 {
     path: 'booking/:serviceId',
     pathMatch: 'full',
     loadComponent: () =>
       import('@pet-sitting-front/booking').then((m) => m.BookingComponent),
   },
+  {
+    path: 'sitter/:userId/:serviceId',
+    pathMatch: 'full',
+    loadComponent: () =>
+      import('@pet-sitting-front/sitter').then((m) => m.PublicSitterComponent),
+  },
+
     // Temporary road
   {  path:'card-animal',
     pathMatch:'full',

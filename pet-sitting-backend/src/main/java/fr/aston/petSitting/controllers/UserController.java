@@ -4,6 +4,7 @@ package fr.aston.petSitting.controllers;
 import java.util.Optional;
  
 import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,46 +24,54 @@ import fr.aston.petSitting.services.UserService;
 @RestController
 @RequestMapping("/userservice")
 public class UserController {
- 
-    @Autowired
-    private UserService userService;
- 
-    // reste le cas d'un email déja existe
-    @PostMapping("/create")
-    public ResponseEntity<?> createUSerControler(@RequestBody User user) {
-        
-        System.out.println("-----------------------------------------------------------------");
-    
-        User resultat = this.userService.createUser(user);
- 
-        return ResponseEntity.ok(UserModelHandler.createModelFromEntity(resultat));
- 
-    }
-    
-    @GetMapping("/login")
-    public ResponseEntity<?> getUserByEmailAndPasswordController(@RequestParam(name = "email", required = true) String email,
-            @RequestParam(name = "password", required = true) String password) {
-        System.out.println("-----------------------------------------------------------------");
- 
-        Optional<User>  userConncted =  this.userService.getUserByEmailAndPassword(email, password);
- 
-        
-        System.out.println(userConncted);
-        return ResponseEntity.ok(userConncted);
- 
-    }
- 
- 
-    @GetMapping("/{idUser}")
-    public ResponseEntity<UserModel> getUserByIdControler(@PathVariable("idUser") int idUser) {
-        System.out.println("tu m'as appelé-----------------------------------------------------------------");
-            User resultat = this.userService.getUserById(idUser);
-            System.out.println(resultat);
-            System.out.println("-----------------------------------------------------------------");
-            System.out.println(resultat.getFirstName());
-            System.out.println("-----------------------------------------------------------------");
-            UserModel resultatModel = UserModelHandler.createModelFromEntity(resultat);
-            return ResponseEntity.ok(resultatModel);
-        
-    }
+
+
+	@Autowired
+	private UserService userService;
+
+	// reste le cas d'un email déja existe
+	@PostMapping("/create")
+	public ResponseEntity<?> createUSerControler(@RequestBody User user) {
+		
+		System.out.println("-----------------------------------------------------------------");
+	
+		User resultat = this.userService.createUser(user);
+
+		return ResponseEntity.ok(UserModelHandler.createModelFromEntity(resultat));
+
+	}
+	
+	@GetMapping("/login")
+	public ResponseEntity<?> getUserByEmailAndPasswordController(@RequestParam(name = "email", required = true) String email,
+			@RequestParam(name = "password", required = true) String password) {
+		System.out.println("-----------------------------------------------------------------");
+
+		Optional<User>  userConncted =  this.userService.getUserByEmailAndPassword(email, password);
+
+		
+		System.out.println(userConncted);
+		return ResponseEntity.ok(userConncted);
+
+	}
+
+
+	@GetMapping("/{idUser}")
+	public ResponseEntity<UserModel> getUserByIdControler(@PathVariable("idUser") int idUser) {
+		System.out.println("tu m'as appelé-----------------------------------------------------------------");
+			User resultat = this.userService.getUserById(idUser);
+			System.out.println(resultat);
+			System.out.println("-----------------------------------------------------------------");
+			System.out.println(resultat.getFirstName());
+			System.out.println("-----------------------------------------------------------------");
+			UserModel resultatModel = UserModelHandler.createModelFromEntity(resultat);
+			return ResponseEntity.ok(resultatModel);
+		
+	}
 }
+
+
+
+
+
+
+
