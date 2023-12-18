@@ -21,5 +21,12 @@ export const appRoutes: Route[] = [
     pathMatch: 'full',
     loadComponent: () =>
       import('@pet-sitting-front/animal').then((m) => m.AnimalComponent),
+  },
+  {
+  path: 'animal-form',
+    pathMatch: 'full',
+    loadComponent: () =>
+    import('@pet-sitting-front/animal').then((m) => m.FormAnimalComponent),
   }
 ];
+
