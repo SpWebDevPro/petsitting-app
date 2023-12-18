@@ -1,11 +1,16 @@
 package fr.aston.petSitting.modele;
 
 import fr.aston.petSitting.entities.ServiceEnum;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 /**
  * Objet qui arrive sur le controlleur
  */
 public class FindAllByDailyPriceBetweenOrTypeModelIn {
+	@Getter
+	@Setter
 	private Float dailyPriceMin;
 	private Float dailyPriceMax;
 	private ServiceEnum type;

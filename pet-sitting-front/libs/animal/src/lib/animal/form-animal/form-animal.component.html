@@ -1,8 +1,8 @@
 <div class="container">
   <form  #f="ngForm">
     <div class="form-group">
-      <label for="Animal-Name" class="form-label mt-4">Nom d'animal</label>
-      <input name="AnimalName"  required ="form-control" rows="3" placeholder="Ecrire ici le nom de votre compagnon" />
+      <label for="Animal-Name"  class="form-label mt-4">Nom d'animal</label>
+      <input name="AnimalName" [(ngModel)]="animal.petName" class="form-control" required  rows="3" placeholder="Ecrire ici le nom de votre compagnon" />
       <p class="invalid-feedback mb-2">
         Vous devez renseigner nom d'animal
       </p>
@@ -11,7 +11,7 @@
       <label for="animal-type" class="form-label mt-4">
         Type d'Animal
       </label>
-      <select [(ngModel)]="typeAnimal" class="px-5 me-sm-1 form-select" name="typeAnimal">
+      <select [(ngModel)]="animal.type" class="px-5 me-sm-1 form-select" required name="typeAnimal">
         <option [value]="null" [disabled]="true">Select animal</option>
 
         <option *ngFor="let type of listAnimalTypes" [value]="type">{{type}}</option>
@@ -21,25 +21,19 @@
       </p>
     </div>
     <div class="form-group">
-      <label for="Animal-Race" class="form-label mt-4">Race d'animal</label>
-      <input name="animalRace" class="form-control" rows="3" placeholder="Mettre ici race de ton animal" />
-      <p class="invalid-feedback mb-2">
-        Vous devez renseigner race de ton animal
-      </p>
+      <label for="Animal-Race" class="form-label mt-4" required>Race d'animal</label>
+      <input name="animalRace"   name="animalBreed" [(ngModel)]="animal.breed"class="form-control" rows="3" placeholder="Mettre ici race de ton animal" />
+  
     </div>
     <div class="form-group">
       <label for="animal-gender" class="form-label mt-4">
         Genre d'animal
       </label>
-      <select [(ngModel)]="genderAnimal" class="px-5 me-sm-1 form-select" name="typeAnimal">
+      <select [(ngModel)]="animal.gender" class="px-5 me-sm-1 form-select" required name="typeAnimal">
         <option [value]="null" [disabled]="true">Select animal</option>
 
         <option *ngFor="let gender of listGenderEnume" [value]="gender">{{gender}}</option>
       </select>
-
-      <p class="invalid-feedback mb-2">
-        Choissizes genre de votre animal
-      </p>
     </div>
 
 
@@ -47,33 +41,29 @@
       <label for="birthday-animal" class="form-label mt-4">
         Anniversaire d'animal
       </label>
-      <input type="date" id="birthday-animal" name="birthday" />
-      <!-- <p>
-        Vous devez indiquer anniversaire de votre animal
-      </p> -->
+      <input type="date" required  [(ngModel)]="animal.dateOfBirth" class="form-control" id="birthday-animal" name="birthday" />
+   
     </div>
     <div class="form-group">
       <label for="poids-animal" class="form-label mt-4">
         Poids d'animal
       </label>
-      <input type="number" class="form-control" name="poidsAnimal" />
-      <!-- <p class="invalid-feedback mb-2">
-        Vous devez renseigner poids de ton animal en kg
-      </p> -->
+      <input type="number" class="form-control"  [(ngModel)]="animal.weight" name="poidsAnimal" />
+  
     </div>
     <div class="form-check mt-2">
-      <input class="form-check-input" name="isVaccinated" type="checkbox" id="is-vaccinated" />
-      <label class="form-check-label" for="is-vaccinated">Vaccinee</label>
+      <input class="form-check-input" [(ngModel)]="animal.isVaccinated" name="isVaccinated" type="checkbox" id="is-vaccinated" />
+      <label class="form-check-label" for="is-vaccinated"  >Vaccinee</label>
     </div>
     <div class="form-check mt-5">
-      <input class="form-check-input" type="checkbox" name="isSterilized" required />
-      <label class="form-check-label" for="is-sterilized">Sterilisee </label>
+      <input class="form-check-input" name="animalSterilized" type="checkbox"  [(ngModel)]="animal.isSterilized"name="isSterilized"  />
+      <label class="form-check-label" for="is-sterilized">ySterilisee </label>
     </div>
 
     <div class="form-check mt-5">
-      <input class="form-check-input" type="checkbox" name="isSocial"  required/>
-      <label class="form-check-label" for="is-social">Est-il/elle social/e? </label>
+      <input class="form-check-input" type="checkbox" name="isSocial"  [(ngModel)]="animal.isSocial" />
+      <label class="form-check-label"  for="is-social">Est-il/elle social/e? </label>
     </div>
-    <button type="submit" class="btn btn-primary mt-lg-5"  (click)="saveAnimal()"  [disabled]="!f.valid">Enregistrer</button>
+    <button type="submit" class="btn btn-primary mt-lg-5"  (click)="saveAnimal()"   [disabled]="!f.valid"  >Enregistrer</button>
   </form>
 </div>

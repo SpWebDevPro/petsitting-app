@@ -1,11 +1,11 @@
 
 <div class="container  d-flex flex-column justify-content-center align-items-center">
-  <pet-sitting-front-animal (adAnimalFormEvent)="addFormNewAnimal()"></pet-sitting-front-animal>
+  <pet-sitting-front-list-animal-booking  (adAnimalFormEvent)="addFormNewAnimal()"></pet-sitting-front-list-animal-booking>
     <pet-sitting-front-form-animal *ngIf="showFormAddNewAnimal" ></pet-sitting-front-form-animal >
        
     <mat-form-field >
         <mat-label>Enter a date range</mat-label>
-        <mat-date-range-input [formGroup]="range" [rangePicker]="picker">
+        <mat-date-range-input  [formGroup]="range" [rangePicker]="picker">
           <input matStartDate formControlName="start" placeholder="Start date">
           <input matEndDate formControlName="end" placeholder="End date">
         </mat-date-range-input>

@@ -1,24 +1,40 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+
+import { Component, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { faCirclePlus } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { CardAnimalComponent } from './card-animal/card-animal.component';
+import { HttpClient } from '@angular/common/http';
+import { AnimalModel, AnimalTypeEnum, GenderEnum } from '@pet-sitting-front/services';
+import { CardAnimalComponent } from "./card-animal/card-animal.component";
 
 @Component({
-  selector: 'pet-sitting-front-animal',
-  standalone: true,
-  imports: [CommonModule, FontAwesomeModule, CardAnimalComponent],
-  templateUrl: './animal.component.html',
-  styleUrl: './animal.component.css',
+    selector: 'pet-sitting-front-animal',
+    standalone: true,
+    templateUrl: './animal.component.html',
+    styleUrl: './animal.component.scss',
+    imports: [CommonModule, CardAnimalComponent]
 })
-export class AnimalComponent {
-  @Output() adAnimalFormEvent = new EventEmitter();
+export class AnimalComponent implements OnInit {
+  //@Input() animal: any; // Adjust the type based on your AnimalModel
 
-  addNewForm(value: any) {
-    console.log("hhhhhhhhhhh")
-   this.adAnimalFormEvent.emit(value);
- }
-  faPlusCircle = faCirclePlus;
+  constructor(private http: HttpClient) {}
 
-  cards = [1,2];
+  animal: AnimalModel = {
+    id:32,
+    type:AnimalTypeEnum.CAT,
+    gender:GenderEnum.FEMALE,
+    dateOfBirth:new Date('2015-10-10'),
+    isVaccinated:true,
+    isSocial:true,
+    weight:5,
+    petName:'Cruella',
+    breed:'Siamois',
+    isSterilized:false,
+    petPhoto:'https://matouchat.fr/wp-content/uploads/2021/03/siamois-846x566.jpg',
+    user_id:6,
+    
+  };
+
+  ngOnInit(): void {
+    // You can make HTTP requests here to fetch animal data from the backend
+  }
+
 }

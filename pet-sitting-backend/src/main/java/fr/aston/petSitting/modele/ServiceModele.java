@@ -15,6 +15,7 @@ public class ServiceModele {
 	private ServiceEnum type;
 	private Integer userId;
 	private User user;
+  public ServiceModele getType;
 
 	/**
 	 * @return the user
