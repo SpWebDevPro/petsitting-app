@@ -1,3 +1,4 @@
+import { Component } from '@angular/core';
 import { Route } from '@angular/router';
 
 export const appRoutes: Route[] = [
@@ -21,7 +22,8 @@ export const appRoutes: Route[] = [
       import('@pet-sitting-front/sitter').then((m) => m.SitterComponent),
   },
   {
-    path: 'animal-list',
+    // Temporary road
+  path: 'animal-list',
     pathMatch: 'full',
     loadComponent: () =>
       import('@pet-sitting-front/animal').then((m) => m.AnimalComponent),
@@ -39,5 +41,10 @@ export const appRoutes: Route[] = [
     loadComponent: () =>
       import('@pet-sitting-front/booking').then((m) => m.BookingComponent),
   },
+    // Temporary road
+  {  path:'card-animal',
+    pathMatch:'full',
+    loadComponent: () =>
+      import('@pet-sitting-front/animal').then((m) =>m.AnimalComponent),
+  }
 ];
-

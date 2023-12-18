@@ -10,8 +10,6 @@ import fr.aston.petSitting.modele.FindAllByDailyPriceBetweenOrTypeModelOut;
 import fr.aston.petSitting.modele.ServiceModele;
 import fr.aston.petSitting.services.UserService;
 
-
-
 public class ServiceEntityModelHandler {
 
 	public static ServiceModele createModelFromEntity(ServiceEntity serviceEntity) {
@@ -46,7 +44,7 @@ public class ServiceEntityModelHandler {
 		return serviceEntity;
 
 	}
-	
+
 	public static FindAllByDailyPriceBetweenOrTypeModelOut fromEntity(ServiceEntity serviceEntity) {
 		FindAllByDailyPriceBetweenOrTypeModelOut resu = new FindAllByDailyPriceBetweenOrTypeModelOut();
 		resu.setDailyPrice(serviceEntity.getDailyPrice());
@@ -64,17 +62,20 @@ public class ServiceEntityModelHandler {
 			for (Booking e : bookingEntities) {
 				bookingIdies.add(e.getId());
 			}
-			
-			resu.setBookings(bookingIdies);
-		}
-	return resu;
-	}
 
-	public static List<FindAllByDailyPriceBetweenOrTypeModelOut> fromEntities (List<ServiceEntity> serviceEntities) {
-		List<FindAllByDailyPriceBetweenOrTypeModelOut> resu = new ArrayList<FindAllByDailyPriceBetweenOrTypeModelOut>();
-		for (ServiceEntity serviceEntity : serviceEntities) {
-			resu.add(fromEntity(serviceEntity));		
+			resu.setBookings(bookingIdies);
 		}
 		return resu;
 	}
+
+	public static List<FindAllByDailyPriceBetweenOrTypeModelOut> fromEntities(List<ServiceEntity> serviceEntities) {
+		List<FindAllByDailyPriceBetweenOrTypeModelOut> resu = new ArrayList<FindAllByDailyPriceBetweenOrTypeModelOut>();
+		for (ServiceEntity serviceEntity : serviceEntities) {
+			resu.add(fromEntity(serviceEntity));
+		}
+		return resu;
+	}
+
+
+
 }

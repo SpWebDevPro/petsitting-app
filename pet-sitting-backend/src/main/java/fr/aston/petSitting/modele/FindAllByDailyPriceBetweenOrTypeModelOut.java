@@ -4,12 +4,18 @@ import java.math.BigDecimal;
 import java.util.List;
 
 import fr.aston.petSitting.entities.ServiceEnum;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 
 /**
  * Objet qui SORT sur le controlleur
  */
 public class FindAllByDailyPriceBetweenOrTypeModelOut {
+	@Getter
+	@Setter
+	
 	private int id;
 	private BigDecimal dailyPrice;
 	private String description;
