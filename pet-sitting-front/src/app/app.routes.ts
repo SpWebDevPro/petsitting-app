@@ -25,7 +25,8 @@ export const appRoutes: Route[] = [
   pathMatch: 'full',
   loadComponent: () =>
     import('@pet-sitting-front/booking').then((m) => m.BookingComponent),
-},{
+},
+{
     path: 'booking/:serviceId',
     pathMatch: 'full',
     loadComponent: () =>
@@ -38,3 +39,4 @@ export const appRoutes: Route[] = [
       import('@pet-sitting-front/sitter').then((m) => m.PublicSitterComponent),
   },
 ];
+

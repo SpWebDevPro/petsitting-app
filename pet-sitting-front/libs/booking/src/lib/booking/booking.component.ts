@@ -12,7 +12,7 @@ import {ServiceModel} from '@pet-sitting-front/services';
 @Component({
   selector: 'pet-sitting-front-booking',
   standalone: true,
-  imports: [CommonModule, CardAnimalComponent,    MatFormFieldModule,
+  imports: [CommonModule, CardAnimalComponent, MatFormFieldModule,
     MatDatepickerModule,
     FormsModule,
     ReactiveFormsModule,
