@@ -1,10 +1,2 @@
-<div class="container">
-  <div class="card">
-    <h2>{{ animal!.name }}</h2>
-    <p>Id : {{ animal!.id}}</p>
-    <p>weight : {{ animal!.weight}}</p>
-    <img src="{{ animal!.sprites.front_default}}" height=200px alt="{{ animal!.name }}">
-    <p>{{ animal.about }}</p>
-    <button (click)="onClick()">Validate !</button>
-  </div>
-</div>
+
+<pet-sitting-front-card-animal [animal]="animal"></pet-sitting-front-card-animal>

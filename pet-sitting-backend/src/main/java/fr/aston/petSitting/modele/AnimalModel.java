@@ -1,18 +1,24 @@
 package fr.aston.petSitting.modele;
+import java.math.BigDecimal;
 import java.util.Date;
 
+import fr.aston.petSitting.entities.AnimalGenderEnum;
+import fr.aston.petSitting.entities.AnimalTypeEnum;
 import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
 
 @Getter
 @Setter
 @NoArgsConstructor
 public class AnimalModel {
 	private int user_id;
-	private EnumType type;
-	private String gender;
+	@Enumerated(EnumType.STRING)
+	private AnimalTypeEnum type;
+	private AnimalGenderEnum gender;
 	private Float weight;
 	private Date date_of_birth;
 	private Boolean is_vaccinated;
@@ -21,22 +27,23 @@ public class AnimalModel {
 	private String breed;
 	private Boolean is_social;
 	private String pet_photo;
-	public int getUser_id(int i, String string, Date date, String string2) {
+	
+	public int getUser_id() {
 		return user_id;
 	}
 	public void setUser_id(int user_id) {
 		this.user_id = user_id;
 	}
-	public EnumType getType() {
+	public AnimalTypeEnum getType() {
 		return type;
 	}
-	public void setType(EnumType type) {
+	public void setType(AnimalTypeEnum type) {
 		this.type = type;
 	}
-	public String getGender() {
+	public AnimalGenderEnum getGender() {
 		return gender;
 	}
-	public void setGender(String gender) {
+	public void setGender(AnimalGenderEnum gender) {
 		this.gender = gender;
 	}
 	public Float getWeight() {
@@ -87,23 +94,10 @@ public class AnimalModel {
 	public void setPet_photo(String pet_photo) {
 		this.pet_photo = pet_photo;
 	}
-@Override
-public String toString() {
-  return "ListAnimalModel [user_id=" + user_id + ", type=" + type + ", gender=" + gender + ", weight=" + weight
-      + ", date_of_birth=" + date_of_birth + ", is_vaccinated=" + is_vaccinated + ", is_sterilized="
-      + is_sterilized + ", pet_name=" + pet_name + ", breed=" + breed + ", is_social=" + is_social
-      + ", pet_photo=" + pet_photo + ", getUser_id()=" + getUser_id() + ", getType()=" + getType()
-      + ", getGender()=" + getGender() + ", getWeight()=" + getWeight() + ", getDate_of_birth()="
-      + getDate_of_birth() + ", getIs_vaccinated()=" + getIs_vaccinated() + ", getIs_sterilized()="
-      + getIs_sterilized() + ", getPet_name()=" + getPet_name() + ", getBreed()=" + getBreed()
-      + ", getIs_social()=" + getIs_social() + ", getPet_photo()=" + getPet_photo() + "]";
-}
-public AnimalModel(int id, String petName, Date dateOfBirth, String breed2) {
-  this.user_id = id;
-  this.pet_name = petName;
-  this.date_of_birth = dateOfBirth;
-  this.breed = breed2;
-}
-
-
+	public void setWeight(BigDecimal weight2) {
+		// TODO Auto-generated method stub
+		
+	}	
+	
+	
 }

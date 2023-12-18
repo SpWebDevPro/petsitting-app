@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import fr.aston.petSitting.entities.AnimalEntity;
+import fr.aston.petSitting.entities.Animal;
 import fr.aston.petSitting.entities.RoleEnum;
 import fr.aston.petSitting.entities.User;
 import fr.aston.petSitting.handler.ServiceEntityModelHandler;

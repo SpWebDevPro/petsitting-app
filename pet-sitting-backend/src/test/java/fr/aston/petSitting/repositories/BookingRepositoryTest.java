@@ -36,7 +36,7 @@ class BookingRepositoryTest {
 		booking.setStartDate(new Date());
 		booking.setEndDate(new Date());
 		booking.setTotalPrice(new BigDecimal(345.32));
-		booking.setAnimalEntity(animalRepository.findById(1).get());
+		booking.setAnimal(animalRepository.findById(1).get());
 		booking.setService(ServiceRepository.findById(1).get());
 
 		Booking bokkingInserted = this.bookingRepository.save(booking);

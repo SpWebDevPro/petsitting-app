@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { AnimalModel } from '@pet-sitting-front/services';
 
 @Component({
   selector: 'pet-sitting-front-card-animal',
@@ -9,5 +10,6 @@ import { CommonModule } from '@angular/common';
   styleUrl: './card-animal.component.scss',
 })
 export class CardAnimalComponent {
-animal: any;
+  @Input()
+  animal!: AnimalModel;
 }

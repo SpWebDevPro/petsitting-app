@@ -1,6 +1,6 @@
 
 package fr.aston.petSitting.entities;
 
-public enum GenderEnum {
+public enum AnimalGenderEnum {
 	MALE, FEMALE;
 }

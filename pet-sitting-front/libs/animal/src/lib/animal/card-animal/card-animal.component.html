@@ -1,10 +1,12 @@
-<div class="container">
+
   <div class="card">
-    <h2>{{ animal!.name }}</h2>
-    <p>Id : {{ animal!.id}}</p>
-    <p>weight : {{ animal!.weight}}</p>
-    <img src="{{ animal!.sprites.front_default}}" height=200px alt="{{ animal!.name }}">
-    <p>{{ animal.about }}</p>
-    <button (click)="onClick()">attrapez le !</button>
+    <h2>{{ animal.pet_name }}</h2>
+    <p>Breed : {{ animal.breed}}</p>
+    <p>Weight : {{ animal.weight}}</p>
+    <img src="{{ animal.pet_photo }}" alt="{{ animal.pet_name }}">
+    <p>Vaccination : {{ animal.is_vaccinated }}</p>
+    <p>Sterilisation : {{ animal.is_sterilized }}</p>
+    <p>Sociability : {{ animal.is_social }}</p>
+    <p>Date of Birth : {{ animal.date_of_birth }}</p>
+
   </div>
-</div>

@@ -47,10 +47,10 @@ public class Booking implements Serializable {
 	@Column(name = "total_price", nullable = false, precision = 7, scale = 2)
 	private BigDecimal totalPrice;
 
-	// bi-directional many-to-one association to AnimalEntity
+	// bi-directional many-to-one association to Animal
 	@ManyToOne
 	@JoinColumn(name = "animal_id", nullable = false)
-	private AnimalEntity animalEntity;
+	private Animal animal;
 
 	// bi-directional many-to-one association to ServiceEntity
 	@ManyToOne

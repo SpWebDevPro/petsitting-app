@@ -12,9 +12,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import fr.aston.petSitting.entities.AnimalEntity;
+import fr.aston.petSitting.entities.Animal;
 import fr.aston.petSitting.entities.ServiceEntity;
 import fr.aston.petSitting.entities.ServiceEnum;
+import fr.aston.petSitting.handler.AnimalModelHandler;
 import fr.aston.petSitting.handler.ServiceEntityModelHandler;
 import fr.aston.petSitting.modele.AnimalModel;
 import fr.aston.petSitting.modele.ResponseModele;
@@ -33,12 +34,14 @@ public class AnimalController{
   private UserService userService; // Added UserService autowired field
 
   @GetMapping("/list/{idUser}")
-  public ResponseEntity<List<ServiceModele>> getSitterServiceListControler(@PathVariable("idUser") int idUser) {
-    List<ServiceEntity> resultat = this.animalService.getServicesByUserId(idUser);
-    List<ServiceModele> resultatModel = ServiceEntityModelHandler.createListModelFromEntities(resultat);
+  public ResponseEntity<List<AnimalModel>> getAnimalListByUserId(@PathVariable("idUser") int idUser) {
+    List<Animal> resultat = this.animalService.getAnimalListByUserId(idUser);
+    List<AnimalModel> resultatModel = AnimalModelHandler.createListModelFromEntities(resultat);
     return ResponseEntity.ok(resultatModel);
   }
 
+/*
+ NOT OK AT ALL =============================== 
 
   @GetMapping("/delete/{id}")
   public ResponseEntity<?> deleteSitterServiceById(@PathVariable("id") int id) {
@@ -65,8 +68,9 @@ public class AnimalController{
   // New mapping
   @GetMapping("/details/{id}")
   public ResponseEntity<AnimalModel> getAnimalDetails(@PathVariable("id") int id) {
-    AnimalEntity animal = this.animalService.getAnimalById(id);
+    Animal animal = this.animalService.getAnimalById(id);
     AnimalModel animalModel = new AnimalModel(animal.getId(), animal.getPetName(), animal.getDateOfBirth(), animal.getBreed());
     return ResponseEntity.ok(animalModel);
   }
+  */
 }

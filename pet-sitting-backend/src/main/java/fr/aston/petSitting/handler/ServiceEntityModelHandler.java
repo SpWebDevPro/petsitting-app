@@ -3,7 +3,6 @@ package fr.aston.petSitting.handler;
 import java.util.ArrayList;
 import java.util.List;
 
-import fr.aston.petSitting.entities.AnimalEntity;
 import fr.aston.petSitting.entities.Booking;
 import fr.aston.petSitting.entities.ServiceEntity;
 import fr.aston.petSitting.entities.User;
