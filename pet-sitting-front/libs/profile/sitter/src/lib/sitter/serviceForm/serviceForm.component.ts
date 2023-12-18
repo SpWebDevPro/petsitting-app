@@ -21,9 +21,8 @@ import { Subscription } from 'rxjs';
   styleUrl: './serviceForm.component.scss',
 })
 export class ServiceFormComponent {
-  @Input()
-  //user!: UserModel;
-  userId: number = 4;
+  @Input({ required: true })
+  userId!: number;
 
   @Output()
   newServiceCreated = new EventEmitter<ServiceModel>();

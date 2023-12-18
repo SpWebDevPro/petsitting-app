@@ -1,5 +1,6 @@
 <div class="sitter-profile-title">
-  <h3>Mes services</h3>
+  <h3>{{ titleSection }}</h3>
+  @if(displaySitterProfileButtons){
   <button
     type="button"
     class="btn btn-info btn-circle btn-circle-sm"
@@ -7,9 +8,11 @@
   >
     <fa-icon [icon]="faPlus" [style.color]="'FFFFFF'" size="xl"></fa-icon>
   </button>
+  }
 </div>
 @if (displayForm){
 <pet-sitting-front-service-form
+  [userId]="userId"
   (newServiceCreated)="addNewServiceToList($event)"
 ></pet-sitting-front-service-form
 >} @if(sitterServiceList; as list){
@@ -19,6 +22,7 @@
   <li>
     <pet-sitting-front-service-card
       [sitterService]="service"
+      [displaySitterProfileButtons]="displaySitterProfileButtons"
     ></pet-sitting-front-service-card>
   </li>
   }
