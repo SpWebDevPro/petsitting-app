@@ -8,6 +8,11 @@ body {
 
 @import "@angular/material/prebuilt-themes/indigo-pink.css";
 
+// <================= carousel =================>
+@import '~bootstrap/dist/css/bootstrap.min.css';
+// <=============== end carousel ===============>
+
+
 /*
 *
 * ==========================================
@@ -37,9 +42,190 @@ button.btn.btn-circle.btn-circle-xl {
 
 button.btn.btn-circle.btn-circle-xl img {
   position: relative;
-  //TODO
-  /* top: -5px;
-    right: 11px;  */
+
+}
+
+/*
+*
+* ==========================================
+* RESPONSIVITY AND MOBILE FIRST APPROACH
+* ==========================================
+*
+*/
+
+
+/* Mobile-first styles */
+.container {
+  width: 100%;
+  padding: 10px;
+
+
+/* Base styles for all screen sizes */
+/* Mobile-first styles (base styles for all screens) */
+body {
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Header styles */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Navigation styles */
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #444;
+  padding: 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  margin: 0 10px;
+}
+
+/* Main content styles */
+main {
+  padding: 20px;
+}
+
+/* Article styles */
+article {
+  margin-bottom: 20px;
+}
+
+/* Footer styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Media query for small screens (phones) */
+@media only screen and (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+
+  nav a {
+    margin: 5px 0;
+  }
+}
+}
+
+/* Tablet styles */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+
+  /* Adjust the container width and padding */
+  .container {
+    max-width: 768px;
+    padding: 15px;
+    margin: 0 auto;
+  }
+
+  /* Adjust font sizes or spacing for better readability on tablets */
+  body {
+    font-size: 16px;
+  }
+
+  /* Adjust styles for navigation, if needed */
+  nav {
+    padding: 10px;
+  }
+
+  nav a {
+    padding: 8px 12px;
+  }
+
+  /* Adjust spacing for main content */
+  main {
+    padding: 15px;
+  }
+
+  /* Additional tablet-specific styles as needed */
+
+}
+
+  /* Media query for desktops */
+@media only screen and (min-width: 1025px) {
+  /* Adjust the container width and padding for larger screens */
+  .container {
+    max-width: 1200px;
+    padding: 20px;
+  }
+
+  /* Additional styles for larger screens */
+  body {
+    font-size: 18px;
+  }
+
+  /* Adjust styles for navigation, if needed */
+  nav {
+    padding: 15px;
+  }
+
+  nav a {
+    padding: 10px 15px;
+  }
+
+  /* Additional desktop-specific styles as needed */
+}
+
+/* Media query for large screens and HD devices */
+@media only screen and (min-width: 1441px) {
+  /* Adjust the container width and padding for very large screens */
+  .container {
+    max-width: 1600px;
+    padding: 30px;
+  }
+
+  /* Additional styles for very large screens */
+  body {
+    font-size: 20px;
+  }
+
+  /* Adjust styles for navigation, if needed */
+  nav {
+    padding: 20px;
+  }
+
+  nav a {
+    padding: 15px 20px;
+  }
+
+  /* Additional large-screen-specific styles as needed */
 }
 
 
+/* Additional media queries as needed */
+
+/* Example: Adjustments for landscape orientation */
+@media only screen and (orientation: landscape) {
+  /* Add landscape-specific styles here */
+}
+
+/* Example: Adjustments for high-resolution screens (Retina) */
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi) {
+  /* Add high-resolution-specific styles here */
+}
+
+// <=============== end of responsivity setup ==============>
