@@ -17,18 +17,18 @@ export const appRoutes: Route[] = [
   },
   {
     // Temporary road
-  path: 'animal-list',
+    path: 'animal-list',
     pathMatch: 'full',
     loadComponent: () =>
       import('@pet-sitting-front/animal').then((m) => m.AnimalComponent),
   },
   {
-  path: 'booking',
-  pathMatch: 'full',
-  loadComponent: () =>
-    import('@pet-sitting-front/booking').then((m) => m.BookingComponent),
-},
-{
+    path: 'booking',
+    pathMatch: 'full',
+    loadComponent: () =>
+      import('@pet-sitting-front/booking').then((m) => m.BookingComponent),
+  },
+  {
     path: 'booking/:serviceId',
     pathMatch: 'full',
     loadComponent: () =>
@@ -41,10 +41,21 @@ export const appRoutes: Route[] = [
       import('@pet-sitting-front/sitter').then((m) => m.PublicSitterComponent),
   },
 
-    // Temporary road
-  {  path:'card-animal',
-    pathMatch:'full',
+  // Temporary road
+  {
+    path: 'card-animal',
+    pathMatch: 'full',
     loadComponent: () =>
-      import('@pet-sitting-front/animal').then((m) =>m.AnimalComponent),
-  }
+      import('@pet-sitting-front/animal').then((m) => m.AnimalComponent),
+  },
+
+  //temporary road notification
+  {
+    path: 'notification',
+    pathMatch: 'full',
+    loadComponent: () =>
+      import('@pet-sitting-front/sitter').then(
+        (m) => m.BookingNotificationComponent
+      ),
+  },
 ];
