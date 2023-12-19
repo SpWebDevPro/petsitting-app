@@ -1,9 +1,8 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ServiceModel } from '@pet-sitting-front/services';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faPen, faTrash } from '@fortawesome/free-solid-svg-icons';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'pet-sitting-front-service-card',
@@ -23,7 +22,23 @@ export class ServiceCardComponent {
   @Input()
   displaySitterProfileButtons: boolean = true;
 
-  constructor(private router: Router) {}
+  @Input()
+  selectedServiceIdFromHomePage!: number;
+
+  //passe les propriétés au parent serviceList
+  @Output()
+  bookingButtonHasBeenClicked = new EventEmitter();
+
+  clikedServiceId!: number;
+
+  constructor() {}
+
+  ngOnInit() {
+    console.log(
+      'ngoninit, je récupère this.selectedServiceIdFromHomePage ',
+      +this.selectedServiceIdFromHomePage
+    );
+  }
 
   onModifyClick() {
     console.log("j'ai cliqué sur modifier");
@@ -36,7 +51,21 @@ export class ServiceCardComponent {
   }
 
   onBookClick(selectedSitterService: ServiceModel) {
-    console.log("j'ai cliqué sur réserver", selectedSitterService);
-    this.router.navigate(['booking', selectedSitterService.id]);
+    this.selectedServiceIdFromHomePage = 0;
+    console.log(
+      'this.selectedServiceIdFromHomePage :',
+      this.selectedServiceIdFromHomePage
+    );
+    this.ngDoCheck();
+    //je dois remonter un event au parent
+    if (selectedSitterService.id) {
+      this.bookingButtonHasBeenClicked.emit(selectedSitterService.id);
+      console.log('je clique');
+      console.log('selectedSitterService.id ', selectedSitterService.id);
+      this.clikedServiceId = selectedSitterService.id;
+      console.log('this.clikedServiceId', this.clikedServiceId);
+    }
   }
+
+  ngDoCheck() {}
 }

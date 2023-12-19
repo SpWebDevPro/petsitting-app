@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ServiceCardComponent } from './../serviceCard/serviceCard.component';
 import { ServiceFormComponent } from './../serviceForm/serviceForm.component';
@@ -34,6 +34,10 @@ export class ServicesListComponent {
   @Input()
   selectedServiceId!: number;
 
+  //passe les propriétés au parent publicSitter
+  @Output()
+  bookingButtonHasBeenClicked = new EventEmitter();
+
   sitterServiceList: ServiceModel[] = [];
   getServicesSubscription: Subscription = new Subscription();
 
@@ -59,6 +63,12 @@ export class ServicesListComponent {
   addNewServiceToList(objet: ServiceModel) {
     this.displayForm = false;
     this.sitterServiceList.push(objet);
+  }
+
+  //methode appelée lorsque la carte service a été cliquée pour reserver
+  //ET ELLE PASSE AU PARENT PUBLICsITTER L'INFO
+  getServiceBookingEnquiry(idService: number) {
+    this.bookingButtonHasBeenClicked.emit(idService);
   }
 
   ngOnDestroy() {
