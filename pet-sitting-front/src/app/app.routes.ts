@@ -58,4 +58,11 @@ export const appRoutes: Route[] = [
         (m) => m.BookingNotificationComponent
       ),
   },
+
+  {
+    path: 'parent-profile',
+    pathMatch: 'full',
+    loadComponent: () =>
+      import('@pet-sitting-front/parent').then((m) => m.ParentComponent),
+  },
 ];
