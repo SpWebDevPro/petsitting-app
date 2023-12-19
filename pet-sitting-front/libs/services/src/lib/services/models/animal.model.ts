@@ -14,6 +14,7 @@ export interface AnimalModel {
   breed:string;
   isSocial:boolean;
   petPhoto:string;
-  user_id:number;
+  userId:number;
   user?:UserModel;
+  selected: boolean;
 }

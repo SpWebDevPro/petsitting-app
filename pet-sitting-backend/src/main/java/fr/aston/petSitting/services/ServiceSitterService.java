@@ -40,5 +40,10 @@ public class ServiceSitterService {
 		
 		return this.serviceRepository.getServices( type,city);
 	}
+	
+	public ServiceEntity getServiceById(int id) {
+		
+		return this.serviceRepository.findById(id).orElse(null);
+	}
 
 }

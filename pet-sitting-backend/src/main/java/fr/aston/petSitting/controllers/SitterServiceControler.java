@@ -16,9 +16,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 import fr.aston.petSitting.entities.ServiceEntity;
 import fr.aston.petSitting.entities.ServiceEnum;
+import fr.aston.petSitting.entities.User;
 import fr.aston.petSitting.handler.ServiceEntityModelHandler;
+import fr.aston.petSitting.handler.UserModelHandler;
 import fr.aston.petSitting.modele.ResponseModele;
 import fr.aston.petSitting.modele.ServiceModele;
+import fr.aston.petSitting.modele.UserModel;
 import fr.aston.petSitting.services.ServiceSitterService;
 import fr.aston.petSitting.services.UserService;
 
@@ -75,4 +78,13 @@ public class SitterServiceControler {
 		return ResponseEntity.ok(resultatModel);
 	}
 
+	@GetMapping("/{serviceId}")
+	public ResponseEntity<ServiceModele> getUserByIdControler(@PathVariable("serviceId") int serviceId) {
+		System.out.println("tu m'as appelé-----------------------------------------------------------------");
+			ServiceEntity resultat = this.service.getServiceById(serviceId);
+			
+			ServiceModele resultatModel = ServiceEntityModelHandler.createModelFromEntity(resultat);
+			return ResponseEntity.ok(resultatModel);
+		
+	}
 }
