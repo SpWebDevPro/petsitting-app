@@ -1,8 +1,10 @@
+
 package fr.aston.petSitting.controllers;
-
+ 
 import java.util.Optional;
-
+ 
 import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,16 +14,17 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
+ 
 import fr.aston.petSitting.entities.User;
 import fr.aston.petSitting.handler.UserModelHandler;
 import fr.aston.petSitting.modele.UserModel;
 import fr.aston.petSitting.services.UserService;
-
+ 
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 @RequestMapping("/userservice")
 public class UserController {
+
 
 	@Autowired
 	private UserService userService;
@@ -65,3 +68,10 @@ public class UserController {
 		
 	}
 }
+
+
+
+
+
+
+

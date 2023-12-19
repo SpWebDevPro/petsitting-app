@@ -13,7 +13,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import fr.aston.petSitting.entities.Animal;
 import fr.aston.petSitting.entities.AnimalTypeEnum;
-import fr.aston.petSitting.entities.GenderEnum;
+import fr.aston.petSitting.entities.AnimalGenderEnum;
 import fr.aston.petSitting.entities.User;
 
 /**
@@ -36,7 +36,7 @@ class AnimalRepositoryTest {
 
 		Animal catToInsert = new Animal();
 		catToInsert.setDateOfBirth(new Date());
-		catToInsert.setGender(GenderEnum.FEMALE);
+		catToInsert.setGender(AnimalGenderEnum.FEMALE);
 		catToInsert.setIsSocial(true);
 		catToInsert.setIsSterilized(true);
 		catToInsert.setIsVaccinated(true);

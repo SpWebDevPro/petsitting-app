@@ -1,2 +1,7 @@
-<p>animal works!</p>
- <!-- appelle tes cartes -->
+
+
+@if(animalList$){
+@for (animal of animalList$|async; track animal.id) {
+  <pet-sitting-front-card-animal [animal]="animal"></pet-sitting-front-card-animal>
+}
+}

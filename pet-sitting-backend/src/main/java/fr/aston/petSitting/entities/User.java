@@ -439,7 +439,7 @@ public class User implements Serializable {
 	@Column(nullable = false, length = 45)
 	private String telephone;
 
-	// bi-directional many-to-one association to AnimalEntity
+	// bi-directional many-to-one association to Animal
 	@JsonIgnore
 
 	@OneToMany(mappedBy = "user", fetch=FetchType.LAZY)

@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BsModalRef, BsModalService, ModalModule } from 'ngx-bootstrap/modal';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';

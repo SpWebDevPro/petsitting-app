@@ -1,1 +1,12 @@
-<p>card-animal works!</p>
+
+  <div class="card">
+    <h2>{{ animal.petName }}</h2>
+    <p>Breed : {{ animal.breed}}</p>
+    <p>Weight : {{ animal.weight}}</p>
+    <img src="{{ animal.petPhoto }}" alt="{{ animal.petName }}">
+    <p>Vaccination : {{ animal.isVaccinated }}</p>
+    <p>Sterilisation : {{ animal.isSterilized }}</p>
+    <p>Sociability : {{ animal.isSocial }}</p>
+    <p>Date of Birth : {{ animal.dateOfBirth }}</p>
+
+  </div>

@@ -11,6 +11,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import fr.aston.petSitting.entities.RoleEnum;
 import fr.aston.petSitting.entities.User;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 /**
  * @author F_CHAMAR
@@ -19,6 +22,9 @@ import fr.aston.petSitting.entities.User;
 
 @SpringBootTest
 class UserRepositoryTest {
+	@Getter
+	@Setter
+
 
 	@Autowired
 	UserRepository userRepo;

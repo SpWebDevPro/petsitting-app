@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { AccomodationTypeEnum, ServiceModel } from '@pet-sitting-front/services';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {  faBuildingUn, faHouseUser } from '@fortawesome/free-solid-svg-icons';
+import {Router } from '@angular/router';
 
 @Component({
   selector: 'pet-sitting-front-card-service',
@@ -11,7 +12,7 @@ import {  faBuildingUn, faHouseUser } from '@fortawesome/free-solid-svg-icons';
   templateUrl: './card-service.component.html',
   styleUrl: './card-service.component.scss',
 })
-export class CardServiceComponent implements OnInit{
+export class CardServiceComponent{
 
   @Input({ required: true })
   serviceModel!: ServiceModel;
@@ -20,11 +21,11 @@ export class CardServiceComponent implements OnInit{
 
  fabuilding =  faBuildingUn;
  faHouse = faHouseUser;
-   constructor(){
-   }
-   ngOnInit() {
-
+   constructor(private router : Router){
    }
 
-  
+
+   seeProfile(){
+    this.router.navigate(['sitter',this.serviceModel.userId,this.serviceModel.id]);
+   }
 }

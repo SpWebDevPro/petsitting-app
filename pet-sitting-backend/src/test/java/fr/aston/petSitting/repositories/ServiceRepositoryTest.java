@@ -13,6 +13,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 import fr.aston.petSitting.entities.ServiceEntity;
 import fr.aston.petSitting.entities.ServiceEnum;
 import fr.aston.petSitting.entities.User;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 /**
  * @author F_CHAMAR
@@ -21,6 +24,8 @@ import fr.aston.petSitting.entities.User;
 
 @SpringBootTest
 class ServiceRepositoryTest {
+	@Getter
+	@Setter
 
 	@Autowired
 	private ServiceRepository serviceRepository;
