@@ -21,9 +21,11 @@ import { Subscription } from 'rxjs';
   styleUrl: './serviceForm.component.scss',
 })
 export class ServiceFormComponent {
+  //reçoit l'info du parent service list
   @Input({ required: true })
   userId!: number;
 
+  //remonte l'info au parent service list
   @Output()
   newServiceCreated = new EventEmitter<ServiceModel>();
 
@@ -55,10 +57,6 @@ export class ServiceFormComponent {
   });
 
   onServiceFormSubmit() {
-    //soumettre le formulaire via le service
-    //recup nopuveau service crée
-    //fermer le formulaire
-    //passer l'info à la liste des services
     const form = this.serviceForm.value;
     if (
       form.name &&

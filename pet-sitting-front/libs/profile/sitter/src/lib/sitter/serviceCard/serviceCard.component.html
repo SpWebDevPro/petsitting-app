@@ -1,7 +1,12 @@
-<div class="card">
+<div
+  class="card"
+  [class.isSelected]="sitterService.id === +this.selectedServiceIdFromHomePage"
+>
   <div class="card-body">
     <div class="card-top">
       <div>
+        <!-- only for testing
+        <h4 class="card-title">{{ sitterService.id }}</h4> -->
         <h4 class="card-title">{{ sitterService.name }}</h4>
         <h6 class="card-subtitle mb-2 text-muted">{{ sitterService.type }}</h6>
       </div>
@@ -30,7 +35,10 @@
         <fa-icon [icon]="faTrash" [style.color]="'FFFFFF'" size="lg"></fa-icon>
       </button>
       } @else {
-      <button class="btn btn-primary" (click)="onBookClick(sitterService)">
+      <button
+        class="btn btn-primary stretched-link"
+        (click)="onBookClick(sitterService)"
+      >
         Réserver
       </button>
       }

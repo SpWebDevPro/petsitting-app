@@ -66,8 +66,6 @@ public class UserModelHandler {
 		user.setTelephone(userModel.getPays());
 		user.setPays(userModel.getTelephone());
 		return user;
-
-
 	}
 	
 	public static List<UserModel> createListModelFromEntities(List<User> listUser) {

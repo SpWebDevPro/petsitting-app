@@ -4,6 +4,15 @@ div.card {
   width: 350px;
 }
 
+.isSelected {
+  background-color: #fbe1e0;
+  /* border-color: #eb6864; */
+  border-color: rgba(
+    var(--bs-primary-rgb),
+    /* var(--bs-border-opacity) */
+  ) !important;
+}
+
 .card {
   border-color: white;
 }
