@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AnimalTypeEnum, GenderEnum , AnimalModel, AnimalService} from '@pet-sitting-front/services';
 import { UserModel }  from '@pet-sitting-front/services';
 
 
-import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'pet-sitting-front-form-animal',
@@ -18,29 +18,32 @@ export class FormAnimalComponent {
   readonly animalTypeEnum = AnimalTypeEnum;
   listGenderEnume!: string[];
   listAnimalTypes!: string[];
-typeAnimal!: string;
-genderAnimal!: string;
-animal = {} as AnimalModel;
-
+  typeAnimal!: string;
+ genderAnimal!: string;
+animal = {isSocial : false,isSterilized : false, isVaccinated : false, } as AnimalModel;
+user : UserModel = {}
+@Output() closeFormEvenet = new EventEmitter();
+@Output() animalCreatedEvenet = new EventEmitter();
 constructor(private animalService: AnimalService){
   this.listGenderEnume = Object.keys(GenderEnum);
   this.listAnimalTypes = Object.keys(AnimalTypeEnum);
 }
 
-user : UserModel = {}
 
+cancelForm(){
+  this.closeFormEvenet.emit();
+}
 saveAnimal(){
-  console.log("im here");
+
   const userID = localStorage.getItem('UserConnected');
 
  
   if(localStorage.getItem('UserConnected') !== null)
   {
 
-    this.animal.user_id= Number(userID);
-    this.user.id =  this.animal.user_id;
-    console.log(this.animal.dateOfBirth);
-    console.log(this.animal.user_id);
+    this.animal.userId= Number(userID);
+   
+
     
     this.animalService.createAnimal(this.animal).subscribe({
       complete: () => {}, // completeHandler
@@ -48,8 +51,8 @@ saveAnimal(){
       console.log(err)
       },    // errorHandler 
       next: (data) => { 
-  
-        console.log(data);
+        this.animalCreatedEvenet.emit(data);
+
   }});
     }
   }

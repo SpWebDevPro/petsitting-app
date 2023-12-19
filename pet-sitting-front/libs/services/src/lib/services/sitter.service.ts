@@ -21,7 +21,11 @@ export class SitterService {
 
   createSitterService(servicedata: ServiceModel) {
     const url = this.apiUrl + 'create';
-    console.log(url);
     return this.httpClient.post<ServiceModel>(url, servicedata);
+  }
+  getServiceById(serviceId: number){
+    const url = this.apiUrl  + serviceId;
+   
+    return this.httpClient.get<ServiceModel>(url);
   }
 }

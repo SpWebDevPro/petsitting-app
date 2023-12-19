@@ -11,4 +11,5 @@ import fr.aston.petSitting.entities.Booking;
 @Repository
 public interface BookingRepository extends JpaRepository<Booking, Integer> {
 
+	
 }

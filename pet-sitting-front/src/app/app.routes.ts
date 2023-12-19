@@ -22,12 +22,6 @@ export const appRoutes: Route[] = [
     loadComponent: () =>
       import('@pet-sitting-front/animal').then((m) => m.AnimalComponent),
   },
-  {
-  path: 'booking',
-  pathMatch: 'full',
-  loadComponent: () =>
-    import('@pet-sitting-front/booking').then((m) => m.BookingComponent),
-},
 {
     path: 'booking/:serviceId',
     pathMatch: 'full',
@@ -46,5 +40,10 @@ export const appRoutes: Route[] = [
     pathMatch:'full',
     loadComponent: () =>
       import('@pet-sitting-front/animal').then((m) =>m.AnimalComponent),
-  }
+  },
+  {  path:'bookings',
+  pathMatch:'full',
+  loadComponent: () =>
+    import('@pet-sitting-front/booking').then((m) =>m.BookingComponent),
+}
 ];

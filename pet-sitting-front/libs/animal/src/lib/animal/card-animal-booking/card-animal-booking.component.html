@@ -1,18 +1,14 @@
-    
-            <div class="card" style="width: 10rem; height: 10rem;">
-        
-                <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                  <img class="card-img-top" style="max-width:30%;" src="https://static.thenounproject.com/png/965184-200.png" 
-                  alt="Card image cap">
-                  <p class="card-text">sPepit</p>
-                  <div class="form-check">
-                    <input class="form-check-input rounded-circle" type="checkbox" />
-              
-                  </div>
-                  <div class="form-check">
-                    <i class="bi bi-badge-vr-fill"></i>
-              
-                  </div>
-                </div>
-                  </div>
-          
+<div (click) = "checkCard()"class="card" style="width: 10rem; height: 10rem;" [ngStyle]="{'background-color': selected? '#D3D3D3' : '#ffffff'}">
+
+  <div class="card-body d-flex flex-column justify-content-center align-items-center" >
+    <img class="card-img-top" style="max-width:30%; color:aqua" src="./assets/images/pet-img.png"
+      alt="Card image cap" >
+    <p class="card-text">{{petName}}</p>
+
+      <fa-icon [icon]="selected ? faPlusCircle : faCircle" [style.color]="selected ? '#eb6864': '#D3D3D3'" size="xl"></fa-icon>
+
+
+
+ 
+  </div>
+</div>

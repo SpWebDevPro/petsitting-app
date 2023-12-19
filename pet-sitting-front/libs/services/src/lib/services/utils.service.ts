@@ -29,4 +29,12 @@ export class UtilService {
       
         return decipher.toString();
       }
-}
+
+
+      getDaysBetweenTwoDates(start : Date, end : Date) : number{
+        return Math.floor((Date.UTC(end.getFullYear(), end.getMonth(), end.getDate()) - Date.UTC(start.getFullYear(), start.getMonth(), start.getDate()) ) /(1000 * 60 * 60 * 24));
+
+      }
+      }
+
+     

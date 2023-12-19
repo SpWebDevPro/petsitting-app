@@ -5,10 +5,7 @@ import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 
-import org.hibernate.annotations.LazyGroup;
-import org.hibernate.annotations.LazyToOne;
-import org.hibernate.annotations.LazyToOneOption;
-import org.hibernate.annotations.Proxy;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -112,79 +109,5 @@ public class Animal implements Serializable {
 	public Boolean getIsSocial() {
 		return isSocial;
 	}
-
-	public void setIsSocial(Boolean isSocial) {
-		this.isSocial = isSocial;
-	}
-
-	public Boolean getIsSterilized() {
-		return isSterilized;
-	}
-
-	public void setIsSterilized(Boolean isSterilized) {
-		this.isSterilized = isSterilized;
-	}
-
-	public Boolean getIsVaccinated() {
-		return isVaccinated;
-	}
-
-	public void setIsVaccinated(Boolean isVaccinated) {
-		this.isVaccinated = isVaccinated;
-	}
-
-	public String getPetName() {
-		return petName;
-	}
-
-	public void setPetName(String petName) {
-		this.petName = petName;
-	}
-
-	public String getPetPhoto() {
-		return petPhoto;
-	}
-
-	public void setPetPhoto(String petPhoto) {
-		this.petPhoto = petPhoto;
-	}
-
-	public AnimalGenderEnum getGender() {
-		return gender;
-	}
-
-	public void setGender(AnimalGenderEnum gender) {
-		this.gender = gender;
-	}
-
-	public BigDecimal getWeight() {
-		return weight;
-	}
-
-	public void setWeight(BigDecimal weight) {
-		this.weight = weight;
-	}
-
-	public User getUser() {
-		return user;
-	}
-
-	public void setUser(User user) {
-		this.user = user;
-	}
-
-
-	public AnimalTypeEnum getType() {
-		return type;
-	}
-
-	public void setType(AnimalTypeEnum type) {
-		this.type = type;
-	}
-
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
-
 
 }

@@ -35,7 +35,6 @@ export class UserService {
 
   getUserById(id: number) {
     const url = this.apiUrl + id;
-    console.log(url);
     return this.httpClient.get<UserModel>(url);
   }
 }
