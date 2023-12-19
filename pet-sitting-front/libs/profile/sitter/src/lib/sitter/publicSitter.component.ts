@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DataSitterComponent } from './dataSitter/dataSitter.component';
 import { ServicesListComponent } from './serviceList/serviceList.component';
@@ -19,7 +19,7 @@ import { EMPTY, Observable, catchError } from 'rxjs';
   templateUrl: './publicSitter.component.html',
   styleUrl: './publicSitter.component.scss',
 })
-export class PublicSitterComponent {
+export class PublicSitterComponent implements OnInit {
   //propriétés d'affichage
   titleSectionInfos: string = 'Informations';
 
