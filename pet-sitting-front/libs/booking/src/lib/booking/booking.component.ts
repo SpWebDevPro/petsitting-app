@@ -1,11 +1,11 @@
-import { AfterContentChecked, AfterViewInit, ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import {AfterViewInit, ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormGroup, FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { JsonPipe } from '@angular/common';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatNativeDateModule } from '@angular/material/core';
-import { AnimalModel, BookingService, BookingModel, UtilService, SitterService, ServiceModel, PopupService } from '@pet-sitting-front/services';
+import { AnimalModel, BookingService, BookingModel, UtilService, SitterService, ServiceModel, PopupService, BookingStatuEnum } from '@pet-sitting-front/services';
 import { ListAnimalBookingComponent } from '@pet-sitting-front/animal';
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -35,10 +35,10 @@ export class BookingComponent implements OnInit, AfterViewInit {
   });
 
   animalSelected !: AnimalModel;
-  bookingModel: BookingModel = {};
+  bookingModel: BookingModel = { status: BookingStatuEnum.PENDING };
 
   constructor(private bookingService: BookingService, private utilService: UtilService, private router: ActivatedRoute, private sitterService: SitterService, private ref: ChangeDetectorRef,
-   private popupService:PopupService, private route : Router){
+    private popupService: PopupService, private route: Router) {
   }
   ngAfterViewInit(): void {
     this.ref.detectChanges();
@@ -71,17 +71,16 @@ export class BookingComponent implements OnInit, AfterViewInit {
 
 
   booking() {
-  
 
     this.bookingService.createBooking(this.bookingModel).subscribe({
 
-      next:(value) =>{
-          this.popupService.openPopup();
+      next: (value) => {
+        this.popupService.openPopup();
 
-          setTimeout(() => {
-            this.popupService.closePopup();
-            this.route.navigate(['/']);
-         }, 1000);
+        setTimeout(() => {
+          this.popupService.closePopup();
+          this.route.navigate(['/']);
+        }, 1000);
       },
     })
 
@@ -89,13 +88,18 @@ export class BookingComponent implements OnInit, AfterViewInit {
 
   formValidation() {
 
-    if (this.animalSelected != null && this.range.value.start != null && this.range.value.end != null) {
-      this.bookingModel.startDate = this.range.value.start;
-      this.bookingModel.endDate = this.range.value.end;
+
+    if (this.range.value.start != null && this.range.value.end != null) {
       this.bookingModel.totalPrice = this.getTotalPrice();
-      this.bookingModel.animalId = this.animalSelected.id;
-      this.bookingModel.serviceId = this.serviceModel.id;
-      return false;
+
+      if (this.animalSelected != null) {
+        this.bookingModel.startDate = this.range.value.start;
+        this.bookingModel.endDate = this.range.value.end;
+        this.bookingModel.animalId = this.animalSelected.id;
+        this.bookingModel.serviceId = this.serviceModel.id;
+        return false;
+      }
+
     }
 
 
@@ -105,15 +109,15 @@ export class BookingComponent implements OnInit, AfterViewInit {
 
   }
 
-  getTotalPrice() : number {
+  getTotalPrice(): number {
 
     if (this.range.value.start != null && this.range?.value?.end != null) {
       const numberOfdays = this.utilService.getDaysBetweenTwoDates(this.range.value.start, this.range.value.end);
 
-     return  this.serviceModel.dailyPrice * numberOfdays;
+      return this.serviceModel.dailyPrice * numberOfdays;
     }
     return 0;
   }
- 
+
 }
 

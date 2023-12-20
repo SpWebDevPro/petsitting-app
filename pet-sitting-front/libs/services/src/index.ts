@@ -28,3 +28,4 @@ export * from './lib/services/models/booking.model';
 export * from './lib/services/booking.service';
 
 export * from './lib/services/popup.service';
+export * from './lib/services/models/statusBooking.enum';

@@ -21,7 +21,8 @@ public class BookingModelHandler {
 		bookingModel.setTotalPrice(booking.getTotalPrice());
 		bookingModel.setServiceId(booking.getService().getId());
 		bookingModel.setAnimalId(booking.getAnimal().getId());
-
+         
+		bookingModel.setStatus(booking.getStatus());
 		return bookingModel;
 	}
 
@@ -39,7 +40,7 @@ public class BookingModelHandler {
 		booking.setStartDate(bookingModel.getStartDate());
 		booking.setEndDate(bookingModel.getEndDate());
 		booking.setTotalPrice(bookingModel.getTotalPrice());
-	
+	    booking.setStatus(bookingModel.getStatus());
 		Animal animal = animalService.getAnimalById(bookingModel.getAnimalId());
 		booking.setAnimal(animal);
 		ServiceEntity service = sitterService.getServiceById(bookingModel.getServiceId());

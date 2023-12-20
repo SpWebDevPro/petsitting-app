@@ -24,5 +24,6 @@ public class BookingModel {
 	private Date endDate;
 	private int animalId;
 	private int serviceId;
+	private String status;
 
 }

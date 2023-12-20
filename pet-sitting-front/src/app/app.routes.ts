@@ -43,22 +43,19 @@ export const appRoutes: Route[] = [
 
       import('@pet-sitting-front/animal').then((m) =>m.AnimalComponent),
   },
+
+
+  {
+    path:'carousel',
+    pathMatch:'full',
+    loadComponent: ()=>
+      import('@pet-sitting-front/home').then((m) =>m.CarouselComponent)
+  },
   {  path:'bookings',
   pathMatch:'full',
   loadComponent: () =>
     import('@pet-sitting-front/booking').then((m) =>m.BookingComponent),
 },
-
-
-  //temporary road notification
-  {
-    path: 'notification',
-    pathMatch: 'full',
-    loadComponent: () =>
-      import('@pet-sitting-front/sitter').then(
-        (m) => m.BookingNotificationComponent
-      ),
-  },
 
   {
     path: 'parent-profile',
