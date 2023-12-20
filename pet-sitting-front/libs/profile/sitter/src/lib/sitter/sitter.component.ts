@@ -5,7 +5,7 @@ import { DataSitterComponent } from './dataSitter/dataSitter.component';
 import { DataSitterFormComponent } from './dataSitterForm/dataSitterForm.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faPen } from '@fortawesome/free-solid-svg-icons';
-import { EMPTY, Observable, catchError } from 'rxjs';
+import { EMPTY, Observable, catchError, of } from 'rxjs';
 import { UserModel, UserService } from '@pet-sitting-front/services';
 
 @Component({
@@ -52,5 +52,10 @@ export class SitterComponent {
 
   onModifyClick() {
     this.displayForm = !this.displayForm;
+  }
+
+  updateDisplayUser(updatedUser: UserModel) {
+    this.displayForm = !this.displayForm;
+    this.user$ = of(updatedUser);
   }
 }

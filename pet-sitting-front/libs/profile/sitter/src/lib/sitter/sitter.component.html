@@ -33,11 +33,12 @@
           }
         </div>
 
-        @if(displayForm){
+        @if(user$ |async; as user){ @if(displayForm){
         <pet-sitting-front-data-sitter-form
-          [userId]="userId"
+          [user]="user"
+          (userSuccessfullyUpdated)="updateDisplayUser($event)"
         ></pet-sitting-front-data-sitter-form>
-        } @else { @if(user$ |async; as user){
+        } @else {
         <pet-sitting-front-data-sitter
           [user]="user"
         ></pet-sitting-front-data-sitter>
