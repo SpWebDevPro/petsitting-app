@@ -15,6 +15,12 @@ import fr.aston.petSitting.entities.Booking;
 
 @Repository
 public interface BookingRepository extends JpaRepository<Booking, Integer> {
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> b1a21d4a2a7512e1f266a4c2120e783592bffc0e
 	
 
 	@Query("select b from Booking b left join b.service s join s.user u   where b.service = s  And s.user =u and u.id= :idUser AND b.status= :status")

@@ -29,7 +29,7 @@ export class ServiceFormComponent {
   @Output()
   newServiceCreated = new EventEmitter<ServiceModel>();
 
-  ServiceTypeEnum = ServiceTypeEnum;
+  serviceTypeEnum = ServiceTypeEnum;
   //je voulais convertir l'enum en un tableau de valeurs pour boucler
   //mais erreur de compilation
   /* serviceType: Array<string> = Object.values(ServiceTypeEnum); */
@@ -45,7 +45,6 @@ export class ServiceFormComponent {
   //je veux plutôt le faire passer à la serviceList
   // donc je vais gérer moi même subscribe et unscubscribe
   newlyCreatedService?: ServiceModel;
-  serviceCreatedSubscription: Subscription = new Subscription();
 
   constructor(private service: SitterService) {}
 
@@ -81,10 +80,6 @@ export class ServiceFormComponent {
           error: (e) => console.error(e),
         });
     }
-  }
-
-  ngOnDestroy() {
-    this.serviceCreatedSubscription.unsubscribe();
   }
 
   get description() {

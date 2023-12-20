@@ -51,7 +51,8 @@ export class ModalInscriptionComponent {
       }, // errorHandler
       next: (data) => {
         this.userConnected = data;
-
+        //only testing purpose
+        console.log('je suis ds create account le user est', data);
         if (
           this.userConnected != null &&
           this.userConnected.id != null &&
