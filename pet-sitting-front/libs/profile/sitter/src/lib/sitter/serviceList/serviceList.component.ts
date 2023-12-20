@@ -1,11 +1,10 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ServiceCardComponent } from './../serviceCard/serviceCard.component';
 import { ServiceFormComponent } from './../serviceForm/serviceForm.component';
 import { ServiceModel, SitterService } from '@pet-sitting-front/services';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
-import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'pet-sitting-front-services-list',
@@ -34,20 +33,21 @@ export class ServicesListComponent {
   @Input()
   selectedServiceId!: number;
 
+  //passe les propriétés au parent publicSitter
+  @Output()
+  bookingButtonHasBeenClicked = new EventEmitter();
+
   sitterServiceList: ServiceModel[] = [];
-  getServicesSubscription: Subscription = new Subscription();
 
   constructor(private service: SitterService) {}
 
   ngOnInit() {
-    this.getServicesSubscription = this.service
-      .getServicesBySitterId(this.userId)
-      .subscribe({
-        next: (data: ServiceModel[]) => {
-          this.sitterServiceList = data;
-        },
-        error: (e) => console.error(e),
-      });
+    this.service.getServicesBySitterId(this.userId).subscribe({
+      next: (data: ServiceModel[]) => {
+        this.sitterServiceList = data;
+      },
+      error: (e) => console.error(e),
+    });
   }
 
   onClickAddButton() {
@@ -61,7 +61,9 @@ export class ServicesListComponent {
     this.sitterServiceList.push(objet);
   }
 
-  ngOnDestroy() {
-    this.getServicesSubscription.unsubscribe();
+  //methode appelée lorsque la carte service a été cliquée pour reserver
+  //ET ELLE PASSE AU PARENT PUBLICsITTER L'INFO
+  getServiceBookingEnquiry(idService: number) {
+    this.bookingButtonHasBeenClicked.emit(idService);
   }
 }

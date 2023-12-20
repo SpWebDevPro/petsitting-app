@@ -1,4 +1,3 @@
-import { Component } from '@angular/core';
 import { Route } from '@angular/router';
 
 export const appRoutes: Route[] = [
@@ -17,17 +16,12 @@ export const appRoutes: Route[] = [
   },
   {
     // Temporary road
-  path: 'animal-list',
+    path: 'animal-list',
     pathMatch: 'full',
     loadComponent: () =>
       import('@pet-sitting-front/animal').then((m) => m.AnimalComponent),
   },
-  {
-  path: 'booking',
-  pathMatch: 'full',
-  loadComponent: () =>
-    import('@pet-sitting-front/booking').then((m) => m.BookingComponent),
-},
+
 {
     path: 'booking/:serviceId',
     pathMatch: 'full',
@@ -41,10 +35,12 @@ export const appRoutes: Route[] = [
       import('@pet-sitting-front/sitter').then((m) => m.PublicSitterComponent),
   },
 
-    // Temporary road
-  {  path:'card-animal',
-    pathMatch:'full',
+  // Temporary road
+  {
+    path: 'card-animal',
+    pathMatch: 'full',
     loadComponent: () =>
+
       import('@pet-sitting-front/animal').then((m) =>m.AnimalComponent),
   },
 
@@ -54,5 +50,17 @@ export const appRoutes: Route[] = [
     pathMatch:'full',
     loadComponent: ()=>
       import('@pet-sitting-front/home').then((m) =>m.CarouselComponent)
-  }
+  },
+  {  path:'bookings',
+  pathMatch:'full',
+  loadComponent: () =>
+    import('@pet-sitting-front/booking').then((m) =>m.BookingComponent),
+},
+
+  {
+    path: 'parent-profile',
+    pathMatch: 'full',
+    loadComponent: () =>
+      import('@pet-sitting-front/parent').then((m) => m.ParentComponent),
+  },
 ];

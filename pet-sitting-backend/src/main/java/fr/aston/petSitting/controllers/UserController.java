@@ -32,9 +32,7 @@ public class UserController {
 	// reste le cas d'un email déja existe
 	@PostMapping("/create")
 	public ResponseEntity<?> createUSerControler(@RequestBody User user) {
-		
-		System.out.println("-----------------------------------------------------------------");
-	
+			
 		User resultat = this.userService.createUser(user);
 
 		return ResponseEntity.ok(UserModelHandler.createModelFromEntity(resultat));
@@ -44,20 +42,15 @@ public class UserController {
 	@GetMapping("/login")
 	public ResponseEntity<?> getUserByEmailAndPasswordController(@RequestParam(name = "email", required = true) String email,
 			@RequestParam(name = "password", required = true) String password) {
-		System.out.println("-----------------------------------------------------------------");
-
 		Optional<User>  userConncted =  this.userService.getUserByEmailAndPassword(email, password);
 
-		
-		System.out.println(userConncted);
-		return ResponseEntity.ok(userConncted);
+				return ResponseEntity.ok(userConncted);
 
 	}
 
 
 	@GetMapping("/{idUser}")
 	public ResponseEntity<UserModel> getUserByIdControler(@PathVariable("idUser") int idUser) {
-		System.out.println("tu m'as appelé-----------------------------------------------------------------");
 			User resultat = this.userService.getUserById(idUser);
 			System.out.println(resultat);
 			System.out.println("-----------------------------------------------------------------");
@@ -67,10 +60,22 @@ public class UserController {
 			return ResponseEntity.ok(resultatModel);
 		
 	}
+	
+	@PostMapping("/update/{idUser}")
+	public ResponseEntity<UserModel> updateUserByIdControler(@RequestBody User user, @PathVariable("idUser") int idUser) {
+		
+		System.out.println("-----------------updateUserByIdControler-------------------------------");
+	
+		User resultat = this.userService.updateUserById(idUser, user);
+
+		return ResponseEntity.ok(UserModelHandler.createModelFromEntity(resultat));
+
+	}
+
+
+
+
 }
-
-
-
 
 
 

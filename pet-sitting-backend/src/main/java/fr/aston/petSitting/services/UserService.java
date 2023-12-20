@@ -27,4 +27,13 @@ public class UserService {
 	public Optional<User>  getUserByEmailAndPassword(String email, String password) {
 		return this.userRepository.findByEmailAndPassword(email, password);
 	}
+	
+	public User updateUserById(int id, User user) {
+		User userToUpdate = this.userRepository.findById(id).get();
+		if (userToUpdate != null && user.getId() == id ) {
+			
+			userToUpdate = this.userRepository.save(user);
+		}
+		return userToUpdate;
+	}
 }

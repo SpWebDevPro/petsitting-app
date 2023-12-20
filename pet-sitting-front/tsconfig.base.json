@@ -22,6 +22,7 @@
       "@pet-sitting-front/home": ["libs/home/src/index.ts"],
       "@pet-sitting-front/nav-bar": ["libs/shared-c/nav-bar/src/index.ts"],
       "@pet-sitting-front/parent": ["libs/profile/parent/src/index.ts"],
+      "@pet-sitting-front/popup": ["libs/shared-c/popup/src/index.ts"],
       "@pet-sitting-front/services": ["libs/services/src/index.ts"],
       "@pet-sitting-front/shared": ["libs/shared/src/index.ts"],
       "@pet-sitting-front/sitter": ["libs/profile/sitter/src/index.ts"],

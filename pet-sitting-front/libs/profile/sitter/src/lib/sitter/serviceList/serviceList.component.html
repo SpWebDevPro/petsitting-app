@@ -21,8 +21,10 @@
   @for (service of list; track service.id){
   <li>
     <pet-sitting-front-service-card
+      (bookingButtonHasBeenClicked)="getServiceBookingEnquiry($event)"
       [sitterService]="service"
       [displaySitterProfileButtons]="displaySitterProfileButtons"
+      [selectedServiceIdFromHomePage]="selectedServiceId"
     ></pet-sitting-front-service-card>
   </li>
   }

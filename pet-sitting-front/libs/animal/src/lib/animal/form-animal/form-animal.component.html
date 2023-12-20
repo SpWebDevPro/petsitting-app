@@ -8,10 +8,10 @@
       </p>
     </div>
     <div class="form-group">
-      <label for="animal-type" class="form-label mt-4">
+      <label for="typeAnimal" class="form-label mt-4">
         Type d'Animal
       </label>
-      <select [(ngModel)]="animal.type" class="px-5 me-sm-1 form-select" required name="typeAnimal">
+      <select [(ngModel)]="animal.type" class="px-5 me-sm-1 form-select"  required name="typeAnimal">
         <option [value]="null" [disabled]="true">Select animal</option>
 
         <option *ngFor="let type of listAnimalTypes" [value]="type">{{type}}</option>
@@ -21,15 +21,15 @@
       </p>
     </div>
     <div class="form-group">
-      <label for="Animal-Race" class="form-label mt-4" required>Race d'animal</label>
-      <input name="animalRace"   name="animalBreed" [(ngModel)]="animal.breed"class="form-control" rows="3" placeholder="Mettre ici race de ton animal" />
+      <label for="AnimalBreed" class="form-label mt-4" >Race d'animal</label>
+      <input   name="AnimalBreed" [(ngModel)]="animal.breed"class="form-control" rows="3" required placeholder="La race" />
   
     </div>
     <div class="form-group">
       <label for="animal-gender" class="form-label mt-4">
         Genre d'animal
       </label>
-      <select [(ngModel)]="animal.gender" class="px-5 me-sm-1 form-select" required name="typeAnimal">
+      <select [(ngModel)]="animal.gender" class="px-5 me-sm-1 form-select" required  name="typeAnimal">
         <option [value]="null" [disabled]="true">Select animal</option>
 
         <option *ngFor="let gender of listGenderEnume" [value]="gender">{{gender}}</option>
@@ -48,7 +48,7 @@
       <label for="poids-animal" class="form-label mt-4">
         Poids d'animal
       </label>
-      <input type="number" class="form-control"  [(ngModel)]="animal.weight" name="poidsAnimal" />
+      <input type="number" class="form-control"  [(ngModel)]="animal.weight" required name="poidsAnimal" />
   
     </div>
     <div class="form-check mt-2">
@@ -64,6 +64,10 @@
       <input class="form-check-input" type="checkbox" name="isSocial"  [(ngModel)]="animal.isSocial" />
       <label class="form-check-label"  for="is-social">Est-il/elle social/e? </label>
     </div>
-    <button type="submit" class="btn btn-primary mt-lg-5"  (click)="saveAnimal()"   [disabled]="!f.valid"  >Enregistrer</button>
+    <div class="row">
+      <button type="submit" class="btn btn-primary mt-lg-5"  (click)="saveAnimal()"   [disabled]="!f.valid"  >Enregistrer</button>
+      <button type="submit" class="btn btn-primary mt-lg-5"  (click)="cancelForm()"    >Annuler</button>
+
+    </div>
   </form>
 </div>

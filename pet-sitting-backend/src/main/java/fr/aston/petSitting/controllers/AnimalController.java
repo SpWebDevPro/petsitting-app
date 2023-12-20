@@ -30,33 +30,27 @@ import fr.aston.petSitting.services.UserService; // Added import statement for U
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 @RequestMapping("/animal")
-public class AnimalController{
-  @Autowired
-  private AnimalService animalService;
+public class AnimalController {
+	@Autowired
+	private AnimalService animalService;
 
-  @Autowired
-  private UserService userService; // Added UserService autowired field
+	@Autowired
+	private UserService userService; // Added UserService autowired field
 
-  @GetMapping("/list/{idUser}")
-  public ResponseEntity<List<AnimalModel>> getAnimalListByUserId(@PathVariable("idUser") int idUser) {
-    List<Animal> resultat = this.animalService.getAnimalListByUserId(idUser);
-    List<AnimalModel> resultatModel = AnimalModelHandler.createListModelFromEntities(resultat);
-    return ResponseEntity.ok(resultatModel);
-  }
+	@GetMapping("/list/{idUser}")
+	public ResponseEntity<List<AnimalModel>> getAnimalListByUserId(@PathVariable("idUser") int idUser) {
+		List<Animal> resultat = this.animalService.getAnimalListByUserId(idUser);
+		List<AnimalModel> resultatModel = AnimalModelHandler.createListModelFromEntities(resultat);
+		return ResponseEntity.ok(resultatModel);
+	}
 
 	@PostMapping("/create")
-	public ResponseEntity<?> createAnimalControler(@RequestBody Animal animal) {
-		
-		
-		System.out.println("-----------------------------------------------------------------");
-		System.out.println(animal.getDateOfBirth());
-		System.out.println(animal.toString());
-	
-		Animal resultat = this.animalService.createAnimal(animal);
-
+	public ResponseEntity<?> createAnimalControler(@RequestBody AnimalModel animalModel) {
+		Animal resultat = this.animalService
+				.createAnimal(AnimalModelHandler.createEntityFromModel(animalModel, userService));
 		return ResponseEntity.ok(AnimalModelHandler.createModelFromEntity(resultat));
 
 	}
-	
+
 
 }

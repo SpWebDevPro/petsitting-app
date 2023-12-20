@@ -27,7 +27,6 @@ export class UserService {
   }
   login(email: string, password: string) {
     const url = this.apiUrl + 'login';
-
     return this.httpClient.get<UserModel>(
       url + '?email=' + email + '&password=' + password
     );
@@ -35,7 +34,14 @@ export class UserService {
 
   getUserById(id: number) {
     const url = this.apiUrl + id;
-    console.log(url);
     return this.httpClient.get<UserModel>(url);
+  }
+
+  updateUserById(id: number, user: UserModel) {
+    const url = this.apiUrl + 'update/' + id;
+    console.log(url);
+    const headers = { 'content-type': 'application/json' };
+    const userJson = JSON.stringify(user);
+    return this.httpClient.post<UserModel>(url, userJson, { headers: headers });
   }
 }

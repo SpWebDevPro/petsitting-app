@@ -4,6 +4,8 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -49,6 +51,7 @@ public class Booking implements Serializable {
 
 	// bi-directional many-to-one association to Animal
 	@ManyToOne
+	@JsonIgnore
 	@JoinColumn(name = "animal_id", nullable = false)
 	private Animal animal;
 
@@ -56,5 +59,9 @@ public class Booking implements Serializable {
 	@ManyToOne
 	@JoinColumn(name = "service_id", nullable = false)
 	private ServiceEntity service;
+	
+	@Column(name="status", nullable=false, length=50)
+	private String status;
+
 
 }

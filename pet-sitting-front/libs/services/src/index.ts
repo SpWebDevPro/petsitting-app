@@ -24,3 +24,8 @@ export * from './lib/services/utils.service';
 export * from './lib/services/models/animal.model';
 
 export * from './lib/services/animal.service';
+export * from './lib/services/models/booking.model';
+export * from './lib/services/booking.service';
+
+export * from './lib/services/popup.service';
+export * from './lib/services/models/statusBooking.enum';
