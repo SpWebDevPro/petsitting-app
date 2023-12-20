@@ -1,4 +1,26 @@
-<p>bookingNotification works!</p>
-<!-- Voir le trello US 7 pour le design de ce component -->
-<!-- pour l'afficher provisioirement pour voir son rendu, j'ai crée une route provisoire :
-localhost/4200/notification -->
+
+<div class="container border border-bottom-0">
+    <span>New Booking</span> 
+
+        <div class="col-md-12">
+            {{bookingMode.totalPrice}} euro
+           
+
+                <a (click)="check(true)"> <fa-icon 
+                    [icon]="facheck
+                     "
+                    [style.color]="'#eb6864'"
+                    size="xl"
+                  >
+                 </fa-icon></a>
+                 <a (click) = "check(false)"> <fa-icon 
+                    [icon]="faclose
+                     "
+                    [style.color]="'#eb6864'"
+                    size="xl"
+                  >
+                 </fa-icon></a>
+     
+    </div>
+</div>
+

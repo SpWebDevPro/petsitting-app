@@ -23,8 +23,8 @@ public class BookingService {
 	  @Autowired
 	  private BookingRepository bookingRepository;
 
-	  public List<Booking> getAnimalListByUserId(int userId){
-	    return this.bookingRepository.findAllByUserId(userId);
+	  public List<Booking> getBookingsBySitterIDByStatus(int userId, String status){
+	    return this.bookingRepository.getBookingsBySitterIdByStatus(userId,  status);
 	  }
 
 	
@@ -38,6 +38,9 @@ public class BookingService {
 	  return this.bookingRepository.findById(id).orElse(null);
 	}
 
+	public int updateBookingSattus(int id, String status) {
+		  return this.bookingRepository.updateBookingStatus(id, status);
+		}
 	}
 
 

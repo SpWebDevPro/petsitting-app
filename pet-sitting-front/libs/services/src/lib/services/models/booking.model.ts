@@ -1,3 +1,5 @@
+import { BookingStatuEnum } from "./statusBooking.enum";
+
 export interface BookingModel {
   id?: number;
   startDate?: Date;
@@ -5,4 +7,5 @@ export interface BookingModel {
   totalPrice?:number;
   animalId?:number;
   serviceId?:number;
+  status:BookingStatuEnum;
 }

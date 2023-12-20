@@ -32,9 +32,7 @@ public class UserController {
 	// reste le cas d'un email déja existe
 	@PostMapping("/create")
 	public ResponseEntity<?> createUSerControler(@RequestBody User user) {
-		
-		System.out.println("-----------------------------------------------------------------");
-	
+			
 		User resultat = this.userService.createUser(user);
 
 		return ResponseEntity.ok(UserModelHandler.createModelFromEntity(resultat));
@@ -44,13 +42,9 @@ public class UserController {
 	@GetMapping("/login")
 	public ResponseEntity<?> getUserByEmailAndPasswordController(@RequestParam(name = "email", required = true) String email,
 			@RequestParam(name = "password", required = true) String password) {
-		System.out.println("-----------------------------------------------------------------");
-
 		Optional<User>  userConncted =  this.userService.getUserByEmailAndPassword(email, password);
 
-		
-		System.out.println(userConncted);
-		return ResponseEntity.ok(userConncted);
+				return ResponseEntity.ok(userConncted);
 
 	}
 
