@@ -46,5 +46,13 @@ export const appRoutes: Route[] = [
     pathMatch:'full',
     loadComponent: () =>
       import('@pet-sitting-front/animal').then((m) =>m.AnimalComponent),
+  },
+
+
+  {
+    path:'carousel',
+    pathMatch:'full',
+    loadComponent: ()=>
+      import('@pet-sitting-front/home').then((m) =>m.CarouselComponent)
   }
 ];

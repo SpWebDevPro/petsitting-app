@@ -105,6 +105,7 @@ CREATE TABLE IF NOT EXISTS `db_petsitting`.`booking` (
   `total_price` DECIMAL(7,2) ZEROFILL NOT NULL,
   `animal_id` INT NOT NULL,
   `service_id` INT NOT NULL,
+  `status` VARCHAR(50) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `id_UNIQUE` (`id` ASC) VISIBLE,
   INDEX `fk_booking_animal1_idx` (`animal_id` ASC) VISIBLE,
@@ -144,7 +145,7 @@ INSERT INTO `service` (`id`, `daily_price`, `type`, `name`, `description`, `user
 
 INSERT INTO `service` (`id`, `daily_price`, `type`, `name`, `description`, `user_id`) VALUES (NULL, '25', 'HOSTING', 'Hébergement de votre animal chez moi', 'vous venez déposer votre animal avec ses croquettes (et bac et littière éventuelle) à mon domicile.', '4'), (NULL, '15', 'WALK', 'une balade en ville.', 'je promène votre animal en ville.', '2');
 
-INSERT INTO `booking` (`id`, `start_date`, `end_date`, `total_price`, `animal_id`, `service_id`) VALUES (NULL, '2023-12-06', '2024-01-16', '15', '4', '4'), (NULL, '2023-12-26', '2024-01-08', '40', '2', '3');
-INSERT INTO `booking` (`id`, `start_date`, `end_date`, `total_price`, `animal_id`, `service_id`) VALUES (NULL, '2024-01-14', '2024-01-26', '122', '3', '1');
-INSERT INTO `booking` (`id`, `start_date`, `end_date`, `total_price`, `animal_id`, `service_id`) VALUES (NULL, '2024-01-14', '2024-02-29', '425', '2', '3'), (NULL, '2023-12-10', '2023-12-22', '60', '1', '2');
+INSERT INTO `booking` (`id`, `start_date`, `end_date`, `total_price`, `animal_id`, `service_id`) VALUES (NULL, '2023-12-06', '2024-01-16', '15', '4', '4'), (NULL, '2023-12-26', '2024-01-08', '40', '2', '3','PENDING'');
+INSERT INTO `booking` (`id`, `start_date`, `end_date`, `total_price`, `animal_id`, `service_id`) VALUES (NULL, '2024-01-14', '2024-01-26', '122', '3', '1','REJECTED');
+INSERT INTO `booking` (`id`, `start_date`, `end_date`, `total_price`, `animal_id`, `service_id`) VALUES (NULL, '2024-01-14', '2024-02-29', '425', '2', '3'), (NULL, '2023-12-10', '2023-12-22', '60', '1', '2','ACCEPTED');
 
