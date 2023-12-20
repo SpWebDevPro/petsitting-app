@@ -57,7 +57,6 @@ public class UserController {
 
 	@GetMapping("/{idUser}")
 	public ResponseEntity<UserModel> getUserByIdControler(@PathVariable("idUser") int idUser) {
-		System.out.println("tu m'as appelé-----------------------------------------------------------------");
 			User resultat = this.userService.getUserById(idUser);
 			System.out.println(resultat);
 			System.out.println("-----------------------------------------------------------------");
@@ -67,10 +66,22 @@ public class UserController {
 			return ResponseEntity.ok(resultatModel);
 		
 	}
+	
+	@PostMapping("/update/{idUser}")
+	public ResponseEntity<UserModel> updateUserByIdControler(@RequestBody User user, @PathVariable("idUser") int idUser) {
+		
+		System.out.println("-----------------updateUserByIdControler-------------------------------");
+	
+		User resultat = this.userService.updateUserById(idUser, user);
+
+		return ResponseEntity.ok(UserModelHandler.createModelFromEntity(resultat));
+
+	}
+
+
+
+
 }
-
-
-
 
 
 

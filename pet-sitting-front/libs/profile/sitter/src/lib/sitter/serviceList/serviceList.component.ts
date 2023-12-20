@@ -5,7 +5,6 @@ import { ServiceFormComponent } from './../serviceForm/serviceForm.component';
 import { ServiceModel, SitterService } from '@pet-sitting-front/services';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
-import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'pet-sitting-front-services-list',
@@ -39,19 +38,16 @@ export class ServicesListComponent {
   bookingButtonHasBeenClicked = new EventEmitter();
 
   sitterServiceList: ServiceModel[] = [];
-  getServicesSubscription: Subscription = new Subscription();
 
   constructor(private service: SitterService) {}
 
   ngOnInit() {
-    this.getServicesSubscription = this.service
-      .getServicesBySitterId(this.userId)
-      .subscribe({
-        next: (data: ServiceModel[]) => {
-          this.sitterServiceList = data;
-        },
-        error: (e) => console.error(e),
-      });
+    this.service.getServicesBySitterId(this.userId).subscribe({
+      next: (data: ServiceModel[]) => {
+        this.sitterServiceList = data;
+      },
+      error: (e) => console.error(e),
+    });
   }
 
   onClickAddButton() {
@@ -69,9 +65,5 @@ export class ServicesListComponent {
   //ET ELLE PASSE AU PARENT PUBLICsITTER L'INFO
   getServiceBookingEnquiry(idService: number) {
     this.bookingButtonHasBeenClicked.emit(idService);
-  }
-
-  ngOnDestroy() {
-    this.getServicesSubscription.unsubscribe();
   }
 }

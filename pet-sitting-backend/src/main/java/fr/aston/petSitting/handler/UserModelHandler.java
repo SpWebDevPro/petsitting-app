@@ -23,6 +23,7 @@ public class UserModelHandler {
 		UserModel userModel = new UserModel();
 		userModel.setId(user.getId());
 		userModel.setAbout(user.getAbout());
+		userModel.setAccomodationType(user.getAccomodationType());
 		userModel.setFirstName(user.getFirstName());
 		userModel.setLastName(user.getLastName());
 		userModel.setEmail(user.getEmail());
@@ -35,10 +36,10 @@ public class UserModelHandler {
 		userModel.setHasVehicule(user.getHasVehicule());
 		userModel.setLivingSpace(user.getLivingSpace());
 		userModel.setRole(user.getRole());
-		userModel.setPassword(user.getPays());
+		userModel.setPassword(user.getPassword());
 		userModel.setStatus(user.getStatus());
-		userModel.setTelephone(user.getPays());
-		userModel.setPays(user.getTelephone());
+		userModel.setTelephone(user.getTelephone());
+		userModel.setPays(user.getPays());
 
 
 		return userModel;
@@ -49,6 +50,7 @@ public class UserModelHandler {
 		User user = new User();
 		user.setId(userModel.getId());
 		user.setAbout(userModel.getAbout());
+		user.setAccomodationType(user.getAccomodationType());
 		user.setFirstName(userModel.getFirstName());
 		user.setLastName(userModel.getLastName());
 		user.setEmail(userModel.getEmail());
@@ -61,10 +63,10 @@ public class UserModelHandler {
 		user.setHasVehicule(userModel.getHasVehicule());
 		user.setLivingSpace(userModel.getLivingSpace());
 		user.setRole(userModel.getRole());
-		user.setPassword(userModel.getPays());
+		user.setPassword(userModel.getPassword());
 		user.setStatus(userModel.getStatus());
-		user.setTelephone(userModel.getPays());
-		user.setPays(userModel.getTelephone());
+		user.setTelephone(userModel.getTelephone());
+		user.setPays(userModel.getPays());
 		return user;
 	}
 	

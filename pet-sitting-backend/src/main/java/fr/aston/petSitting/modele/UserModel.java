@@ -27,6 +27,7 @@ import lombok.NoArgsConstructor;
 public class UserModel {
 
 	private int id;
+	@Enumerated(EnumType.STRING)
 	private AccomodationTypeEnum accomodationType;
 	private String address;
 	private String city;
@@ -41,6 +42,7 @@ public class UserModel {
 	private String pays;
 	private String postalCode;
 	private String about;
+	
 	private RoleEnum role;
 	@Enumerated(EnumType.STRING)
 	private StatusEnum status;
