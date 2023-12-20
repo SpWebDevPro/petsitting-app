@@ -75,7 +75,6 @@ export class ServiceFormComponent {
         })
         .subscribe({
           next: (data: ServiceModel) => {
-            console.log(data);
             this.newlyCreatedService = data;
             this.newServiceCreated.emit(data);
           },

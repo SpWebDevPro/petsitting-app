@@ -26,4 +26,6 @@ export class SitterService {
     console.log(url);
     return this.httpClient.get<ServiceModel[]>(url);
   }
+
+
 }
