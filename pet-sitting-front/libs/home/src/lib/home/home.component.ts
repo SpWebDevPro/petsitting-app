@@ -10,6 +10,7 @@ import {
   SitterService,
 } from '@pet-sitting-front/services';
 import { Observable, catchError, map, of, startWith } from 'rxjs';
+import { CarouselComponent } from '../carousel/carousel.component';
 @Component({
   selector: 'pet-sitting-front-home',
   standalone: true,
@@ -18,6 +19,7 @@ import { Observable, catchError, map, of, startWith } from 'rxjs';
     NavBarComponent,
     HeaderComponent,
     CardServiceComponent,
+    CarouselComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
