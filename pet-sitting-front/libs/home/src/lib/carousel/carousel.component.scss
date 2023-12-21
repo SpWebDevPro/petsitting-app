@@ -1,38 +1,30 @@
-
-
-.carousel-item{
-  transition: transform 2s ease, opacity .2s ease-out;
-    height: 450px;
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    //height: 200px;
-    position: fixed;
-    z-index: -1200;
-    top: 0px;
-
+.carousel {
+  margin-top: 120px;
 }
 
-.background-header-col{
+.carousel-item {
+  transition: transform 2s ease, opacity 0.2s ease-out;
+  height: 450px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.background-header-col {
   color: rgba(105, 105, 105, 0.288);
 }
 
-.carousel-item img{
+.carousel-item img {
   $transition-duration: 0.8s;
   $transition-ease: cubic-bezier(0.4, 0, 0.2, 1);
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform $transition-duration $transition-ease;
-    }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform $transition-duration $transition-ease;
+  }
 
-    &:hover img {
-      transform: scale(1.2);
-    }
-  .carousel-item {
-
-//
-
+  &:hover img {
+    transform: scale(1.2);
   }
 }
