@@ -132,4 +132,10 @@ export class NavBarComponent implements OnDestroy {
       },
     });
   }
+  goToProfile() : string{
+   const role =  localStorage.getItem("role")
+    if(role == "SITTER") 
+    return "sitter-profile";
+  return "parent-profile";
+  }
 }
