@@ -19,11 +19,11 @@
         "assets": ["./src/favicon.ico", "./src/assets"],
         "styles": [
           "./src/styles.scss",
-          "node_modules/bootswatch/dist/journal/bootstrap.min.css"  ],
+          "node_modules/bootswatch/dist/journal/bootstrap.min.css"
+        ],
         "scripts": [
           "node_modules/jquery/dist/jquery.min.js",
           "node_modules/crypto-js/crypto-js.js"
-
         ]
       },
       "configurations": {
@@ -32,7 +32,7 @@
             {
               "type": "initial",
               "maximumWarning": "500kb",
-              "maximumError": "1mb"
+              "maximumError": "2mb"
             },
             {
               "type": "anyComponentStyle",

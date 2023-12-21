@@ -1,28 +1,20 @@
 
 
+
 <div class="container border border-bottom-0">
     <span>Vous avez recu une demande de reservation.</span> 
 
-        <div class="col-md-12">
-            {{bookingMode.totalPrice}} euro
-           
 
-                <a (click)="check(true)"> <fa-icon 
-                    [icon]="facheck
-                     "
-                    [style.color]="'#eb6864'"
-                    size="xl"
-                  >
-                 </fa-icon></a>
-                 <a (click) = "check(false)"> <fa-icon 
-                    [icon]="faclose
-                     "
-                    [style.color]="'#eb6864'"
-                    size="xl"
-                  >
-                 </fa-icon></a>
-     
-    </div>
+
+  <div class="col-md-12">
+    {{ bookingMode.totalPrice }} euro
+
+    <a (click)="check(true)">
+      <fa-icon [icon]="facheck" [style.color]="'#eb6864'" size="xl"> </fa-icon
+    ></a>
+    <a (click)="check(false)">
+      <fa-icon [icon]="faclose" [style.color]="'#eb6864'" size="xl"> </fa-icon
+    ></a>
+  </div>
 </div>
-
 

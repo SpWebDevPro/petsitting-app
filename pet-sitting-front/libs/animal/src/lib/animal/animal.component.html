@@ -1,7 +1,14 @@
 
 
-@if(animalList$){
-@for (animal of animalList$|async; track animal.id) {
-  <pet-sitting-front-card-animal [animal]="animal"></pet-sitting-front-card-animal>
-}
-}
+<div class="container mt-4">
+  <div class="row">
+    <div class="list-pet">
+    @if(animalList$){
+      @for (animal of animalList$|async; track animal.id) {
+        <pet-sitting-front-card-animal [animal]="animal"></pet-sitting-front-card-animal>
+      }
+      }
+      </div>
+</div>
+</div>
+

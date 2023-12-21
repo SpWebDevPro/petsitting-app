@@ -1,4 +1,5 @@
 import { Route } from '@angular/router';
+import { NotFoundComponent } from './notFound/notFound.component';
 
 export const appRoutes: Route[] = [
   {
@@ -22,7 +23,7 @@ export const appRoutes: Route[] = [
       import('@pet-sitting-front/animal').then((m) => m.AnimalComponent),
   },
 
-{
+  {
     path: 'booking/:serviceId',
     pathMatch: 'full',
     loadComponent: () =>
@@ -40,24 +41,14 @@ export const appRoutes: Route[] = [
     path: 'card-animal',
     pathMatch: 'full',
     loadComponent: () =>
-
-      import('@pet-sitting-front/animal').then((m) =>m.AnimalComponent),
+      import('@pet-sitting-front/animal').then((m) => m.AnimalComponent),
   },
-  {  path:'bookings',
-  pathMatch:'full',
-  loadComponent: () =>
-    import('@pet-sitting-front/booking').then((m) =>m.BookingComponent),
-},
 
-
-  //temporary road notification
   {
-    path: 'notification',
+    path: 'bookings',
     pathMatch: 'full',
     loadComponent: () =>
-      import('@pet-sitting-front/sitter').then(
-        (m) => m.BookingNotificationComponent
-      ),
+      import('@pet-sitting-front/booking').then((m) => m.BookingComponent),
   },
 
   {
@@ -65,5 +56,9 @@ export const appRoutes: Route[] = [
     pathMatch: 'full',
     loadComponent: () =>
       import('@pet-sitting-front/parent').then((m) => m.ParentComponent),
+  },
+  {
+    path: '**',
+    component: NotFoundComponent,
   },
 ];

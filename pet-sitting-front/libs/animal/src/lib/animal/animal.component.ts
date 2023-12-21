@@ -15,8 +15,17 @@ import { EMPTY, Observable, catchError } from 'rxjs';
 export class AnimalComponent implements OnInit {
 
 
-  constructor(private animalService: AnimalService) {}
-  user_id:number = 3;
+  constructor(private animalService: AnimalService) {
+
+    const userID = localStorage.getItem('UserConnected') ;
+    if(userID !== null)
+    {
+
+  
+      this.user_id= Number(userID);
+    }
+  }
+  user_id!:number;
   animalList$!:Observable<AnimalModel[]>;
 
   ngOnInit(): void {

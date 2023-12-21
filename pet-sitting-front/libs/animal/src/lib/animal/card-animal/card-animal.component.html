@@ -1,12 +1,16 @@
-
-  <div class="card">
-    <h2>{{ animal.petName }}</h2>
-    <p>Breed : {{ animal.breed}}</p>
-    <p>Weight : {{ animal.weight}}</p>
-    <img src="{{ animal.petPhoto }}" alt="{{ animal.petName }}">
-    <p>Vaccination : {{ animal.isVaccinated }}</p>
-    <p>Sterilisation : {{ animal.isSterilized }}</p>
-    <p>Sociability : {{ animal.isSocial }}</p>
-    <p>Date of Birth : {{ animal.dateOfBirth }}</p>
-
+<div class="container">
+  <div class="card" style="width: 18rem;">
+    <img src="./assets/images/pet.jpeg"  class="imgpet"alt="{{ animal.petName }}" >
+      <div class="card-body">
+      <h5 class="card-title">{{animal.petName}}</h5>
+      <p>Breed : {{ animal.breed}}</p>
+      <p>Weight : {{ animal.weight}}</p>
+      <p>Vaccination : {{ animal.isVaccinated }}</p>
+      <p>Sterilisation : {{ animal.isSterilized }}</p>
+      <p>Sociability : {{ animal.isSocial }}</p>
+      <p>Date of Birth : {{ animal.dateOfBirth }}</p>
+    </div>
   </div>
+</div>
+
+

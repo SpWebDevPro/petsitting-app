@@ -1,7 +1,7 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { faCheck, faCheckCircle, faCircle } from '@fortawesome/free-solid-svg-icons';
+import { faCheckCircle, faCircle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @Component({
@@ -12,22 +12,20 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   styleUrl: './card-animal-booking.component.scss',
 })
 export class CardAnimalBookingComponent {
-
-  @Input() 
-  petName !: string;
+  @Input()
+  petName!: string;
   faPlusCircle = faCheckCircle;
-faCircle = faCircle;
+  faCircle = faCircle;
 
-  @Input() 
-  selected !: boolean
- 
-@Output() checkEvent = new EventEmitter();
+  @Input()
+  selected!: boolean;
 
-checkCard(){
-  this.checkEvent.emit();
-}
-hello(){
-this.selected = !this.selected
+  @Output() checkEvent = new EventEmitter();
 
-}
+  checkCard() {
+    this.checkEvent.emit();
+  }
+  hello() {
+    this.selected = !this.selected;
+  }
 }

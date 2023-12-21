@@ -93,7 +93,11 @@ export class ModalConnexionComponent {
             'UserConnected',
             this.userConnected.id?.toString()
           );
-
+          if(this.userConnected.role != null && this.userConnected.role != undefined)
+          localStorage.setItem(
+            'role',
+            this.userConnected.role
+          );
           this.navBarService.display();
           this.buttonLoading = false;
           this.bsModalRef.hide();
