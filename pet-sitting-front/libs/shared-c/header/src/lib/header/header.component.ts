@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, HostListener, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AnimalTypeEnum, ServiceTypeEnum } from '@pet-sitting-front/services';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -30,12 +30,16 @@ export class HeaderComponent {
     this.listAnimalTypes = Object.keys(AnimalTypeEnum);
   }
 
-
-
-
-
-
   searchServices(value: any) {
     this.searchEvent.emit(value);
+  }
+
+  isScrolled = false;
+  @HostListener('window:scroll')
+  scrollEvent() {
+    window.scrollY >= 250
+      ? (this.isScrolled = true)
+      : (this.isScrolled = false);
+    console.log(this.isScrolled);
   }
 }

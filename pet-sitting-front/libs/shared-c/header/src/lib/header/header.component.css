@@ -16,3 +16,11 @@ header {
   top: 60px;
   height: 200px;
 }
+
+.displaynone {
+  display: none;
+}
+
+.header-title {
+  margin-top: 100px;
+}

@@ -1,9 +1,9 @@
-<header class="py-6" id="header-search">
+<header class="py-6" id="header-search" [ngClass]="{ displaynone: isScrolled }">
   <div class="container px-5">
     <div class="row gx-5 justify-content-center">
       <div class="col-lg-10">
         <div class="text-center my-5">
-          <h1 class="display-5 fw-bolder text-white mb-5 pb-5">
+          <h1 class="header-title display-5 fw-bolder text-white mb-5 pb-5">
             Trouvez votre gardien idéal !
           </h1>
           <p class="lead text-white-50 mb-4"></p>
