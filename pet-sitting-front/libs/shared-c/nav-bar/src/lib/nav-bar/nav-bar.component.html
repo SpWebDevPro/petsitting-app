@@ -1,52 +1,115 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container py-4">
-        <a class="navbar-brand" href="#!">Pet settings</a>
+  <div class="container py-4">
+    <a class="navbar-brand" href="#!">Pet settings</a>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="#!">Contact</a></li>
-                <li class="nav-item"><a class="nav-link" *ngIf="!showPrfileDrop" (click)= "openModalWithComponent()">Login</a></li>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#!">Home</a>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#!">Contact</a></li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            *ngIf="!showPrfileDrop"
+            (click)="openModalWithComponent()"
+            >Login</a
+          >
+        </li>
 
-              <div class="collapse navbar-collapse"  *ngIf="showPrfileDrop" id="navbar-list-4" >
-                <ul class="navbar-nav">
-                    <li class="nav-item dropdown">
-                    <a  class="nav-link " href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <fa-icon [icon]="faBell" [style.color]=" notifCount> 0 ? '#eb6864': '#D3D3D3'"   ></fa-icon>
-                              <span class="badge badge-light"> {{notifCount}}</span>
-
-                    </a>
-                    <div  class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <pet-sitting-front-booking-notification (checkEvent)="accepteBooking($event, booking.id ?? 0)" *ngFor="let booking of listBookingPending" [bookingMode]="booking"></pet-sitting-front-booking-notification>
-                  <div  class="container"*ngIf = " listBookingPending === undefined || listBookingPending.length === 0">
-
-                    Pas de notifications
-
-                  </div>
-
-                    </div>
-
-                  </li>
-                </ul>
+        <div
+          class="collapse navbar-collapse"
+          *ngIf="showPrfileDrop"
+          id="navbar-list-4"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <fa-icon
+                  [icon]="faBell"
+                  [style.color]="notifCount > 0 ? '#eb6864' : '#D3D3D3'"
+                ></fa-icon>
+                <span class="badge badge-light"> {{ notifCount }}</span>
+              </a>
+              <div
+                class="dropdown-menu"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <pet-sitting-front-booking-notification
+                  (checkEvent)="accepteBooking($event, booking.id ?? 0)"
+                  *ngFor="let booking of listBookingPending"
+                  [bookingMode]="booking"
+                ></pet-sitting-front-booking-notification>
+                <div
+                  class="container"
+                  *ngIf="
+                    listBookingPending === undefined ||
+                    listBookingPending.length === 0
+                  "
+                >
+                  Pas de notifications
+                </div>
               </div>
-                  <div class="collapse navbar-collapse" id="navbar-list-4" *ngIf="showPrfileDrop">
-                    <ul class="navbar-nav">
-                        <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          <img src="./assets/images/user-woman-icon.png" width="40" height="40" class="rounded-circle">
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                          <a class="dropdown-item" href="#">Dashboard</a>
-                          <a class="dropdown-item"  [routerLink]="['sitter-profile']">Profil</a>
-                          <a class="dropdown-item" (click)="logOut()">Log Out</a>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-            </ul>
-
+            </li>
+          </ul>
         </div>
+        <div
+          class="collapse navbar-collapse"
+          id="navbar-list-4"
+          *ngIf="showPrfileDrop"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <img
+                  src="./assets/images/user-woman-icon.png"
+                  width="40"
+                  height="40"
+                  class="rounded-circle"
+                />
+              </a>
+              <div
+                class="dropdown-menu"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <a class="dropdown-item" href="#">Dashboard</a>
+                <a class="dropdown-item" [routerLink]="['sitter-profile']"
+                  >Profil</a
+                >
+                <a class="dropdown-item" (click)="logOut()">Log Out</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </ul>
     </div>
+  </div>
 </nav>

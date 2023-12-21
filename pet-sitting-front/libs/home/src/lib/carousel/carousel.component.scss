@@ -1,10 +1,7 @@
-.carousel {
-  margin-top: 120px;
-}
-
 .carousel-item {
   transition: transform 2s ease, opacity 0.2s ease-out;
   height: 450px;
+  z-index: -1200;
   position: relative;
   overflow: hidden;
   width: 100%;
