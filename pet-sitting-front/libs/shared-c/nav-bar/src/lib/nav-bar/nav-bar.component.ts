@@ -16,7 +16,7 @@ import {  BookingNotificationComponent} from '@pet-sitting-front/sitter';
   standalone: true,
   imports: [CommonModule, ModalModule, ModalConnexionComponent , MatIconModule, MatMenuModule, RouterModule, FontAwesomeModule, BookingNotificationComponent],
   templateUrl: './nav-bar.component.html',
-  styleUrl: './nav-bar.component.css',
+  styleUrl: './nav-bar.component.scss',
   providers: [BsModalService]
 })
 export class NavBarComponent implements OnDestroy {
@@ -27,7 +27,7 @@ export class NavBarComponent implements OnDestroy {
   subscription : Subscription;
   faBell = faBell;
    currentUserID!: number;
- 
+
    notifCount!: number;
    listBookingPending !: BookingModel[];
   constructor(private modalService: BsModalService, private navBarService: NavBarService,private bookingService: BookingService) {
@@ -37,7 +37,7 @@ this.navBarService.display();
 
 this.subscription = this.navBarService.showProfilDrop.subscribe((value)=>
 
-{ 
+{
   if(value)
   this.getBookingPending();
   this.showPrfileDrop = value
@@ -46,7 +46,7 @@ this.subscription = this.navBarService.showProfilDrop.subscribe((value)=>
   }
 
 
- 
+
   openModalWithComponent() {
     const initialState = {
       list: [
@@ -63,7 +63,7 @@ this.subscription = this.navBarService.showProfilDrop.subscribe((value)=>
 
 
   logOut(){
-  
+
 localStorage.setItem('IsAuthentified', 'false');
 localStorage.setItem('UserConnected', '');
 
@@ -83,7 +83,7 @@ this.navBarService.hide();
     this.currentUserID = Number(userIDString);
    this.isAuthenitified= isAuthenitifiedString != null && ! undefined && isAuthenitifiedString!= 'false'&&
    userIDString!= null && userIDString !=undefined? JSON.parse(isAuthenitifiedString) : false ;
-   
+
 
 
   }
@@ -95,8 +95,8 @@ this.bookingService.getBookingOfSitterByStatus(this.currentUserID, BookingStatuE
   complete: () => {}, // completeHandler
   error: (err) => {
   console.log(err)
-  },    // errorHandler 
-  next: (data) => { 
+  },    // errorHandler
+  next: (data) => {
     this.notifCount = data.length;
     this.listBookingPending = data;
 }});
@@ -118,6 +118,6 @@ this.bookingService.getBookingOfSitterByStatus(this.currentUserID, BookingStatuE
       console.log(err)
       },
    })
-  
+
   }
 }

@@ -43,6 +43,7 @@ export const appRoutes: Route[] = [
     loadComponent: () =>
       import('@pet-sitting-front/animal').then((m) => m.AnimalComponent),
   },
+
   {
     path: 'bookings',
     pathMatch: 'full',
