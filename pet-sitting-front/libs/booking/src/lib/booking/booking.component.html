@@ -1,35 +1,55 @@
+<div class="main container-fluid">
+  <div class="row">
+    <div class="left welcome col-5">
+      <img src="./assets/images/unsplash-1.jpg" alt="booking-petsitter" />
+    </div>
 
-<div class="container">
-  <pet-sitting-front-list-animal-booking  (selectedAnimalEvent) = "selectedAnimalEvent($event)" ></pet-sitting-front-list-animal-booking>
-     
-        <mat-form-field   >
+    <div class="right col-7 p-5">
+      <div class="container-booking">
+        <h2>Finalisez votre réservation</h2>
+        <pet-sitting-front-list-animal-booking
+          (selectedAnimalEvent)="selectedAnimalEvent($event)"
+        ></pet-sitting-front-list-animal-booking>
+
+        <mat-form-field>
           <mat-label>Saisir la période</mat-label>
-          <mat-date-range-input  [formGroup]="range" [rangePicker]="picker">
-            <input matStartDate formControlName="start"   placeholder="Start date">
-            <input matEndDate formControlName="end"   placeholder="End date">
+          <mat-date-range-input [formGroup]="range" [rangePicker]="picker">
+            <input
+              matStartDate
+              formControlName="start"
+              placeholder="Start date"
+            />
+            <input matEndDate formControlName="end" placeholder="End date" />
           </mat-date-range-input>
-          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker-toggle
+            matIconSuffix
+            [for]="picker"
+          ></mat-datepicker-toggle>
           <mat-date-range-picker color="warn" #picker></mat-date-range-picker>
-        
+
           @if (range.controls.start.hasError('matStartDateInvalid')) {
-            <mat-error>Invalid start date</mat-error>
-          }
-          @if (range.controls.end.hasError('matEndDateInvalid')) {
-            <mat-error>Invalid end date</mat-error>
+          <mat-error>Invalid start date</mat-error>
+          } @if (range.controls.end.hasError('matEndDateInvalid')) {
+          <mat-error>Invalid end date</mat-error>
           }
         </mat-form-field>
 
-        <div >
-             <label>Total : </label>
-             <label >{{bookingModel.totalPrice}} € </label>
+        <div class="mb-4">
+          <strong>
+            <label>Prix Total : </label>
+            <label>{{ bookingModel.totalPrice | currency : 'EUR' }} </label>
+          </strong>
         </div>
-        
-    
-        <button class="btn btn-primary btn-lg"  type="submit" [disabled]="formValidation()" (click)="booking()" >Reserver</button>
-  
- 
+
+        <button
+          class="btn btn-primary btn-lg"
+          type="submit"
+          [disabled]="formValidation()"
+          (click)="booking()"
+        >
+          Reserver
+        </button>
+      </div>
+    </div>
+  </div>
 </div>
-
-
-
-

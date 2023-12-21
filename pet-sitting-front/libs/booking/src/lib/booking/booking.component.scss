@@ -1,0 +1,25 @@
+div.left {
+  background-color: #222222;
+  color: #eeeeee;
+  display: flex;
+  flex-direction: column;
+  padding-right: 0;
+}
+
+div.container-booking {
+  max-width: 70%;
+  min-height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+}
+
+h2 {
+  text-align: center;
+}
+
+img {
+  /* height: 100%; */
+  width: auto;
+}
