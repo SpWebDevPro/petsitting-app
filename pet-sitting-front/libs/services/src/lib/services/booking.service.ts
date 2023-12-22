@@ -5,7 +5,8 @@ import { BookingModel } from './models/booking.model';
 
 @Injectable({ providedIn: 'root' })
 export class BookingService {
-  private readonly apiUrl = 'http://13.38.89.48:8080/booking/';
+  private readonly apiUrl = 'http://localhost:8080/booking/';
+  /* private readonly apiUrl = 'http://13.38.89.48:8080/booking/'; */
   private headers = new HttpHeaders({
     'Access-Control-Allow-Origin': '*',
     'content-type': 'application/json',

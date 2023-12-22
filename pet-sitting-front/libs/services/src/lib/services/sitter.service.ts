@@ -4,7 +4,8 @@ import { ServiceModel } from './models/service.model';
 
 @Injectable({ providedIn: 'root' })
 export class SitterService {
-  private readonly apiUrl = 'http://13.38.89.48:8080/sitterservice/';
+  private readonly apiUrl = 'http://localhost:8080/sitterservice/';
+  /*  private readonly apiUrl = 'http://13.38.89.48:8080/sitterservice/'; */
   private headers = new HttpHeaders({
     'Access-Control-Allow-Origin': '*',
     'content-type': 'application/json',

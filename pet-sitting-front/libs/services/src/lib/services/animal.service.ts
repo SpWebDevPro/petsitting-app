@@ -5,7 +5,8 @@ import { AnimalModel } from './models/animal.model';
 
 @Injectable({ providedIn: 'root' })
 export class AnimalService {
-  private readonly apiUrl = 'http://13.38.89.48:8080/animal/';
+  private readonly apiUrl = 'http://localhost:8080/animal/';
+  /* private readonly apiUrl = 'http://13.38.89.48:8080/animal/'; */
   private headers = new HttpHeaders({
     'Access-Control-Allow-Origin': '*',
     'content-type': 'application/json',
