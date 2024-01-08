@@ -43,7 +43,7 @@ This application enable pet owners to find pet sitters in order to care about th
 ## Special Thanks
 
 
-Thanks to my collegues for this team work : [Fatima ](https://github.com/FatimaCha) | [Lucas](https://github.com/LucasTymen) | [Matheusz](https://github.com/Indopasnorte)| [Hilaria]
+Thanks to my collegues for this team work : [Fatima ](https://github.com/FatimaCha) | [Lucas](https://github.com/LucasTymen) | [Matheusz](https://github.com/Indopasnorte) | [Hilaria]
 
 Thanks to our professionnal trainers [Renaud Ferret](https://ferretrenaud.ovh/renaud91) for Java and [Michael Putters](https://github.com/rraziel) for Angular   
 
